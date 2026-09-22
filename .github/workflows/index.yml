@@ -1,0 +1,46 @@
+name: index
+
+# Rebuild index.json from the .mimic assets attached to the repo's releases, so
+# the catalog the app fetches always reflects the live assets. The bundle is
+# uploaded locally after the release is created, so this runs on workflow_dispatch
+# (the Makefile's release target dispatches it once the upload finishes) rather
+# than on the release-published event, which fires before the asset exists. The
+# release types are kept as a backstop for assets attached through the GitHub UI.
+on:
+  workflow_dispatch:
+  release:
+    types: [released, edited]
+
+permissions:
+  contents: write
+
+# Serialize reindex runs so two releases published close together cannot race
+# each other committing index.json
+concurrency:
+  group: index
+  cancel-in-progress: false
+
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache-dependency-path: go.sum
+
+      - name: Rebuild index.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: go run ./tools/reindex -o index.json
+
+      - name: Commit index.json
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add index.json
+          git commit -m "chore: reindex templates" || exit 0
+          git push

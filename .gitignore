@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+._*
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# Go workspace sum, when a local go.work is used for engine development
+go.work
+go.work.sum
+
+# Source frame PSDs. These are the large source-of-truth binaries the bundles
+# are built from, not the shipped artifact, so they stay out of git the same way
+# they did in the engine repo
+*.psd
+*.psb
+/psd/
+
+# Generated layer PNGs. The manifest.json and bundle.json beside them are
+# tracked, so the geometry stays reviewable, but the extracted PNGs are large
+# and are rebuilt from the source PSD on demand
+templates/**/*.png
+
+# Built bundles and other build output. Bundles are release assets, uploaded to
+# GitHub Releases, not committed
+/build/
+*.mimic
+
+# Test, coverage and profiling output
+*.test
+coverage.out
+coverage.html
+*.prof
+*.pprof
+
+# Claude Code per-user settings. Shared .claude/settings.json stays tracked
+.claude/settings.local.json

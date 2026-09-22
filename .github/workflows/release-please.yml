@@ -1,0 +1,23 @@
+name: release-please
+
+# release-please watches main for conventional commits and keeps one release
+# pull request open per template. Merging that pull request creates the tag and
+# an empty GitHub Release; the maintainer then builds the bundle locally and
+# uploads it to that release, since the source PSDs are too large to live in git
+# or run through CI. See the Makefile's release target.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json

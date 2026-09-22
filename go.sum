@@ -1,0 +1,10 @@
+github.com/gopherjs/gopherjs v1.21.0 h1:5HEGrz+XhpCchubMGzuyLuGoCTlL/yCT7sGsT5Se/dw=
+github.com/gopherjs/gopherjs v1.21.0/go.mod h1:R2HIOen3IzYSzvmvkeD8WOfiLN9wueR/T5Y+6z326Ck=
+github.com/odevine/impasto v0.1.1 h1:5jjmLGwspafRgfzLBlEvCEwvX8VjxF/9DSfWxt5GRw8=
+github.com/odevine/impasto v0.1.1/go.mod h1:hsDtuh29Ba47P2Rv9Zr/FIvG9pA5Zv7Tp81NJoUdbvk=
+github.com/odevine/mimic/engine v0.3.0 h1:jkTbVKoplW10joHuE36S0HeLXXMvWMicP088lu3WwIs=
+github.com/odevine/mimic/engine v0.3.0/go.mod h1:0J5utLP0oxQC24v3oOYlN0nZXKGUehwNiOb5Iqb8jQE=
+github.com/oov/psd v0.0.0-20260818185439-a5d50ec0acac h1:fC+EOwHfg8tfu5ZsybZZMr+g4rpGxw5pPhbob9k7ThY=
+github.com/oov/psd v0.0.0-20260818185439-a5d50ec0acac/go.mod h1:GHI1bnmAcbp96z6LNfBJvtrjxhaXGkbsk967utPlvL8=
+golang.org/x/image v0.46.0 h1:b1+oYj0Jbp6K5MDT4i4/eZpYlk3V8SJhhDKh6LBHAyQ=
+golang.org/x/image v0.46.0/go.mod h1:3B3W05VGVQyuXucLINLjXKrqISASfi4Xj+iCVkLMwew=
