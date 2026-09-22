@@ -3,14 +3,21 @@
   "templates": [
     {
       "name": "normal",
-      "latest": "0.1.0",
+      "latest": "0.2.0",
       "versions": [
         {
+          "version": "0.2.0",
+          "minEngine": "0.5.0",
+          "url": "https://github.com/odevine/mimic-templates/releases/download/normal/v0.2.0/normal.mimic",
+          "size": 208308016,
+          "sha256": "090ab5f1e0888ef98fe1010d677cfa838a96f45d163c182d3706ed397f7a5a6f"
+        },
+        {
           "version": "0.1.0",
-          "minEngine": "0.3.0",
+          "minEngine": "0.5.0",
           "url": "https://github.com/odevine/mimic-templates/releases/download/normal/0.1.0/normal.mimic",
-          "size": 208307885,
-          "sha256": "396db69ef29d426ef3270774bd6359dd4c4a7fb50278a995e5d72f0ec5ddcb34"
+          "size": 208308016,
+          "sha256": "4f688d7ef446325aa0925ca514b2f6069991b69120163798e25fd8a1a59bb8e9"
         }
       ]
     }
