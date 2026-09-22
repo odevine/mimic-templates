@@ -5,6 +5,7 @@
   "layers": [
     {
       "name": "background",
+      "colorSlot": "background",
       "colorVariants": {
         "artifact": {
           "path": "background/artifact.png"
@@ -190,6 +191,7 @@
     {
       "name": "land_pinlines_textbox",
       "condition": "land",
+      "colorSlot": "pinlines",
       "colorVariants": {
         "b": {
           "path": "land_pinlines_textbox/b.png"
@@ -247,6 +249,7 @@
     {
       "name": "pinlines_textbox",
       "condition": "nonland",
+      "colorSlot": "pinlines",
       "colorVariants": {
         "artifact": {
           "path": "pinlines_textbox/artifact.png"
@@ -307,6 +310,7 @@
     {
       "name": "legendary_crown",
       "condition": "legendary",
+      "colorSlot": "crown",
       "colorVariants": {
         "artifact": {
           "path": "legendary_crown/artifact.png"
@@ -396,6 +400,7 @@
     },
     {
       "name": "name_title_boxes",
+      "colorSlot": "twins",
       "colorVariants": {
         "artifact": {
           "path": "name_title_boxes/artifact.png"
@@ -492,6 +497,7 @@
     {
       "name": "pt_box",
       "condition": "creature",
+      "colorSlot": "ptBox",
       "colorVariants": {
         "artifact": {
           "path": "pt_box/artifact.png"
@@ -528,6 +534,7 @@
     {
       "name": "pt_box_dark",
       "condition": "pt_dark",
+      "colorSlot": "ptBox",
       "colorVariants": {
         "artifact": {
           "path": "pt_box_dark/artifact.png"
@@ -568,7 +575,9 @@
       "fontSize": 156,
       "align": "left",
       "vAlign": "baseline",
-      "color": "#000000"
+      "color": "#000000",
+      "font": "title",
+      "clearOf": "mana"
     },
     "mana": {
       "x": 2047,
@@ -576,9 +585,14 @@
       "width": 866,
       "height": 200,
       "fontSize": 179,
+      "minFontSize": 179,
       "align": "right",
       "vAlign": "baseline",
-      "color": "#000000"
+      "color": "#000000",
+      "shadow": {
+        "distance": 0.0907,
+        "angle": 25
+      }
     },
     "type": {
       "x": 385,
@@ -588,7 +602,8 @@
       "fontSize": 132,
       "align": "left",
       "vAlign": "baseline",
-      "color": "#000000"
+      "color": "#000000",
+      "font": "title"
     },
     "oracle": {
       "x": 347,
@@ -600,7 +615,8 @@
       "vAlign": "center",
       "lineSpacing": 1.0,
       "color": "#000000",
-      "padding": 40
+      "padding": 40,
+      "avoidLayer": "pt_box"
     },
     "pt": {
       "x": 2490,
@@ -610,7 +626,8 @@
       "fontSize": 159,
       "align": "center",
       "vAlign": "baseline",
-      "color": "#000000"
+      "color": "#000000",
+      "font": "title"
     },
     "artist": {
       "x": 730,
@@ -620,7 +637,8 @@
       "fontSize": 77,
       "align": "left",
       "vAlign": "baseline",
-      "color": "#FFFFFF"
+      "color": "#FFFFFF",
+      "font": "small-caps"
     },
     "collector": {
       "x": 327,
@@ -631,7 +649,8 @@
       "align": "left",
       "vAlign": "baseline",
       "color": "#FFFFFF",
-      "tracking": 125
+      "tracking": 125,
+      "font": "info"
     },
     "set": {
       "x": 329,
@@ -641,7 +660,8 @@
       "fontSize": 68,
       "align": "left",
       "vAlign": "baseline",
-      "color": "#FFFFFF"
+      "color": "#FFFFFF",
+      "font": "info"
     },
     "copyright": {
       "x": 1500,
@@ -652,7 +672,9 @@
       "align": "right",
       "vAlign": "baseline",
       "color": "#FFFFFF",
-      "tracking": 40
+      "tracking": 40,
+      "duckLayer": "pt_box",
+      "duckRow": "artist"
     }
   },
   "art": {
