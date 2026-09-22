@@ -41,7 +41,11 @@ var pngEncoder = png.Encoder{CompressionLevel: png.BestCompression}
 // decoding and PNG writing. That is fast, for iterating on conditions, font
 // sizes and text-box geometry, and assumes the PNGs from a prior full run are
 // already in place
-func Extract(psdPath string, r Recipe, outRoot string, writeAssets bool) (*Summary, error) {
+// writeAssets controls whether the layer PNGs are written; writeManifestFile
+// controls whether manifest.json is. Full extraction sets both. manifest-only
+// sets writeManifestFile alone, reusing existing PNGs. png-only sets writeAssets
+// alone, leaving a hand-tuned manifest untouched while the art is re-cut.
+func Extract(psdPath string, r Recipe, outRoot string, writeAssets, writeManifestFile bool) (*Summary, error) {
 	doc, err := decodePSD(psdPath, !writeAssets)
 	if err != nil {
 		return nil, err
@@ -97,8 +101,10 @@ func Extract(psdPath string, r Recipe, outRoot string, writeAssets bool) (*Summa
 	}
 	sum.TextBoxes = len(m.TextBoxes)
 
-	if err := writeManifest(outDir, &m); err != nil {
-		return nil, err
+	if writeManifestFile {
+		if err := writeManifest(outDir, &m); err != nil {
+			return nil, err
+		}
 	}
 	return sum, nil
 }

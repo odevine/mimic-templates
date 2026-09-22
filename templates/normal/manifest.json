@@ -1,0 +1,665 @@
+{
+  "template": "normal",
+  "width": 3264,
+  "height": 4440,
+  "layers": [
+    {
+      "name": "background",
+      "colorVariants": {
+        "artifact": {
+          "path": "background/artifact.png"
+        },
+        "b": {
+          "path": "background/b.png"
+        },
+        "bg": {
+          "path": "background/bg.png"
+        },
+        "br": {
+          "path": "background/br.png"
+        },
+        "colorless": {
+          "path": "background/colorless.png"
+        },
+        "g": {
+          "path": "background/g.png"
+        },
+        "gold": {
+          "path": "background/gold.png"
+        },
+        "land": {
+          "path": "background/land.png"
+        },
+        "r": {
+          "path": "background/r.png"
+        },
+        "rg": {
+          "path": "background/rg.png"
+        },
+        "u": {
+          "path": "background/u.png"
+        },
+        "ub": {
+          "path": "background/ub.png"
+        },
+        "ug": {
+          "path": "background/ug.png"
+        },
+        "ur": {
+          "path": "background/ur.png"
+        },
+        "vehicle": {
+          "path": "background/vehicle.png"
+        },
+        "w": {
+          "path": "background/w.png"
+        },
+        "wb": {
+          "path": "background/wb.png"
+        },
+        "wg": {
+          "path": "background/wg.png"
+        },
+        "wr": {
+          "path": "background/wr.png"
+        },
+        "wu": {
+          "path": "background/wu.png"
+        }
+      }
+    },
+    {
+      "name": "nyx",
+      "condition": "nyx",
+      "colorVariants": {
+        "artifact": {
+          "path": "nyx/artifact.png"
+        },
+        "b": {
+          "path": "nyx/b.png"
+        },
+        "bg": {
+          "path": "nyx/bg.png"
+        },
+        "br": {
+          "path": "nyx/br.png"
+        },
+        "colorless": {
+          "path": "nyx/colorless.png"
+        },
+        "g": {
+          "path": "nyx/g.png"
+        },
+        "gold": {
+          "path": "nyx/gold.png"
+        },
+        "land": {
+          "path": "nyx/land.png"
+        },
+        "r": {
+          "path": "nyx/r.png"
+        },
+        "rg": {
+          "path": "nyx/rg.png"
+        },
+        "u": {
+          "path": "nyx/u.png"
+        },
+        "ub": {
+          "path": "nyx/ub.png"
+        },
+        "ug": {
+          "path": "nyx/ug.png"
+        },
+        "ur": {
+          "path": "nyx/ur.png"
+        },
+        "vehicle": {
+          "path": "nyx/vehicle.png"
+        },
+        "w": {
+          "path": "nyx/w.png"
+        },
+        "wb": {
+          "path": "nyx/wb.png"
+        },
+        "wg": {
+          "path": "nyx/wg.png"
+        },
+        "wr": {
+          "path": "nyx/wr.png"
+        },
+        "wu": {
+          "path": "nyx/wu.png"
+        }
+      }
+    },
+    {
+      "name": "companion",
+      "condition": "companion",
+      "colorVariants": {
+        "bg": {
+          "path": "companion/bg.png"
+        },
+        "br": {
+          "path": "companion/br.png"
+        },
+        "rg": {
+          "path": "companion/rg.png"
+        },
+        "ub": {
+          "path": "companion/ub.png"
+        },
+        "ug": {
+          "path": "companion/ug.png"
+        },
+        "ur": {
+          "path": "companion/ur.png"
+        },
+        "wb": {
+          "path": "companion/wb.png"
+        },
+        "wg": {
+          "path": "companion/wg.png"
+        },
+        "wr": {
+          "path": "companion/wr.png"
+        },
+        "wu": {
+          "path": "companion/wu.png"
+        }
+      }
+    },
+    {
+      "name": "shadows",
+      "colorVariants": {
+        "any": {
+          "path": "shadows/any.png"
+        }
+      }
+    },
+    {
+      "name": "hollow_crown_shadow",
+      "condition": "hollow_crown",
+      "colorVariants": {
+        "any": {
+          "path": "hollow_crown_shadow/any.png"
+        }
+      }
+    },
+    {
+      "name": "land_pinlines_textbox",
+      "condition": "land",
+      "colorVariants": {
+        "b": {
+          "path": "land_pinlines_textbox/b.png"
+        },
+        "bg": {
+          "path": "land_pinlines_textbox/bg.png"
+        },
+        "br": {
+          "path": "land_pinlines_textbox/br.png"
+        },
+        "g": {
+          "path": "land_pinlines_textbox/g.png"
+        },
+        "gold": {
+          "path": "land_pinlines_textbox/gold.png"
+        },
+        "land": {
+          "path": "land_pinlines_textbox/land.png"
+        },
+        "r": {
+          "path": "land_pinlines_textbox/r.png"
+        },
+        "rg": {
+          "path": "land_pinlines_textbox/rg.png"
+        },
+        "u": {
+          "path": "land_pinlines_textbox/u.png"
+        },
+        "ub": {
+          "path": "land_pinlines_textbox/ub.png"
+        },
+        "ug": {
+          "path": "land_pinlines_textbox/ug.png"
+        },
+        "ur": {
+          "path": "land_pinlines_textbox/ur.png"
+        },
+        "w": {
+          "path": "land_pinlines_textbox/w.png"
+        },
+        "wb": {
+          "path": "land_pinlines_textbox/wb.png"
+        },
+        "wg": {
+          "path": "land_pinlines_textbox/wg.png"
+        },
+        "wr": {
+          "path": "land_pinlines_textbox/wr.png"
+        },
+        "wu": {
+          "path": "land_pinlines_textbox/wu.png"
+        }
+      }
+    },
+    {
+      "name": "pinlines_textbox",
+      "condition": "nonland",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_textbox/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_textbox/b.png"
+        },
+        "bg": {
+          "path": "pinlines_textbox/bg.png"
+        },
+        "br": {
+          "path": "pinlines_textbox/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_textbox/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_textbox/g.png"
+        },
+        "gold": {
+          "path": "pinlines_textbox/gold.png"
+        },
+        "r": {
+          "path": "pinlines_textbox/r.png"
+        },
+        "rg": {
+          "path": "pinlines_textbox/rg.png"
+        },
+        "u": {
+          "path": "pinlines_textbox/u.png"
+        },
+        "ub": {
+          "path": "pinlines_textbox/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_textbox/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_textbox/ur.png"
+        },
+        "w": {
+          "path": "pinlines_textbox/w.png"
+        },
+        "wb": {
+          "path": "pinlines_textbox/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_textbox/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_textbox/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_textbox/wu.png"
+        }
+      }
+    },
+    {
+      "name": "legendary_crown",
+      "condition": "legendary",
+      "colorVariants": {
+        "artifact": {
+          "path": "legendary_crown/artifact.png"
+        },
+        "b": {
+          "path": "legendary_crown/b.png"
+        },
+        "bg": {
+          "path": "legendary_crown/bg.png"
+        },
+        "br": {
+          "path": "legendary_crown/br.png"
+        },
+        "colorless": {
+          "path": "legendary_crown/colorless.png"
+        },
+        "g": {
+          "path": "legendary_crown/g.png"
+        },
+        "gold": {
+          "path": "legendary_crown/gold.png"
+        },
+        "land": {
+          "path": "legendary_crown/land.png"
+        },
+        "r": {
+          "path": "legendary_crown/r.png"
+        },
+        "rg": {
+          "path": "legendary_crown/rg.png"
+        },
+        "u": {
+          "path": "legendary_crown/u.png"
+        },
+        "ub": {
+          "path": "legendary_crown/ub.png"
+        },
+        "ug": {
+          "path": "legendary_crown/ug.png"
+        },
+        "ur": {
+          "path": "legendary_crown/ur.png"
+        },
+        "w": {
+          "path": "legendary_crown/w.png"
+        },
+        "wb": {
+          "path": "legendary_crown/wb.png"
+        },
+        "wg": {
+          "path": "legendary_crown/wg.png"
+        },
+        "wr": {
+          "path": "legendary_crown/wr.png"
+        },
+        "wu": {
+          "path": "legendary_crown/wu.png"
+        }
+      }
+    },
+    {
+      "name": "border",
+      "condition": "nonlegendary",
+      "colorVariants": {
+        "any": {
+          "path": "border/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_legendary",
+      "condition": "legendary",
+      "colorVariants": {
+        "any": {
+          "path": "border_legendary/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_fullart",
+      "condition": "",
+      "colorVariants": {
+        "any": {
+          "path": "border_fullart/any.png"
+        }
+      }
+    },
+    {
+      "name": "name_title_boxes",
+      "colorVariants": {
+        "artifact": {
+          "path": "name_title_boxes/artifact.png"
+        },
+        "b": {
+          "path": "name_title_boxes/b.png"
+        },
+        "colorless": {
+          "path": "name_title_boxes/colorless.png"
+        },
+        "g": {
+          "path": "name_title_boxes/g.png"
+        },
+        "gold": {
+          "path": "name_title_boxes/gold.png"
+        },
+        "land": {
+          "path": "name_title_boxes/land.png"
+        },
+        "r": {
+          "path": "name_title_boxes/r.png"
+        },
+        "u": {
+          "path": "name_title_boxes/u.png"
+        },
+        "w": {
+          "path": "name_title_boxes/w.png"
+        }
+      }
+    },
+    {
+      "name": "color_indicator",
+      "condition": "color_indicator",
+      "colorVariants": {
+        "b": {
+          "path": "color_indicator/b.png"
+        },
+        "bg": {
+          "path": "color_indicator/bg.png"
+        },
+        "br": {
+          "path": "color_indicator/br.png"
+        },
+        "g": {
+          "path": "color_indicator/g.png"
+        },
+        "r": {
+          "path": "color_indicator/r.png"
+        },
+        "rg": {
+          "path": "color_indicator/rg.png"
+        },
+        "u": {
+          "path": "color_indicator/u.png"
+        },
+        "ub": {
+          "path": "color_indicator/ub.png"
+        },
+        "ubr": {
+          "path": "color_indicator/ubr.png"
+        },
+        "ug": {
+          "path": "color_indicator/ug.png"
+        },
+        "ur": {
+          "path": "color_indicator/ur.png"
+        },
+        "w": {
+          "path": "color_indicator/w.png"
+        },
+        "wb": {
+          "path": "color_indicator/wb.png"
+        },
+        "wg": {
+          "path": "color_indicator/wg.png"
+        },
+        "wr": {
+          "path": "color_indicator/wr.png"
+        },
+        "wu": {
+          "path": "color_indicator/wu.png"
+        }
+      }
+    },
+    {
+      "name": "divider",
+      "condition": "divider",
+      "colorVariants": {
+        "any": {
+          "path": "divider/any.png"
+        }
+      }
+    },
+    {
+      "name": "pt_box",
+      "condition": "creature",
+      "colorVariants": {
+        "artifact": {
+          "path": "pt_box/artifact.png"
+        },
+        "b": {
+          "path": "pt_box/b.png"
+        },
+        "colorless": {
+          "path": "pt_box/colorless.png"
+        },
+        "g": {
+          "path": "pt_box/g.png"
+        },
+        "gold": {
+          "path": "pt_box/gold.png"
+        },
+        "land": {
+          "path": "pt_box/land.png"
+        },
+        "r": {
+          "path": "pt_box/r.png"
+        },
+        "u": {
+          "path": "pt_box/u.png"
+        },
+        "vehicle": {
+          "path": "pt_box/vehicle.png"
+        },
+        "w": {
+          "path": "pt_box/w.png"
+        }
+      }
+    },
+    {
+      "name": "pt_box_dark",
+      "condition": "pt_dark",
+      "colorVariants": {
+        "artifact": {
+          "path": "pt_box_dark/artifact.png"
+        },
+        "b": {
+          "path": "pt_box_dark/b.png"
+        },
+        "colorless": {
+          "path": "pt_box_dark/colorless.png"
+        },
+        "g": {
+          "path": "pt_box_dark/g.png"
+        },
+        "gold": {
+          "path": "pt_box_dark/gold.png"
+        },
+        "land": {
+          "path": "pt_box_dark/land.png"
+        },
+        "r": {
+          "path": "pt_box_dark/r.png"
+        },
+        "u": {
+          "path": "pt_box_dark/u.png"
+        },
+        "w": {
+          "path": "pt_box_dark/w.png"
+        }
+      }
+    }
+  ],
+  "textBoxes": {
+    "title": {
+      "x": 386,
+      "y": 510,
+      "width": 2400,
+      "height": 200,
+      "fontSize": 156,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#000000"
+    },
+    "mana": {
+      "x": 2047,
+      "y": 506,
+      "width": 866,
+      "height": 200,
+      "fontSize": 179,
+      "align": "right",
+      "vAlign": "baseline",
+      "color": "#000000"
+    },
+    "type": {
+      "x": 385,
+      "y": 2650,
+      "width": 2100,
+      "height": 200,
+      "fontSize": 132,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#000000"
+    },
+    "oracle": {
+      "x": 347,
+      "y": 2750,
+      "width": 2569,
+      "height": 1244,
+      "fontSize": 150,
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1.0,
+      "color": "#000000",
+      "padding": 40
+    },
+    "pt": {
+      "x": 2490,
+      "y": 4030,
+      "width": 474,
+      "height": 200,
+      "fontSize": 159,
+      "align": "center",
+      "vAlign": "baseline",
+      "color": "#000000"
+    },
+    "artist": {
+      "x": 730,
+      "y": 4176,
+      "width": 2100,
+      "height": 120,
+      "fontSize": 77,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF"
+    },
+    "collector": {
+      "x": 327,
+      "y": 4102,
+      "width": 2400,
+      "height": 120,
+      "fontSize": 68,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "tracking": 125
+    },
+    "set": {
+      "x": 329,
+      "y": 4176,
+      "width": 2400,
+      "height": 120,
+      "fontSize": 68,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF"
+    },
+    "copyright": {
+      "x": 1500,
+      "y": 4102,
+      "width": 1437,
+      "height": 120,
+      "fontSize": 68,
+      "align": "right",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "tracking": 40
+    }
+  },
+  "art": {
+    "x": 356,
+    "y": 607,
+    "width": 2552,
+    "height": 1856,
+    "after": "background"
+  }
+}

@@ -3,6 +3,7 @@ package main
 import (
 	"archive/zip"
 	"encoding/json"
+	"io"
 	"os"
 	"path/filepath"
 	"testing"
@@ -93,6 +94,85 @@ func TestWriteBundle(t *testing.T) {
 	}
 	if got != b {
 		t.Errorf("bundle.json = %+v, want %+v", got, b)
+	}
+}
+
+func TestRepackBundle(t *testing.T) {
+	// Build a base bundle with a real layer PNG the manifest references
+	src := t.TempDir()
+	writeFile(t, filepath.Join(src, "manifest.json"),
+		`{"template":"normal","width":10,"height":10,"layers":[{"name":"background","colorVariants":{"any":{"path":"background/any.png"}}}]}`)
+	writeFile(t, filepath.Join(src, "background", "any.png"), "ORIGINAL-PNG-BYTES")
+	base := filepath.Join(t.TempDir(), "base.mimic")
+	if _, err := writeBundle(base, src, Bundle{Format: 1, Template: "normal", Version: "1.0.0", MinEngine: "0.3.0"}); err != nil {
+		t.Fatal(err)
+	}
+
+	// Repack it with an edited manifest that still points at the same PNG
+	edited := []byte(`{"template":"normal","width":20,"height":20,"layers":[{"name":"background","colorVariants":{"any":{"path":"background/any.png"}}}]}`)
+	m, err := validateManifestBytes(edited)
+	if err != nil {
+		t.Fatal(err)
+	}
+	out := filepath.Join(t.TempDir(), "repacked.mimic")
+	if _, err := repackBundle(out, base, edited, m, Bundle{Format: 1, Template: "normal", Version: "1.1.0", MinEngine: "0.3.0"}); err != nil {
+		t.Fatal(err)
+	}
+
+	zr, err := zip.OpenReader(out)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer zr.Close()
+
+	got := map[string]string{}
+	for _, f := range zr.File {
+		rc, err := f.Open()
+		if err != nil {
+			t.Fatal(err)
+		}
+		data, _ := io.ReadAll(rc)
+		rc.Close()
+		got[f.Name] = string(data)
+	}
+
+	// The PNG is carried over byte-for-byte from the base bundle
+	if got["background/any.png"] != "ORIGINAL-PNG-BYTES" {
+		t.Errorf("carried PNG = %q, want the original bytes", got["background/any.png"])
+	}
+	// The manifest is the edited one
+	if got["manifest.json"] != string(edited) {
+		t.Error("repacked manifest should be the edited one")
+	}
+	// The header carries the new version
+	var b Bundle
+	if err := json.Unmarshal([]byte(got["bundle.json"]), &b); err != nil {
+		t.Fatal(err)
+	}
+	if b.Version != "1.1.0" {
+		t.Errorf("version = %q, want 1.1.0", b.Version)
+	}
+}
+
+func TestRepackRejectsMissingLayer(t *testing.T) {
+	src := t.TempDir()
+	writeFile(t, filepath.Join(src, "manifest.json"),
+		`{"template":"normal","width":10,"height":10,"layers":[{"name":"background","colorVariants":{"any":{"path":"background/any.png"}}}]}`)
+	writeFile(t, filepath.Join(src, "background", "any.png"), "PNG")
+	base := filepath.Join(t.TempDir(), "base.mimic")
+	if _, err := writeBundle(base, src, Bundle{Format: 1, Template: "normal", Version: "1.0.0"}); err != nil {
+		t.Fatal(err)
+	}
+
+	// Edited manifest points at a PNG the base bundle does not contain
+	edited := []byte(`{"template":"normal","width":10,"height":10,"layers":[{"name":"crown","colorVariants":{"any":{"path":"crown/any.png"}}}]}`)
+	m, err := validateManifestBytes(edited)
+	if err != nil {
+		t.Fatal(err)
+	}
+	out := filepath.Join(t.TempDir(), "bad.mimic")
+	if _, err := repackBundle(out, base, edited, m, Bundle{Format: 1, Template: "normal", Version: "1.1.0"}); err == nil {
+		t.Fatal("expected repack to reject a manifest referencing a missing PNG")
 	}
 }
 

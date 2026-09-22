@@ -1,10 +1,12 @@
 name: release-please
 
 # release-please watches main for conventional commits and keeps one release
-# pull request open per template. Merging that pull request creates the tag and
-# an empty GitHub Release; the maintainer then builds the bundle locally and
-# uploads it to that release, since the source PSDs are too large to live in git
-# or run through CI. See the Makefile's release target.
+# pull request open per template. Merging that pull request bumps the template's
+# bundle.json, creates its tag, and an empty GitHub Release. The bundle job then
+# repacks a bundle from the previous release's PNGs plus the edited manifest and
+# uploads it, so a routine manifest change ships without the source PSD. A brand
+# new template's first release is bootstrapped locally (see the Makefile), since
+# there is no previous bundle to carry PNGs from.
 on:
   push:
     branches: [main]
@@ -13,11 +15,71 @@ permissions:
   contents: write
   pull-requests: write
 
+# Serialize release runs so the index.json commit from one cannot race another
+concurrency:
+  group: release-please
+  cancel-in-progress: false
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      paths_released: ${{ steps.release.outputs.paths_released }}
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+
+  bundle:
+    needs: release-please
+    if: needs.release-please.outputs.releases_created == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache-dependency-path: go.sum
+
+      - name: Repack and upload each released template
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PATHS: ${{ needs.release-please.outputs.paths_released }}
+        run: |
+          mkdir -p build
+          for path in $(echo "$PATHS" | jq -r '.[]'); do
+            name="${path#templates/}"
+            version="$(jq -r .version "templates/$name/bundle.json")"
+            tag="$name/$version"
+            prev="$(jq -r --arg n "$name" '.templates[]|select(.name==$n)|.versions[0].url // empty' index.json)"
+            if [ -z "$prev" ]; then
+              echo "::error::no previous bundle for $name in index.json; bootstrap its first release locally (make pack + gh release create)"
+              exit 1
+            fi
+            echo "repacking $tag from $prev"
+            go run ./tools/pack -from-bundle "$prev" -manifest "templates/$name/manifest.json" \
+              -version "$version" -o "build/$name.mimic"
+            gh release upload "$tag" "build/$name.mimic" --clobber
+          done
+
+      - name: Rebuild index.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: go run ./tools/reindex -o index.json
+
+      - name: Commit index.json
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add index.json
+          git commit -m "chore: reindex templates" || exit 0
+          git push origin main

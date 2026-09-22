@@ -1,19 +1,22 @@
-// Command pack wraps a loose extracted template directory into a single
-// versioned .mimic bundle. A .mimic file is a zip archive: bundle.json and
-// manifest.json at the root, then one directory of layer PNGs per layer group,
-// mirroring the on-disk layout the extractor writes and the engine reads.
+// Command pack builds a versioned .mimic bundle. A .mimic file is a zip archive:
+// bundle.json and manifest.json at the root, then one directory of layer PNGs
+// per layer group, mirroring the on-disk layout the engine reads.
 //
-// Usage:
+// It has two modes:
 //
-//	pack <dir> -version 1.2.0                 write <dir>/../<template>.mimic
-//	pack <dir> -version 1.2.0 -o out.mimic    write to an explicit path
-//	pack <dir> -version 1.2.0 -min-engine 0.3.0
+//	pack <dir> -version 1.2.0
+//	    Bootstrap mode. Reads the manifest and layer PNGs from a loose extracted
+//	    directory. Used once per template, or when the art is re-cut from the PSD.
 //
-// pack imports the engine's template package to validate the manifest the same
-// way the running engine will, so a bundle that packs cannot fail to load for a
-// reason pack could have caught. minEngine defaults to the engine version this
-// repo's go.mod pins, so a bundle never claims to need an engine newer or older
-// than the one it was built against unless -min-engine says so.
+//	pack -from-bundle prev.mimic -manifest templates/normal/manifest.json -version 1.3.0
+//	    Repack mode. Carries the layer PNGs over from a previous bundle and pairs
+//	    them with a hand-edited manifest. The bundle can be a local path or an
+//	    https URL. This is the routine path: the manifest is the source of truth
+//	    and the PNGs are stable, so a version usually differs only in its manifest.
+//
+// pack imports the engine's template package and validates the manifest the same
+// way the running engine will, so a bundle that packs is one the engine accepts.
+// minEngine defaults to the engine version this repo's go.mod pins.
 package main
 
 import (
@@ -21,9 +24,13 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
+	"time"
 
 	"github.com/odevine/mimic/engine/template"
 )
@@ -63,31 +70,55 @@ func run() error {
 	fs := flag.NewFlagSet("pack", flag.ExitOnError)
 	version := fs.String("version", "", "template semver to stamp into bundle.json (required)")
 	minEngine := fs.String("min-engine", "", "minimum engine version; empty derives it from go.mod")
-	out := fs.String("o", "", "output .mimic path; empty writes <template>.mimic beside the source directory")
+	out := fs.String("o", "", "output .mimic path; empty writes <template>.mimic beside the source")
 	goMod := fs.String("go-mod", "go.mod", "go.mod to read the engine version from when -min-engine is empty")
+	fromBundle := fs.String("from-bundle", "", "previous .mimic (path or https URL) to carry PNGs from; enables repack mode")
+	manifestPath := fs.String("manifest", "", "manifest.json to pack; required with -from-bundle")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
-
 	if dir == "" && fs.NArg() == 1 {
 		dir = fs.Arg(0)
-	}
-	if dir == "" {
-		return fmt.Errorf("expected one source directory argument")
 	}
 	if *version == "" {
 		return fmt.Errorf("-version is required")
 	}
 
-	// Validate through the engine's own reader so a bundle that packs is one
-	// the engine will accept, and read the template name from the manifest so
-	// the bundle header and its filename cannot disagree with its contents
-	m, err := template.NewFSAssetProvider(dir).Manifest()
-	if err != nil {
-		return fmt.Errorf("validating manifest in %q: %w", dir, err)
+	repack := *fromBundle != ""
+
+	// Resolve the manifest the same way in both modes: through the engine's own
+	// reader, so a bundle that packs is one the engine will accept, and read the
+	// template name from it so the header and filename cannot disagree with the
+	// contents. In repack mode the manifest is the hand-edited tracked file; in
+	// bootstrap mode it is the one in the loose directory
+	var (
+		m             *template.Manifest
+		manifestBytes []byte
+		err           error
+	)
+	if repack {
+		if *manifestPath == "" {
+			return fmt.Errorf("-manifest is required with -from-bundle")
+		}
+		manifestBytes, err = os.ReadFile(*manifestPath)
+		if err != nil {
+			return err
+		}
+		m, err = validateManifestBytes(manifestBytes)
+		if err != nil {
+			return fmt.Errorf("validating %q: %w", *manifestPath, err)
+		}
+	} else {
+		if dir == "" {
+			return fmt.Errorf("expected a source directory argument or -from-bundle")
+		}
+		m, err = template.NewFSAssetProvider(dir).Manifest()
+		if err != nil {
+			return fmt.Errorf("validating manifest in %q: %w", dir, err)
+		}
 	}
 	if m.Template == "" {
-		return fmt.Errorf("manifest in %q has no template name", dir)
+		return fmt.Errorf("manifest has no template name")
 	}
 
 	minEng := *minEngine
@@ -107,10 +138,19 @@ func run() error {
 
 	outPath := *out
 	if outPath == "" {
-		outPath = filepath.Join(filepath.Dir(filepath.Clean(dir)), m.Template+".mimic")
+		base := dir
+		if repack {
+			base = *fromBundle
+		}
+		outPath = filepath.Join(filepath.Dir(filepath.Clean(base)), m.Template+".mimic")
 	}
 
-	n, err := writeBundle(outPath, dir, bundle)
+	var n int
+	if repack {
+		n, err = repackBundle(outPath, *fromBundle, manifestBytes, m, bundle)
+	} else {
+		n, err = writeBundle(outPath, dir, bundle)
+	}
 	if err != nil {
 		return err
 	}
@@ -119,11 +159,11 @@ func run() error {
 	return nil
 }
 
-// writeBundle writes the .mimic zip at outPath: bundle.json first, then every
-// file under dir except a stray bundle.json and dotfiles. PNGs are stored
-// uncompressed because their pixel data is already DEFLATE-compressed inside
-// the PNG, so zipping them again costs CPU on every read and saves nothing and
-// keeps each entry cheaply seekable. JSON is deflated. Returns the entry count
+// writeBundle writes a .mimic zip from a loose directory: bundle.json first,
+// then every file under dir except a stray bundle.json and dotfiles. PNGs are
+// stored uncompressed because their pixel data is already DEFLATE-compressed
+// inside the PNG, so zipping it again spends CPU on every read for no size gain
+// and keeps each entry cheaply seekable. JSON is deflated. Returns the entry count
 func writeBundle(outPath, dir string, b Bundle) (int, error) {
 	f, err := os.Create(outPath)
 	if err != nil {
@@ -184,6 +224,174 @@ func writeBundle(outPath, dir string, b Bundle) (int, error) {
 		return 0, err
 	}
 	return entries, nil
+}
+
+// repackBundle writes a new bundle that carries the PNG entries over from a
+// previous bundle verbatim and pairs them with a fresh manifest and header. The
+// PNGs never change on a manifest-only release, so copying them raw avoids
+// re-reading and re-compressing a couple hundred MB. It then checks that every
+// PNG the new manifest points at is actually present, so a manifest edit that
+// references a missing layer fails here rather than at render time
+func repackBundle(outPath, fromBundle string, manifestBytes []byte, m *template.Manifest, b Bundle) (int, error) {
+	zr, closeSrc, err := openBundle(fromBundle)
+	if err != nil {
+		return 0, err
+	}
+	defer closeSrc()
+
+	f, err := os.Create(outPath)
+	if err != nil {
+		return 0, err
+	}
+	defer f.Close()
+
+	zw := zip.NewWriter(f)
+	entries := 0
+
+	header, err := json.MarshalIndent(b, "", "  ")
+	if err != nil {
+		return 0, err
+	}
+	if err := writeEntry(zw, "bundle.json", zip.Deflate, header); err != nil {
+		return 0, err
+	}
+	entries++
+	if err := writeEntry(zw, "manifest.json", zip.Deflate, manifestBytes); err != nil {
+		return 0, err
+	}
+	entries++
+
+	// Copy every carried entry as stored raw bytes, preserving each entry's own
+	// compression method without decompressing and re-compressing it
+	carried := map[string]bool{}
+	for _, src := range zr.File {
+		if src.Name == "bundle.json" || src.Name == "manifest.json" {
+			continue
+		}
+		fh := src.FileHeader
+		w, err := zw.CreateRaw(&fh)
+		if err != nil {
+			zw.Close()
+			return 0, err
+		}
+		rc, err := src.OpenRaw()
+		if err != nil {
+			zw.Close()
+			return 0, err
+		}
+		if _, err := io.Copy(w, rc); err != nil {
+			zw.Close()
+			return 0, err
+		}
+		carried[src.Name] = true
+		entries++
+	}
+
+	if missing := missingLayers(m, carried); len(missing) > 0 {
+		zw.Close()
+		return 0, fmt.Errorf("manifest references %d layer PNG(s) not in %s:\n  %s",
+			len(missing), fromBundle, strings.Join(missing, "\n  "))
+	}
+
+	if err := zw.Close(); err != nil {
+		return 0, err
+	}
+	return entries, nil
+}
+
+// missingLayers returns the layer PNG paths the manifest points at that are not
+// among the carried entries, sorted for a stable error message
+func missingLayers(m *template.Manifest, carried map[string]bool) []string {
+	var missing []string
+	for _, layer := range m.Layers {
+		for _, variant := range layer.ColorVariants {
+			if !carried[variant.Path] {
+				missing = append(missing, variant.Path)
+			}
+		}
+	}
+	sort.Strings(missing)
+	return missing
+}
+
+// openBundle opens a .mimic for reading from a local path or an https URL,
+// returning the zip reader and a cleanup. A URL is downloaded to a temp file
+// first, because a zip reader needs random access to the central directory at
+// the end of the archive
+func openBundle(src string) (*zip.Reader, func(), error) {
+	if strings.HasPrefix(src, "http://") || strings.HasPrefix(src, "https://") {
+		path, err := downloadTemp(src)
+		if err != nil {
+			return nil, nil, err
+		}
+		zr, closeFile, err := openBundleFile(path)
+		if err != nil {
+			os.Remove(path)
+			return nil, nil, err
+		}
+		return zr, func() { closeFile(); os.Remove(path) }, nil
+	}
+	return openBundleFile(src)
+}
+
+func openBundleFile(path string) (*zip.Reader, func(), error) {
+	f, err := os.Open(path)
+	if err != nil {
+		return nil, nil, err
+	}
+	info, err := f.Stat()
+	if err != nil {
+		f.Close()
+		return nil, nil, err
+	}
+	zr, err := zip.NewReader(f, info.Size())
+	if err != nil {
+		f.Close()
+		return nil, nil, fmt.Errorf("reading %q as a zip: %w", path, err)
+	}
+	return zr, func() { f.Close() }, nil
+}
+
+// downloadTemp fetches url to a temp file and returns its path
+func downloadTemp(url string) (string, error) {
+	client := &http.Client{Timeout: 10 * time.Minute}
+	resp, err := client.Get(url)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("downloading %s: %s", url, resp.Status)
+	}
+	tmp, err := os.CreateTemp("", "pack-*.mimic")
+	if err != nil {
+		return "", err
+	}
+	if _, err := io.Copy(tmp, resp.Body); err != nil {
+		tmp.Close()
+		os.Remove(tmp.Name())
+		return "", err
+	}
+	if err := tmp.Close(); err != nil {
+		os.Remove(tmp.Name())
+		return "", err
+	}
+	return tmp.Name(), nil
+}
+
+// validateManifestBytes runs the engine's own manifest reader against raw bytes
+// by staging them where FSAssetProvider expects, so repack rejects a manifest
+// the engine would reject
+func validateManifestBytes(raw []byte) (*template.Manifest, error) {
+	dir, err := os.MkdirTemp("", "pack-manifest-")
+	if err != nil {
+		return nil, err
+	}
+	defer os.RemoveAll(dir)
+	if err := os.WriteFile(filepath.Join(dir, "manifest.json"), raw, 0o644); err != nil {
+		return nil, err
+	}
+	return template.NewFSAssetProvider(dir).Manifest()
 }
 
 // writeEntry adds one file to the zip with an explicit compression method

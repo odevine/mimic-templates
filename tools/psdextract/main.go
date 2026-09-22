@@ -1,16 +1,21 @@
 // Command psdextract converts a Proxyshop-style card template PSD into the
 // Manifest JSON and PNG layer assets the engine's template package consumes.
-// It is an internal, single-user dev tool: run it once per template, by hand,
-// against a local PSD, then it has no further reason to run.
+// It is a bootstrap tool: run it once when adding a template to seed the
+// manifest and layer PNGs, then the manifest becomes the tracked source of
+// truth that a contributor hand-tunes. The PSD bounds are only a starting
+// point, so routine releases repack a bundle from the tracked manifest and
+// never re-run this tool. It runs again only to re-cut the art from a changed
+// PSD, where -png-only leaves the tuned manifest alone.
 //
 // Usage:
 //
-//	psdextract -template normal            extract using the normal recipe
-//	psdextract -template normal -psd x.psd override the recipe's source file
-//	psdextract -template normal -inspect   print the PSD layer tree, extract nothing
+//	psdextract -template normal              seed manifest.json and layer PNGs
+//	psdextract -template normal -psd x.psd   override the recipe's source PSD
+//	psdextract -template normal -png-only    rewrite PNGs, keep the tuned manifest
+//	psdextract -template normal -inspect     print the PSD layer tree, extract nothing
 //
-// The -psd path is resolved against -assets when relative. Output lands in
-// <assets>/<template>/.
+// -psd is used as given; without it the source is <assets>/<recipe source file>.
+// Output lands in <assets>/<template>/
 package main
 
 import (
@@ -36,8 +41,12 @@ func run() error {
 	assets := flag.String("assets", "assets", "output root; extraction writes <assets>/<template>/")
 	inspect := flag.Bool("inspect", false, "print the PSD layer tree and exit without extracting")
 	manifestOnly := flag.Bool("manifest-only", false, "regenerate manifest.json only, reusing existing PNGs (fast, skips pixel decode)")
+	pngOnly := flag.Bool("png-only", false, "regenerate layer PNGs only, leaving a hand-tuned manifest.json untouched (for an art re-cut)")
 	flag.Parse()
 
+	if *manifestOnly && *pngOnly {
+		return fmt.Errorf("-manifest-only and -png-only are mutually exclusive")
+	}
 	if *name == "" {
 		return fmt.Errorf("-template is required; known: %v", recipes.Names())
 	}
@@ -55,11 +64,13 @@ func run() error {
 		return extract.Inspect(src, os.Stdout)
 	}
 
-	sum, err := extract.Extract(src, r, *assets, !*manifestOnly)
+	writeAssets := !*manifestOnly
+	writeManifestFile := !*pngOnly
+	sum, err := extract.Extract(src, r, *assets, writeAssets, writeManifestFile)
 	if err != nil {
 		return err
 	}
-	printSummary(sum, !*manifestOnly)
+	printSummary(sum, writeAssets)
 	return nil
 }
 
