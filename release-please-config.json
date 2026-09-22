@@ -14,7 +14,7 @@
       "release-type": "simple",
       "component": "normal",
       "extra-files": [
-        { "type": "json", "path": "templates/normal/bundle.json", "jsonpath": "$.version" }
+        { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
       ]
     }
   }
