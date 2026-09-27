@@ -3,7 +3,7 @@ module github.com/odevine/mimic-templates
 go 1.26.2
 
 require (
-	github.com/odevine/mimic/engine v0.5.0
+	github.com/odevine/mimic/engine v0.10.0
 	github.com/oov/psd v0.0.0-20260818185439-a5d50ec0acac
 )
 
