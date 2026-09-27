@@ -104,7 +104,7 @@ bundle, which is where a repack reads them from.
 
 release-please owns versioning and tagging. Each template is a component, so a
 conventional-commit history produces a per-template release pull request and a
-tag like `normal/1.2.0`.
+tag like `normal/v1.2.0`.
 
 **Routine release (a manifest change).** Edit `templates/<name>/manifest.json`,
 commit with a conventional message, and open a PR. When the release PR
@@ -120,7 +120,7 @@ carry PNGs from, so the first bundle is built locally from the PSD:
 2. `make extract TEMPLATE=<name>` seeds `manifest.json` and the PNGs, then tune
    the manifest.
 3. `make pack TEMPLATE=<name>` builds the bundle.
-4. `gh release create <name>/<version> build/<name>.mimic` publishes it, then run
+4. `gh release create <name>/v<version> build/<name>.mimic` publishes it, then run
    the `index` workflow to catalog it.
 
 After that first release, the template follows the routine path.
@@ -151,7 +151,7 @@ its SHA-256, and renders from the cache. Rendering never reads from the network.
         {
           "version": "1.2.0",
           "minEngine": "0.3.0",
-          "url": "https://github.com/odevine/mimic-templates/releases/download/normal/1.2.0/normal.mimic",
+          "url": "https://github.com/odevine/mimic-templates/releases/download/normal/v1.2.0/normal.mimic",
           "size": 208412672,
           "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }

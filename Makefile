@@ -50,5 +50,5 @@ repack:
 # Routine releases run in CI; this is the manual path, for a first release or a
 # release cut from your machine.
 release:
-	gh release upload $(TEMPLATE)/$(VERSION) build/$(TEMPLATE).mimic --clobber
+	gh release upload $(TEMPLATE)/v$(VERSION) build/$(TEMPLATE).mimic --clobber
 	gh workflow run index.yml

@@ -59,7 +59,7 @@ jobs:
           for path in $(echo "$PATHS" | jq -r '.[]'); do
             name="${path#templates/}"
             version="$(jq -r .version "templates/$name/bundle.json")"
-            tag="$name/$version"
+            tag="$name/v$version"
             prev="$(jq -r --arg n "$name" '.templates[]|select(.name==$n)|.versions[0].url // empty' index.json)"
             if [ -z "$prev" ]; then
               echo "::error::no previous bundle for $name in index.json; bootstrap its first release locally (make pack + gh release create)"
