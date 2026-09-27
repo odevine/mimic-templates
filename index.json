@@ -3,8 +3,15 @@
   "templates": [
     {
       "name": "normal",
-      "latest": "0.2.0",
+      "latest": "0.3.0",
       "versions": [
+        {
+          "version": "0.3.0",
+          "minEngine": "0.10.0",
+          "url": "https://github.com/odevine/mimic-templates/releases/download/normal/v0.3.0/normal.mimic",
+          "size": 208308054,
+          "sha256": "efd0f0b8bde664881f4b0bd396c7d824304b11bf86bbb402999aa1d797f72919"
+        },
         {
           "version": "0.2.0",
           "minEngine": "0.5.0",
