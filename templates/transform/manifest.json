@@ -1,0 +1,1018 @@
+{
+  "template": "transform",
+  "width": 3264,
+  "height": 4440,
+  "layers": [
+    {
+      "name": "background_front",
+      "condition": "front",
+      "colorSlot": "background",
+      "colorVariants": {
+        "artifact": {
+          "path": "background_front/artifact.png"
+        },
+        "b": {
+          "path": "background_front/b.png"
+        },
+        "bg": {
+          "path": "background_front/bg.png"
+        },
+        "br": {
+          "path": "background_front/br.png"
+        },
+        "colorless": {
+          "path": "background_front/colorless.png"
+        },
+        "g": {
+          "path": "background_front/g.png"
+        },
+        "gold": {
+          "path": "background_front/gold.png"
+        },
+        "land": {
+          "path": "background_front/land.png"
+        },
+        "r": {
+          "path": "background_front/r.png"
+        },
+        "rg": {
+          "path": "background_front/rg.png"
+        },
+        "u": {
+          "path": "background_front/u.png"
+        },
+        "ub": {
+          "path": "background_front/ub.png"
+        },
+        "ug": {
+          "path": "background_front/ug.png"
+        },
+        "ur": {
+          "path": "background_front/ur.png"
+        },
+        "vehicle": {
+          "path": "background_front/vehicle.png"
+        },
+        "w": {
+          "path": "background_front/w.png"
+        },
+        "wb": {
+          "path": "background_front/wb.png"
+        },
+        "wg": {
+          "path": "background_front/wg.png"
+        },
+        "wr": {
+          "path": "background_front/wr.png"
+        },
+        "wu": {
+          "path": "background_front/wu.png"
+        }
+      }
+    },
+    {
+      "name": "background_back",
+      "condition": "back",
+      "colorSlot": "background",
+      "colorVariants": {
+        "artifact": {
+          "path": "background_back/artifact.png"
+        },
+        "b": {
+          "path": "background_back/b.png"
+        },
+        "bg": {
+          "path": "background_back/bg.png"
+        },
+        "br": {
+          "path": "background_back/br.png"
+        },
+        "colorless": {
+          "path": "background_back/colorless.png"
+        },
+        "g": {
+          "path": "background_back/g.png"
+        },
+        "gold": {
+          "path": "background_back/gold.png"
+        },
+        "land": {
+          "path": "background_back/land.png"
+        },
+        "r": {
+          "path": "background_back/r.png"
+        },
+        "rg": {
+          "path": "background_back/rg.png"
+        },
+        "u": {
+          "path": "background_back/u.png"
+        },
+        "ub": {
+          "path": "background_back/ub.png"
+        },
+        "ug": {
+          "path": "background_back/ug.png"
+        },
+        "ur": {
+          "path": "background_back/ur.png"
+        },
+        "vehicle": {
+          "path": "background_back/vehicle.png"
+        },
+        "w": {
+          "path": "background_back/w.png"
+        },
+        "wb": {
+          "path": "background_back/wb.png"
+        },
+        "wg": {
+          "path": "background_back/wg.png"
+        },
+        "wr": {
+          "path": "background_back/wr.png"
+        },
+        "wu": {
+          "path": "background_back/wu.png"
+        }
+      },
+      "mirror": {
+        "condition": "icon_right"
+      }
+    },
+    {
+      "name": "shadows_front",
+      "condition": "front",
+      "colorVariants": {
+        "any": {
+          "path": "shadows_front/any.png"
+        }
+      }
+    },
+    {
+      "name": "shadows_back",
+      "condition": "back",
+      "colorVariants": {
+        "any": {
+          "path": "shadows_back/any.png"
+        }
+      }
+    },
+    {
+      "name": "hollow_crown_shadow",
+      "condition": "hollow_crown",
+      "colorVariants": {
+        "any": {
+          "path": "hollow_crown_shadow/any.png"
+        }
+      }
+    },
+    {
+      "name": "land_pinlines_textbox_front",
+      "condition": "front,land",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "land": {
+          "path": "land_pinlines_textbox_front/land.png"
+        }
+      }
+    },
+    {
+      "name": "land_pinlines_textbox_back",
+      "condition": "back,land",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "b": {
+          "path": "land_pinlines_textbox_back/b.png"
+        },
+        "bg": {
+          "path": "land_pinlines_textbox_back/bg.png"
+        },
+        "br": {
+          "path": "land_pinlines_textbox_back/br.png"
+        },
+        "g": {
+          "path": "land_pinlines_textbox_back/g.png"
+        },
+        "gold": {
+          "path": "land_pinlines_textbox_back/gold.png"
+        },
+        "land": {
+          "path": "land_pinlines_textbox_back/land.png"
+        },
+        "r": {
+          "path": "land_pinlines_textbox_back/r.png"
+        },
+        "rg": {
+          "path": "land_pinlines_textbox_back/rg.png"
+        },
+        "u": {
+          "path": "land_pinlines_textbox_back/u.png"
+        },
+        "ub": {
+          "path": "land_pinlines_textbox_back/ub.png"
+        },
+        "ug": {
+          "path": "land_pinlines_textbox_back/ug.png"
+        },
+        "ur": {
+          "path": "land_pinlines_textbox_back/ur.png"
+        },
+        "w": {
+          "path": "land_pinlines_textbox_back/w.png"
+        },
+        "wb": {
+          "path": "land_pinlines_textbox_back/wb.png"
+        },
+        "wg": {
+          "path": "land_pinlines_textbox_back/wg.png"
+        },
+        "wr": {
+          "path": "land_pinlines_textbox_back/wr.png"
+        },
+        "wu": {
+          "path": "land_pinlines_textbox_back/wu.png"
+        }
+      },
+      "mirror": {
+        "condition": "icon_right",
+        "y": 260,
+        "width": 1632,
+        "height": 360
+      }
+    },
+    {
+      "name": "pinlines_textbox_front",
+      "condition": "front,nonland",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_textbox_front/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_textbox_front/b.png"
+        },
+        "bg": {
+          "path": "pinlines_textbox_front/bg.png"
+        },
+        "br": {
+          "path": "pinlines_textbox_front/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_textbox_front/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_textbox_front/g.png"
+        },
+        "gold": {
+          "path": "pinlines_textbox_front/gold.png"
+        },
+        "r": {
+          "path": "pinlines_textbox_front/r.png"
+        },
+        "rg": {
+          "path": "pinlines_textbox_front/rg.png"
+        },
+        "u": {
+          "path": "pinlines_textbox_front/u.png"
+        },
+        "ub": {
+          "path": "pinlines_textbox_front/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_textbox_front/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_textbox_front/ur.png"
+        },
+        "w": {
+          "path": "pinlines_textbox_front/w.png"
+        },
+        "wb": {
+          "path": "pinlines_textbox_front/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_textbox_front/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_textbox_front/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_textbox_front/wu.png"
+        }
+      }
+    },
+    {
+      "name": "pinlines_textbox_back",
+      "condition": "back,nonland",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_textbox_back/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_textbox_back/b.png"
+        },
+        "bg": {
+          "path": "pinlines_textbox_back/bg.png"
+        },
+        "br": {
+          "path": "pinlines_textbox_back/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_textbox_back/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_textbox_back/g.png"
+        },
+        "gold": {
+          "path": "pinlines_textbox_back/gold.png"
+        },
+        "r": {
+          "path": "pinlines_textbox_back/r.png"
+        },
+        "rg": {
+          "path": "pinlines_textbox_back/rg.png"
+        },
+        "u": {
+          "path": "pinlines_textbox_back/u.png"
+        },
+        "ub": {
+          "path": "pinlines_textbox_back/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_textbox_back/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_textbox_back/ur.png"
+        },
+        "w": {
+          "path": "pinlines_textbox_back/w.png"
+        },
+        "wb": {
+          "path": "pinlines_textbox_back/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_textbox_back/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_textbox_back/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_textbox_back/wu.png"
+        }
+      },
+      "mirror": {
+        "condition": "icon_right",
+        "y": 260,
+        "width": 1632,
+        "height": 360
+      }
+    },
+    {
+      "name": "legendary_crown",
+      "condition": "legendary",
+      "colorSlot": "crown",
+      "colorVariants": {
+        "artifact": {
+          "path": "legendary_crown/artifact.png"
+        },
+        "b": {
+          "path": "legendary_crown/b.png"
+        },
+        "bg": {
+          "path": "legendary_crown/bg.png"
+        },
+        "br": {
+          "path": "legendary_crown/br.png"
+        },
+        "colorless": {
+          "path": "legendary_crown/colorless.png"
+        },
+        "g": {
+          "path": "legendary_crown/g.png"
+        },
+        "gold": {
+          "path": "legendary_crown/gold.png"
+        },
+        "land": {
+          "path": "legendary_crown/land.png"
+        },
+        "r": {
+          "path": "legendary_crown/r.png"
+        },
+        "rg": {
+          "path": "legendary_crown/rg.png"
+        },
+        "u": {
+          "path": "legendary_crown/u.png"
+        },
+        "ub": {
+          "path": "legendary_crown/ub.png"
+        },
+        "ug": {
+          "path": "legendary_crown/ug.png"
+        },
+        "ur": {
+          "path": "legendary_crown/ur.png"
+        },
+        "w": {
+          "path": "legendary_crown/w.png"
+        },
+        "wb": {
+          "path": "legendary_crown/wb.png"
+        },
+        "wg": {
+          "path": "legendary_crown/wg.png"
+        },
+        "wr": {
+          "path": "legendary_crown/wr.png"
+        },
+        "wu": {
+          "path": "legendary_crown/wu.png"
+        }
+      }
+    },
+    {
+      "name": "border_front",
+      "condition": "front,nonlegendary",
+      "colorVariants": {
+        "any": {
+          "path": "border_front/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_back",
+      "condition": "back,nonlegendary",
+      "colorVariants": {
+        "any": {
+          "path": "border_back/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_legendary_front",
+      "condition": "front,legendary",
+      "colorVariants": {
+        "any": {
+          "path": "border_legendary_front/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_legendary_back",
+      "condition": "back,legendary",
+      "colorVariants": {
+        "any": {
+          "path": "border_legendary_back/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_fullart",
+      "colorVariants": {
+        "any": {
+          "path": "border_fullart/any.png"
+        }
+      }
+    },
+    {
+      "name": "name_title_boxes_front",
+      "condition": "front",
+      "colorSlot": "twins",
+      "colorVariants": {
+        "artifact": {
+          "path": "name_title_boxes_front/artifact.png"
+        },
+        "b": {
+          "path": "name_title_boxes_front/b.png"
+        },
+        "colorless": {
+          "path": "name_title_boxes_front/colorless.png"
+        },
+        "g": {
+          "path": "name_title_boxes_front/g.png"
+        },
+        "gold": {
+          "path": "name_title_boxes_front/gold.png"
+        },
+        "land": {
+          "path": "name_title_boxes_front/land.png"
+        },
+        "r": {
+          "path": "name_title_boxes_front/r.png"
+        },
+        "u": {
+          "path": "name_title_boxes_front/u.png"
+        },
+        "w": {
+          "path": "name_title_boxes_front/w.png"
+        }
+      }
+    },
+    {
+      "name": "name_title_boxes_back",
+      "condition": "back",
+      "colorSlot": "twins",
+      "colorVariants": {
+        "artifact": {
+          "path": "name_title_boxes_back/artifact.png"
+        },
+        "b": {
+          "path": "name_title_boxes_back/b.png"
+        },
+        "colorless": {
+          "path": "name_title_boxes_back/colorless.png"
+        },
+        "g": {
+          "path": "name_title_boxes_back/g.png"
+        },
+        "gold": {
+          "path": "name_title_boxes_back/gold.png"
+        },
+        "land": {
+          "path": "name_title_boxes_back/land.png"
+        },
+        "r": {
+          "path": "name_title_boxes_back/r.png"
+        },
+        "u": {
+          "path": "name_title_boxes_back/u.png"
+        },
+        "w": {
+          "path": "name_title_boxes_back/w.png"
+        }
+      },
+      "mirror": {
+        "condition": "icon_right",
+        "y": 260,
+        "width": 1632,
+        "height": 360
+      }
+    },
+    {
+      "name": "transform_circle",
+      "colorVariants": {
+        "any": {
+          "path": "transform_circle/any.png"
+        }
+      },
+      "mirror": {
+        "condition": "icon_right"
+      }
+    },
+    {
+      "name": "artifact_overlay",
+      "condition": "clipped",
+      "colorVariants": {
+        "any": {
+          "path": "artifact_overlay/any.png"
+        }
+      }
+    },
+    {
+      "name": "transform_icon_front",
+      "condition": "front",
+      "colorSlot": "transform_icon",
+      "colorVariants": {
+        "compasslanddfc": {
+          "path": "transform_icon_front/compasslanddfc.png"
+        },
+        "convertdfc": {
+          "path": "transform_icon_front/convertdfc.png"
+        },
+        "meld": {
+          "path": "transform_icon_front/meld.png"
+        },
+        "mooneldrazidfc": {
+          "path": "transform_icon_front/mooneldrazidfc.png"
+        },
+        "originpwdfc": {
+          "path": "transform_icon_front/originpwdfc.png"
+        },
+        "sunmoondfc": {
+          "path": "transform_icon_front/sunmoondfc.png"
+        },
+        "upsidedowndfc": {
+          "path": "transform_icon_front/upsidedowndfc.png"
+        }
+      }
+    },
+    {
+      "name": "transform_icon_back",
+      "condition": "back",
+      "colorSlot": "transform_icon",
+      "colorVariants": {
+        "compasslanddfc": {
+          "path": "transform_icon_back/compasslanddfc.png"
+        },
+        "convertdfc": {
+          "path": "transform_icon_back/convertdfc.png"
+        },
+        "fandfc": {
+          "path": "transform_icon_back/fandfc.png"
+        },
+        "meld": {
+          "path": "transform_icon_back/meld.png"
+        },
+        "mooneldrazidfc": {
+          "path": "transform_icon_back/mooneldrazidfc.png"
+        },
+        "originpwdfc": {
+          "path": "transform_icon_back/originpwdfc.png"
+        },
+        "sunmoondfc": {
+          "path": "transform_icon_back/sunmoondfc.png"
+        },
+        "upsidedowndfc": {
+          "path": "transform_icon_back/upsidedowndfc.png"
+        }
+      },
+      "mirror": {
+        "condition": "icon_right"
+      }
+    },
+    {
+      "name": "color_indicator",
+      "condition": "color_indicator",
+      "colorSlot": "indicator",
+      "colorVariants": {
+        "b": {
+          "path": "color_indicator/b.png"
+        },
+        "bg": {
+          "path": "color_indicator/bg.png"
+        },
+        "br": {
+          "path": "color_indicator/br.png"
+        },
+        "g": {
+          "path": "color_indicator/g.png"
+        },
+        "r": {
+          "path": "color_indicator/r.png"
+        },
+        "rg": {
+          "path": "color_indicator/rg.png"
+        },
+        "u": {
+          "path": "color_indicator/u.png"
+        },
+        "ub": {
+          "path": "color_indicator/ub.png"
+        },
+        "ubr": {
+          "path": "color_indicator/ubr.png"
+        },
+        "ug": {
+          "path": "color_indicator/ug.png"
+        },
+        "ur": {
+          "path": "color_indicator/ur.png"
+        },
+        "w": {
+          "path": "color_indicator/w.png"
+        },
+        "wb": {
+          "path": "color_indicator/wb.png"
+        },
+        "wg": {
+          "path": "color_indicator/wg.png"
+        },
+        "wr": {
+          "path": "color_indicator/wr.png"
+        },
+        "wu": {
+          "path": "color_indicator/wu.png"
+        }
+      }
+    },
+    {
+      "name": "divider",
+      "condition": "divider",
+      "colorVariants": {
+        "any": {
+          "path": "divider/any.png"
+        }
+      }
+    },
+    {
+      "name": "pt_box_front",
+      "condition": "front,creature",
+      "colorSlot": "ptBox",
+      "colorVariants": {
+        "artifact": {
+          "path": "pt_box_front/artifact.png"
+        },
+        "b": {
+          "path": "pt_box_front/b.png"
+        },
+        "colorless": {
+          "path": "pt_box_front/colorless.png"
+        },
+        "g": {
+          "path": "pt_box_front/g.png"
+        },
+        "gold": {
+          "path": "pt_box_front/gold.png"
+        },
+        "land": {
+          "path": "pt_box_front/land.png"
+        },
+        "r": {
+          "path": "pt_box_front/r.png"
+        },
+        "u": {
+          "path": "pt_box_front/u.png"
+        },
+        "vehicle": {
+          "path": "pt_box_front/vehicle.png"
+        },
+        "w": {
+          "path": "pt_box_front/w.png"
+        }
+      }
+    },
+    {
+      "name": "pt_box_back",
+      "condition": "back,creature",
+      "colorSlot": "ptBox",
+      "colorVariants": {
+        "artifact": {
+          "path": "pt_box_back/artifact.png"
+        },
+        "b": {
+          "path": "pt_box_back/b.png"
+        },
+        "colorless": {
+          "path": "pt_box_back/colorless.png"
+        },
+        "g": {
+          "path": "pt_box_back/g.png"
+        },
+        "gold": {
+          "path": "pt_box_back/gold.png"
+        },
+        "land": {
+          "path": "pt_box_back/land.png"
+        },
+        "r": {
+          "path": "pt_box_back/r.png"
+        },
+        "u": {
+          "path": "pt_box_back/u.png"
+        },
+        "vehicle": {
+          "path": "pt_box_back/vehicle.png"
+        },
+        "w": {
+          "path": "pt_box_back/w.png"
+        }
+      }
+    }
+  ],
+  "textBoxes": {
+    "title": {
+      "x": 612,
+      "y": 500,
+      "width": 2174,
+      "height": 200,
+      "fontSize": 156,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#000000",
+      "font": "title",
+      "clearOf": "mana",
+      "condition": "front"
+    },
+    "title_back": {
+      "x": 612,
+      "y": 500,
+      "width": 2174,
+      "height": 200,
+      "fontSize": 156,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "title",
+      "clearOf": "mana",
+      "box": "title",
+      "condition": "back"
+    },
+    "mana": {
+      "x": 2047,
+      "y": 506,
+      "width": 866,
+      "height": 200,
+      "fontSize": 179,
+      "minFontSize": 179,
+      "align": "right",
+      "vAlign": "baseline",
+      "color": "#000000",
+      "shadow": {
+        "distance": 0.0907,
+        "angle": 25
+      }
+    },
+    "type": {
+      "x": 385,
+      "y": 2640,
+      "width": 2100,
+      "height": 200,
+      "fontSize": 132,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#000000",
+      "font": "title"
+    },
+    "type_shift": {
+      "x": 514,
+      "y": 2640,
+      "width": 1971,
+      "height": 200,
+      "fontSize": 132,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#000000",
+      "font": "title",
+      "box": "type",
+      "condition": "color_indicator"
+    },
+    "type_back": {
+      "x": 385,
+      "y": 2640,
+      "width": 2100,
+      "height": 200,
+      "fontSize": 132,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "title",
+      "box": "type",
+      "condition": "back"
+    },
+    "type_back_shift": {
+      "x": 514,
+      "y": 2640,
+      "width": 1971,
+      "height": 200,
+      "fontSize": 132,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "title",
+      "box": "type",
+      "condition": "back,color_indicator"
+    },
+    "oracle": {
+      "x": 347,
+      "y": 2750,
+      "width": 2569,
+      "height": 1244,
+      "fontSize": 150,
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1.0,
+      "color": "#000000",
+      "padding": 40,
+      "avoidLayer": "pt_box_front",
+      "clearOf": "flipside_pt",
+      "condition": "front"
+    },
+    "oracle_back": {
+      "x": 347,
+      "y": 2750,
+      "width": 2569,
+      "height": 1244,
+      "fontSize": 150,
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1.0,
+      "color": "#000000",
+      "padding": 40,
+      "avoidLayer": "pt_box_back",
+      "box": "oracle",
+      "condition": "back"
+    },
+    "pt": {
+      "x": 2490,
+      "y": 4020,
+      "width": 474,
+      "height": 200,
+      "fontSize": 159,
+      "align": "center",
+      "vAlign": "baseline",
+      "color": "#000000",
+      "font": "title"
+    },
+    "pt_back": {
+      "x": 2490,
+      "y": 4020,
+      "width": 474,
+      "height": 200,
+      "fontSize": 159,
+      "align": "center",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "title",
+      "box": "pt",
+      "condition": "back"
+    },
+    "flipside_pt": {
+      "x": 2526,
+      "y": 3758,
+      "width": 400,
+      "height": 150,
+      "fontSize": 116,
+      "align": "right",
+      "vAlign": "baseline",
+      "color": "#494949",
+      "font": "title"
+    },
+    "artist": {
+      "x": 730,
+      "y": 4176,
+      "width": 2100,
+      "height": 120,
+      "fontSize": 77,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "small-caps"
+    },
+    "collector": {
+      "x": 327,
+      "y": 4102,
+      "width": 2400,
+      "height": 120,
+      "fontSize": 68,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "tracking": 125,
+      "font": "info"
+    },
+    "set": {
+      "x": 329,
+      "y": 4176,
+      "width": 2400,
+      "height": 120,
+      "fontSize": 68,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "info"
+    },
+    "copyright": {
+      "x": 1500,
+      "y": 4102,
+      "width": 1437,
+      "height": 120,
+      "fontSize": 68,
+      "align": "right",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "tracking": 40,
+      "duckLayer": "pt_box_front",
+      "duckRow": "artist",
+      "condition": "front"
+    },
+    "copyright_back": {
+      "x": 1500,
+      "y": 4102,
+      "width": 1437,
+      "height": 120,
+      "fontSize": 68,
+      "align": "right",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "tracking": 40,
+      "duckLayer": "pt_box_back",
+      "duckRow": "artist",
+      "box": "copyright",
+      "condition": "back"
+    },
+    "title_back_right": {
+      "x": 386,
+      "y": 500,
+      "width": 2300,
+      "height": 200,
+      "fontSize": 156,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#FFFFFF",
+      "font": "title",
+      "clearOf": "mana",
+      "box": "title",
+      "condition": "back,icon_right"
+    }
+  },
+  "art": {
+    "x": 356,
+    "y": 607,
+    "width": 2552,
+    "height": 1856,
+    "after": "background_back"
+  }
+}

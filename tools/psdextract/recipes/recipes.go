@@ -11,7 +11,8 @@ import (
 
 // registry maps a template name to its recipe constructor
 var registry = map[string]func() extract.Recipe{
-	"normal": Normal,
+	"normal":    Normal,
+	"transform": Transform,
 }
 
 // Get returns the recipe for name, and whether it exists

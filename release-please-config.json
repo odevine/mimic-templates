@@ -16,6 +16,13 @@
       "extra-files": [
         { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
       ]
+    },
+    "templates/transform": {
+      "release-type": "simple",
+      "component": "transform",
+      "extra-files": [
+        { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
+      ]
     }
   }
 }

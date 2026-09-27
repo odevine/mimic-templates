@@ -434,6 +434,7 @@
     {
       "name": "color_indicator",
       "condition": "color_indicator",
+      "colorSlot": "indicator",
       "colorVariants": {
         "b": {
           "path": "color_indicator/b.png"
@@ -598,6 +599,19 @@
       "x": 385,
       "y": 2650,
       "width": 2100,
+      "height": 200,
+      "fontSize": 132,
+      "align": "left",
+      "vAlign": "baseline",
+      "color": "#000000",
+      "font": "title"
+    },
+    "type_shift": {
+      "box": "type",
+      "condition": "color_indicator",
+      "x": 514,
+      "y": 2650,
+      "width": 1971,
       "height": 200,
       "fontSize": 132,
       "align": "left",

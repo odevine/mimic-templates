@@ -14,8 +14,10 @@
 //	psdextract -template normal -png-only    rewrite PNGs, keep the tuned manifest
 //	psdextract -template normal -inspect     print the PSD layer tree, extract nothing
 //
-// -psd is used as given; without it the source is <assets>/<recipe source file>.
-// Output lands in <assets>/<template>/
+// -psd is used as given. Without it the source is <psd-dir>/<recipe source
+// file>, and a recipe that reads several sources finds each in <psd-dir>, where
+// -psd does not apply. -psd-dir defaults to <assets>. Output lands in
+// <assets>/<template>/
 package main
 
 import (
@@ -23,6 +25,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"sort"
 
 	"github.com/odevine/mimic-templates/tools/psdextract/extract"
 	"github.com/odevine/mimic-templates/tools/psdextract/recipes"
@@ -39,6 +42,7 @@ func run() error {
 	name := flag.String("template", "", "template recipe name to extract (e.g. normal)")
 	psdPath := flag.String("psd", "", "override the recipe's source PSD path")
 	assets := flag.String("assets", "assets", "output root; extraction writes <assets>/<template>/")
+	psdDir := flag.String("psd-dir", "", "directory holding the recipe's source PSDs; empty means the -assets root")
 	inspect := flag.Bool("inspect", false, "print the PSD layer tree and exit without extracting")
 	manifestOnly := flag.Bool("manifest-only", false, "regenerate manifest.json only, reusing existing PNGs (fast, skips pixel decode)")
 	pngOnly := flag.Bool("png-only", false, "regenerate layer PNGs only, leaving a hand-tuned manifest.json untouched (for an art re-cut)")
@@ -55,18 +59,43 @@ func run() error {
 		return fmt.Errorf("unknown template %q; known: %v", *name, recipes.Names())
 	}
 
-	src := *psdPath
-	if src == "" {
-		src = filepath.Join(*assets, r.SourceFile)
+	dir := *psdDir
+	if dir == "" {
+		dir = *assets
+	}
+	paths := map[string]string{}
+	switch {
+	case len(r.Sources) > 0:
+		if *psdPath != "" && !*inspect {
+			return fmt.Errorf("%s reads several PSDs from -psd-dir, so -psd does not apply", r.Template)
+		}
+		for name, file := range r.Sources {
+			paths[name] = filepath.Join(dir, file)
+		}
+	case *psdPath != "":
+		paths[""] = *psdPath
+	default:
+		paths[""] = filepath.Join(dir, r.SourceFile)
 	}
 
 	if *inspect {
-		return extract.Inspect(src, os.Stdout)
+		if *psdPath != "" {
+			return extract.Inspect(*psdPath, os.Stdout)
+		}
+		for _, name := range sortedNames(paths) {
+			if name != "" {
+				fmt.Printf("== source %s: %s\n", name, paths[name])
+			}
+			if err := extract.Inspect(paths[name], os.Stdout); err != nil {
+				return err
+			}
+		}
+		return nil
 	}
 
 	writeAssets := !*manifestOnly
 	writeManifestFile := !*pngOnly
-	sum, err := extract.Extract(src, r, *assets, writeAssets, writeManifestFile)
+	sum, err := extract.Extract(paths, r, *assets, writeAssets, writeManifestFile)
 	if err != nil {
 		return err
 	}
@@ -89,4 +118,13 @@ func printSummary(s *extract.Summary, wroteAssets bool) {
 			fmt.Printf("  - %s\n", v)
 		}
 	}
+}
+
+func sortedNames(m map[string]string) []string {
+	names := make([]string, 0, len(m))
+	for k := range m {
+		names = append(names, k)
+	}
+	sort.Strings(names)
+	return names
 }

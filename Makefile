@@ -7,7 +7,9 @@
 #   make extract TEMPLATE=normal   seed a new template from its PSD (once)
 #   make assets  TEMPLATE=normal   re-cut just the PNGs from a changed PSD
 #
-# TEMPLATE selects the template; PSD_DIR is where the source PSDs live locally.
+# TEMPLATE selects the template. PSD_DIR is where the source PSDs live locally,
+# and each recipe names its own files there, such as normal.psd, or tf-front.psd
+# and tf-back.psd for transform.
 
 TEMPLATE ?= normal
 PSD_DIR ?= psd
@@ -21,12 +23,12 @@ LATEST_URL = $(shell jq -r --arg n "$(TEMPLATE)" '.templates[]|select(.name==$$n
 # point to hand-tune, and this overwrites any existing one, so use it only when
 # first adding a template.
 extract:
-	go run ./tools/psdextract -template $(TEMPLATE) -assets templates -psd $(PSD_DIR)/$(TEMPLATE).psd
+	go run ./tools/psdextract -template $(TEMPLATE) -assets templates -psd-dir $(PSD_DIR)
 
 # assets re-cuts only the layer PNGs from the PSD, leaving the tuned manifest
 # untouched. Use it when the source art changes.
 assets:
-	go run ./tools/psdextract -template $(TEMPLATE) -assets templates -psd $(PSD_DIR)/$(TEMPLATE).psd -png-only
+	go run ./tools/psdextract -template $(TEMPLATE) -assets templates -psd-dir $(PSD_DIR) -png-only
 
 # pack builds a full bundle from the local templates/$(TEMPLATE)/ directory
 # (tuned manifest plus local PNGs). Used for a template's first release, or after

@@ -81,7 +81,9 @@ repo's releases, recording each bundle's download URL, size, SHA-256, and the
 `tools/psdextract` converts a Proxyshop-style PSD into `manifest.json` and the
 layer PNGs, driven by a per-template recipe under `tools/psdextract/recipes`. It
 is a bootstrap tool: run it once to seed a template, or with `-png-only` to
-re-cut the art while leaving the tuned manifest alone.
+re-cut the art while leaving the tuned manifest alone. A recipe can read more
+than one PSD into a single manifest, which is how `transform` takes its front
+and back faces from `tf-front.psd` and `tf-back.psd`.
 
 ## Repository layout
 
@@ -89,7 +91,7 @@ re-cut the art while leaving the tuned manifest alone.
 templates/<name>/bundle.json     tracked: format, version, minEngine
 templates/<name>/manifest.json    tracked: layout and geometry (the edit surface)
 templates/<name>/<group>/*.png    gitignored: seeded by psdextract, carried in bundles
-psd/<name>.psd                    gitignored: the source PSD (bootstrap only)
+psd/*.psd                         gitignored: the source PSDs (bootstrap only)
 index.json                        the catalog the app fetches
 ```
 
@@ -113,8 +115,8 @@ rebuilds `index.json`. No PSD or local asset set is involved.
 **First release of a new template (bootstrap).** CI has no previous bundle to
 carry PNGs from, so the first bundle is built locally from the PSD:
 
-1. Put the source PSD at `psd/<name>.psd` and add a recipe under
-   `tools/psdextract/recipes`.
+1. Put the source PSD in `psd/` under the name the recipe gives it, and add a
+   recipe under `tools/psdextract/recipes`.
 2. `make extract TEMPLATE=<name>` seeds `manifest.json` and the PNGs, then tune
    the manifest.
 3. `make pack TEMPLATE=<name>` builds the bundle.
