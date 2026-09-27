@@ -20,6 +20,19 @@
           "sha256": "4f688d7ef446325aa0925ca514b2f6069991b69120163798e25fd8a1a59bb8e9"
         }
       ]
+    },
+    {
+      "name": "transform",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "minEngine": "0.10.0",
+          "url": "https://github.com/odevine/mimic-templates/releases/download/transform/v0.1.0/transform.mimic",
+          "size": 229085939,
+          "sha256": "8730ed509a84988101db31aef245b1771c5f02855857736823c910bcb8844361"
+        }
+      ]
     }
   ]
 }
