@@ -1,4 +1,7 @@
-# mimic-templates
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/templates-banner-dark.svg">
+  <img src=".github/templates-banner-light.svg" alt="mimic">
+</picture>
 
 This repo produces the frame templates the [mimic](https://github.com/odevine/mimic)
 app renders cards with. Each template ships as one versioned `.mimic` bundle,
@@ -9,7 +12,7 @@ The rendering engine lives in the mimic repo. This repo holds the producer
 pipeline: the per-template manifests, the packer, the catalog builder, and the
 one-time extraction tool.
 
-## The manifest is the source of truth
+## Manifests and layer PNGs
 
 A template is two things: a `manifest.json` that describes the layout and
 geometry, and a set of layer PNGs. The PNGs come out of a source PSD once and
@@ -18,7 +21,7 @@ only a starting point, and the app needs exact bounds to center text, so the
 real values are tuned in the manifest itself.
 
 So `manifest.json` is tracked and reviewable, and a routine change to a template
-is a manifest edit. The layer PNGs are not regenerated on release; they are
+is a manifest edit. The layer PNGs are not regenerated on release. They are
 carried over from the previous bundle. The extraction tool runs only to seed a
 new template or to re-cut art from a changed PSD.
 
@@ -88,7 +91,7 @@ and back faces from `tf-front.psd` and `tf-back.psd`.
 ## Repository layout
 
 ```
-templates/<name>/bundle.json     tracked: format, version, minEngine
+templates/<name>/bundle.json      tracked: format, version, minEngine
 templates/<name>/manifest.json    tracked: layout and geometry (the edit surface)
 templates/<name>/<group>/*.png    gitignored: seeded by psdextract, carried in bundles
 psd/*.psd                         gitignored: the source PSDs (bootstrap only)
@@ -106,14 +109,14 @@ release-please owns versioning and tagging. Each template is a component, so a
 conventional-commit history produces a per-template release pull request and a
 tag like `normal/v1.2.0`.
 
-**Routine release (a manifest change).** Edit `templates/<name>/manifest.json`,
+**A routine release starts from a manifest change.** Edit `templates/<name>/manifest.json`,
 commit with a conventional message, and open a PR. When the release PR
 release-please opens is merged, CI creates the tag and Release, repacks a bundle
 from the previous release's PNGs plus the edited manifest, uploads it, and
 rebuilds `index.json`. No PSD or local asset set is involved.
 
-**First release of a new template (bootstrap).** CI has no previous bundle to
-carry PNGs from, so the first bundle is built locally from the PSD:
+**A new template's first release is built locally.** CI has no previous bundle
+to carry PNGs from, so the first bundle comes from the PSD:
 
 1. Put the source PSD in `psd/` under the name the recipe gives it, and add a
    recipe under `tools/psdextract/recipes`.
@@ -125,8 +128,8 @@ carry PNGs from, so the first bundle is built locally from the PSD:
 
 After that first release, the template follows the routine path.
 
-**Re-cutting art.** If the source PSD's pixels change, `make assets
-TEMPLATE=<name>` rewrites the PNGs without touching the tuned manifest, then
+**Re-cutting art regenerates the PNGs from the PSD.** If the source PSD's pixels
+change, `make assets TEMPLATE=<name>` rewrites the PNGs without touching the tuned manifest, then
 `make pack` builds a bundle to release.
 
 Adding a template is one entry in `.release-please-manifest.json`, one package
