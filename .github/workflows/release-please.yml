@@ -27,9 +27,12 @@ jobs:
       releases_created: ${{ steps.release.outputs.releases_created }}
       paths_released: ${{ steps.release.outputs.paths_released }}
     steps:
+      # A personal access token rather than GITHUB_TOKEN, so the release pull
+      # request and the tag it pushes still trigger CI
       - uses: googleapis/release-please-action@v5
         id: release
         with:
+          token: ${{ secrets.MIMIC_RELEASE_PLEASE_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
@@ -49,6 +52,13 @@ jobs:
         with:
           go-version-file: go.mod
           cache-dependency-path: go.sum
+
+      # CI on the release commit runs alongside this job rather than gating it, so
+      # the tools are checked here before a bundle they build is published
+      - name: Vet and test
+        run: |
+          go vet ./...
+          go test ./...
 
       - name: Repack and upload each released template
         env:
