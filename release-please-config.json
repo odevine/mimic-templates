@@ -20,6 +20,7 @@
     "templates/transform": {
       "release-type": "simple",
       "component": "transform",
+      "last-release-sha": "9533bdb390636ed6ef8d4cbfcbd74b2a19048350",
       "extra-files": [
         { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
       ]
