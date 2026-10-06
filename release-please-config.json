@@ -28,7 +28,7 @@
     "templates/split": {
       "release-type": "simple",
       "component": "split",
-      "last-release-sha": "459b61200a138d2b0d9459b0b54e87af19de0de8",
+      "last-release-sha": "6ffa8fc04e310a732bf7d6522de66bf5024bcbb0",
       "extra-files": [
         { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
       ]
