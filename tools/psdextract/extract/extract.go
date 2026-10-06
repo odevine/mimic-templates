@@ -3,6 +3,7 @@ package extract
 import (
 	"encoding/json"
 	"fmt"
+	"image"
 	"image/png"
 	"os"
 	"path/filepath"
@@ -62,11 +63,13 @@ func Extract(paths map[string]string, r Recipe, outRoot string, writeAssets, wri
 	}
 
 	sum := &Summary{Template: r.Template}
-	m := template.Manifest{
+	m := manifest{
 		Template:  r.Template,
-		TextBoxes: map[string]template.TextBoxSpec{},
+		DPI:       r.DPI,
+		Rotate:    r.Rotate,
+		TextBoxes: map[string]textBoxSpec{},
 	}
-	layers := make([]template.LayerSpec, len(r.Layers))
+	layers := make([][]layerSpec, len(r.Layers))
 	for _, src := range sources {
 		path, ok := paths[src]
 		if !ok {
@@ -84,6 +87,13 @@ func Extract(paths map[string]string, r Recipe, outRoot string, writeAssets, wri
 			return nil, fmt.Errorf("source %q is %dx%d, the others %dx%d", src, w, h, m.Width, m.Height)
 		}
 
+		var halves *halfGeometry
+		if r.Halves != nil && r.Halves.First.Source == src {
+			if halves, err = measureHalves(doc, *r.Halves); err != nil {
+				return nil, err
+			}
+		}
+
 		// The PNGs are cut and encoded in parallel, and all of one source's
 		// finish before its decoded layers are dropped
 		pool := newPNGPool(runtime.NumCPU())
@@ -91,29 +101,34 @@ func Extract(paths map[string]string, r Recipe, outRoot string, writeAssets, wri
 			if rule.Source != src {
 				continue
 			}
-			spec, err := extractLayer(doc, rule, outDir, sum, writeAssets, pool)
+			specs, err := extractLayer(doc, rule, halves, outDir, sum, writeAssets, pool)
 			if err != nil {
 				return nil, err
 			}
-			if len(spec.ColorVariants) == 0 {
-				// Every variant went missing. That is a recipe bug worth
-				// stopping on, not a layer to drop silently from the manifest
-				return nil, fmt.Errorf("layer %q: no color variant resolved to a PSD layer", rule.ManifestName)
-			}
-			layers[i] = spec
+			layers[i] = specs
 		}
 		if err := pool.Wait(); err != nil {
 			return nil, err
 		}
 
-		if r.ArtSlot.Source == src {
+		if r.ArtSlot.Source == src && (r.ArtSlot.LayerName != "" || r.ArtSlot.Half) {
 			art, err := extractBounds(doc, r.ArtSlot.GroupPath, r.ArtSlot.LayerName)
 			if err != nil {
 				return nil, fmt.Errorf("art slot: %w", err)
 			}
-			m.Art = template.ArtSlot{
+			slot := template.ArtSlot{
 				X: art.Min.X, Y: art.Min.Y, Width: art.Dx(), Height: art.Dy(),
 				After: r.ArtSlot.After,
+			}
+			if r.ArtSlot.Half {
+				if halves == nil {
+					return nil, fmt.Errorf("art slot: Half needs Recipe.Halves")
+				}
+				second := slot
+				second.X += halves.shift
+				m.Arts = []template.ArtSlot{slot, second}
+			} else {
+				m.Art = &slot
 			}
 		}
 
@@ -121,18 +136,43 @@ func Extract(paths map[string]string, r Recipe, outRoot string, writeAssets, wri
 			if tb.Source != src {
 				continue
 			}
-			bounds, err := extractBounds(doc, tb.GroupPath, tb.LayerName)
-			if err != nil {
-				return nil, fmt.Errorf("text box %q: %w", name, err)
+			bounds := tb.Rect
+			if tb.LayerName != "" {
+				if bounds, err = extractBounds(doc, tb.GroupPath, tb.LayerName); err != nil {
+					return nil, fmt.Errorf("text box %q: %w", name, err)
+				}
 			}
-			m.TextBoxes[name] = template.TextBoxSpec{
-				X: bounds.Min.X, Y: bounds.Min.Y, Width: bounds.Dx(), Height: bounds.Dy(),
-				FontSize: tb.FontSize, Align: tb.Align, Color: tb.Color,
-				Box: tb.Box, Condition: tb.Condition,
+			spec := textBoxSpec{
+				TextBoxSpec: template.TextBoxSpec{
+					X: bounds.Min.X, Y: bounds.Min.Y, Width: bounds.Dx(), Height: bounds.Dy(),
+					FontSize: tb.FontSize, Align: tb.Align, Color: tb.Color,
+					Box: tb.Box, Condition: tb.Condition,
+					VAlign: tb.VAlign, Font: tb.Font, LineSpacing: tb.LineSpacing,
+					MinFontSize: tb.MinFontSize, Tracking: tb.Tracking,
+					Padding: tb.Padding, PaddingX: tb.PaddingX, PaddingY: tb.PaddingY,
+					ClearOf: tb.ClearOf, Shadow: tb.Shadow,
+				},
+				Space: tb.Space,
 			}
+			if !tb.Half {
+				m.TextBoxes[name] = spec
+				continue
+			}
+			if halves == nil {
+				return nil, fmt.Errorf("text box %q: Half needs Recipe.Halves", name)
+			}
+			if spec.Box == "" {
+				spec.Box = name
+			}
+			first, second := spec, spec
+			first.Half, second.Half = 1, 2
+			second.X += halves.shift
+			m.TextBoxes[name+"_1"], m.TextBoxes[name+"_2"] = first, second
 		}
 	}
-	m.Layers = layers
+	for _, specs := range layers {
+		m.Layers = append(m.Layers, specs...)
+	}
 	sum.TextBoxes = len(m.TextBoxes)
 
 	if writeManifestFile {
@@ -143,14 +183,48 @@ func Extract(paths map[string]string, r Recipe, outRoot string, writeAssets, wri
 	return sum, nil
 }
 
+// halfGeometry is where the first half of a split card sits and how far the
+// second is from it
+type halfGeometry struct {
+	frame image.Rectangle
+	shift int
+}
+
+// measureHalves reads the two half frames from their reference layers. The
+// halves must be the same size, since one cut is placed at both
+func measureHalves(doc *psdDoc, h HalvesRule) (*halfGeometry, error) {
+	first, err := extractBounds(doc, h.First.GroupPath, h.First.LayerName)
+	if err != nil {
+		return nil, fmt.Errorf("first half frame: %w", err)
+	}
+	second, err := extractBounds(doc, h.Second.GroupPath, h.Second.LayerName)
+	if err != nil {
+		return nil, fmt.Errorf("second half frame: %w", err)
+	}
+	if first.Dx() != second.Dx() || first.Dy() != second.Dy() || first.Min.Y != second.Min.Y {
+		return nil, fmt.Errorf("half frames %v and %v differ in size or row", first, second)
+	}
+	return &halfGeometry{frame: first, shift: second.Min.X - first.Min.X}, nil
+}
+
 // extractLayer resolves a layer rule's group and exports its color variants to
-// PNGs, returning the manifest spec. With AllVariants it exports every pixel
-// layer in the group; otherwise it exports the enumerated ColorVariants, and a
-// variant whose layer is missing is recorded on the summary and skipped
-func extractLayer(doc *psdDoc, rule LayerRule, outDir string, sum *Summary, writeAssets bool, pool *pngPool) (template.LayerSpec, error) {
+// PNGs, returning the manifest layers: one, or two for a rule that cuts a half.
+// With AllVariants it exports every pixel layer in the group, with Tint it
+// recolors shape layers, and otherwise it exports the enumerated ColorVariants,
+// where a variant whose layer is missing is recorded on the summary and skipped
+func extractLayer(doc *psdDoc, rule LayerRule, halves *halfGeometry, outDir string, sum *Summary, writeAssets bool, pool *pngPool) ([]layerSpec, error) {
 	group, err := resolveGroup(doc.Layer, rule.GroupPath)
 	if err != nil {
-		return template.LayerSpec{}, fmt.Errorf("layer %q: %w", rule.ManifestName, err)
+		return nil, fmt.Errorf("layer %q: %w", rule.ManifestName, err)
+	}
+	var crop image.Rectangle
+	if rule.Halves {
+		if halves == nil {
+			return nil, fmt.Errorf("layer %q: Halves needs Recipe.Halves", rule.ManifestName)
+		}
+		crop = halves.frame
+	} else {
+		crop = rule.Crop
 	}
 	spec := template.LayerSpec{
 		Name:          rule.ManifestName,
@@ -160,35 +234,107 @@ func extractLayer(doc *psdDoc, rule LayerRule, outDir string, sum *Summary, writ
 		ColorVariants: map[string]template.LayerAsset{},
 		Mirror:        rule.Mirror,
 	}
+	var fx *effectPlanes
+	if rule.Effects != nil && writeAssets {
+		if fx, err = effectsFor(doc, group, rule, crop); err != nil {
+			return nil, err
+		}
+	}
+	cut := func(i int) func() (*nrgba, error) {
+		l := &group[i]
+		var base *psdLayer
+		if rule.ApplyClip {
+			base = clipBase(group, i)
+		}
+		return func() (*nrgba, error) {
+			img, err := renderLayer(doc, l, crop, base)
+			if err == nil && fx != nil {
+				fx.apply(img)
+			}
+			return img, err
+		}
+	}
 
-	if rule.AllVariants {
+	switch {
+	case rule.Tint != nil:
+		if err := tintVariants(doc, group, rule, crop, outDir, &spec, sum, writeAssets, pool); err != nil {
+			return nil, err
+		}
+	case rule.AllVariants:
 		for i := range group {
 			l := &group[i]
 			if !exportable(l, writeAssets) {
 				continue // a subgroup or an empty layer, not a variant
 			}
-			key := normalizeKey(l.Name)
-			if err := exportVariant(doc, l, outDir, rule.ManifestName, key, &spec, sum, writeAssets, pool); err != nil {
-				return template.LayerSpec{}, err
+			exportVariant(cut(i), outDir, rule.ManifestName, normalizeKey(l.Name), &spec, sum, writeAssets, pool)
+		}
+	default:
+		for _, key := range sortedKeys(rule.ColorVariants) {
+			name := rule.ColorVariants[key]
+			i := indexOfLayer(group, name)
+			if i < 0 || !exportable(&group[i], writeAssets) {
+				sum.MissingVariants = append(sum.MissingVariants, rule.ManifestName+"/"+key)
+				continue
 			}
+			exportVariant(cut(i), outDir, rule.ManifestName, key, &spec, sum, writeAssets, pool)
 		}
-		if len(spec.ColorVariants) == 0 {
-			return template.LayerSpec{}, fmt.Errorf("layer %q: group has no pixel layers to export", rule.ManifestName)
-		}
-		return spec, nil
+	}
+	if len(spec.ColorVariants) == 0 {
+		// Every variant went missing. That is a recipe bug worth stopping on, not
+		// a layer to drop silently from the manifest
+		return nil, fmt.Errorf("layer %q: no color variant resolved to a PSD layer", rule.ManifestName)
 	}
 
-	for _, key := range sortedKeys(rule.ColorVariants) {
-		l := findLayer(group, rule.ColorVariants[key])
-		if l == nil || !exportable(l, writeAssets) {
-			sum.MissingVariants = append(sum.MissingVariants, rule.ManifestName+"/"+key)
-			continue
+	if !rule.Halves {
+		return []layerSpec{{LayerSpec: spec, X: crop.Min.X, Y: crop.Min.Y, ColorBlend: rule.ColorBlend}}, nil
+	}
+	first, second := spec, spec
+	first.Name, second.Name = rule.ManifestName+"_1", rule.ManifestName+"_2"
+	return []layerSpec{
+		{LayerSpec: first, Half: 1, X: crop.Min.X, Y: crop.Min.Y, ColorBlend: rule.ColorBlend},
+		{LayerSpec: second, Half: 2, X: crop.Min.X + halves.shift, Y: crop.Min.Y, ColorBlend: rule.ColorBlend},
+	}, nil
+}
+
+// tintVariants exports one variant per color of a tint rule, each the united
+// shape of the rule's source layers colored in
+func tintVariants(doc *psdDoc, group []psdLayer, rule LayerRule, crop image.Rectangle, outDir string, spec *template.LayerSpec, sum *Summary, writeAssets bool, pool *pngPool) error {
+	var shapes []*psdLayer
+	for _, name := range rule.Tint.From {
+		i := indexOfLayer(group, name)
+		if i < 0 || !exportable(&group[i], writeAssets) {
+			return fmt.Errorf("layer %q: tint source %q is not a pixel layer in its group", rule.ManifestName, name)
 		}
-		if err := exportVariant(doc, l, outDir, rule.ManifestName, key, &spec, sum, writeAssets, pool); err != nil {
-			return template.LayerSpec{}, err
+		shapes = append(shapes, &group[i])
+	}
+	if crop.Empty() {
+		crop = image.Rect(0, 0, doc.Config.Rect.Dx(), doc.Config.Rect.Dy())
+	}
+	var plane []uint8
+	if writeAssets {
+		plane = unionAlpha(shapes, crop)
+		if s := rule.Tint.Stroke; s != nil {
+			plane = strokePlane(plane, crop.Dx(), crop.Dy(), s.Width, s.Outside)
 		}
 	}
-	return spec, nil
+	for _, key := range tintKeys(rule.Tint.Colors) {
+		colors := rule.Tint.Colors[key]
+		exportVariant(func() (*nrgba, error) { return tintImage(plane, crop.Dx(), crop.Dy(), colors) },
+			outDir, rule.ManifestName, key, spec, sum, writeAssets, pool)
+	}
+	return nil
+}
+
+func tintKeys(m map[string]string) []string { return sortedKeys(m) }
+
+// indexOfLayer is the index of the direct-child layer with the given name, or -1
+func indexOfLayer(layers []psdLayer, name string) int {
+	for i := range layers {
+		if layers[i].Name == name {
+			return i
+		}
+	}
+	return -1
 }
 
 // exportable reports whether a layer is a pixel variant worth exporting. Pixel
@@ -200,13 +346,13 @@ func exportable(l *psdLayer, writeAssets bool) bool {
 	return !writeAssets || l.Picker != nil
 }
 
-// exportVariant records one variant on the spec and the summary, writing its
-// PNG when writeAssets is set
-func exportVariant(doc *psdDoc, l *psdLayer, outDir, manifestName, key string, spec *template.LayerSpec, sum *Summary, writeAssets bool, pool *pngPool) error {
+// exportVariant records one variant on the spec and the summary, writing the
+// image render produces to its PNG when writeAssets is set
+func exportVariant(render func() (*nrgba, error), outDir, manifestName, key string, spec *template.LayerSpec, sum *Summary, writeAssets bool, pool *pngPool) {
 	relPath := filepath.ToSlash(filepath.Join(manifestName, key+".png"))
 	if writeAssets {
 		pool.Go(func() error {
-			img, err := renderLayer(doc, l)
+			img, err := render()
 			if err != nil {
 				return fmt.Errorf("layer %q variant %q: %w", manifestName, key, err)
 			}
@@ -215,7 +361,6 @@ func exportVariant(doc *psdDoc, l *psdLayer, outDir, manifestName, key string, s
 	}
 	spec.ColorVariants[key] = template.LayerAsset{Path: relPath}
 	sum.PNGsWritten++
-	return nil
 }
 
 // wubrg is Magic's canonical color order. Dual and multi-color keys are sorted
@@ -276,7 +421,7 @@ func writePNG(path string, img *nrgba) error {
 // writeManifest serializes m with sorted map keys and a trailing newline.
 // encoding/json already sorts map keys, giving a stable manifest.json across
 // runs with an unchanged recipe
-func writeManifest(outDir string, m *template.Manifest) error {
+func writeManifest(outDir string, m *manifest) error {
 	raw, err := json.MarshalIndent(m, "", "  ")
 	if err != nil {
 		return fmt.Errorf("encoding manifest: %w", err)
@@ -331,4 +476,17 @@ func (p *pngPool) Go(fn func() error) {
 func (p *pngPool) Wait() error {
 	p.wg.Wait()
 	return p.err
+}
+
+// effectsFor measures the shape a rule's effects follow, inside crop
+func effectsFor(doc *psdDoc, group []psdLayer, rule LayerRule, crop image.Rectangle) (*effectPlanes, error) {
+	i := indexOfLayer(group, rule.Effects.Shape)
+	if i < 0 || group[i].Picker == nil {
+		return nil, fmt.Errorf("layer %q: effects shape %q is not a pixel layer in its group", rule.ManifestName, rule.Effects.Shape)
+	}
+	if crop.Empty() {
+		crop = image.Rect(0, 0, doc.Config.Rect.Dx(), doc.Config.Rect.Dy())
+	}
+	shape := unionAlpha([]*psdLayer{&group[i]}, crop)
+	return prepareEffects(shape, crop.Dx(), crop.Dy(), rule.Effects)
 }

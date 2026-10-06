@@ -1,0 +1,867 @@
+{
+  "template": "split",
+  "width": 4440,
+  "height": 3264,
+  "dpi": 1200,
+  "rotate": 270,
+  "layers": [
+    {
+      "name": "background_1",
+      "colorSlot": "background",
+      "colorVariants": {
+        "b": {
+          "path": "background/b.png"
+        },
+        "bg": {
+          "path": "background/bg.png"
+        },
+        "br": {
+          "path": "background/br.png"
+        },
+        "g": {
+          "path": "background/g.png"
+        },
+        "gold": {
+          "path": "background/gold.png"
+        },
+        "r": {
+          "path": "background/r.png"
+        },
+        "rg": {
+          "path": "background/rg.png"
+        },
+        "u": {
+          "path": "background/u.png"
+        },
+        "ub": {
+          "path": "background/ub.png"
+        },
+        "ug": {
+          "path": "background/ug.png"
+        },
+        "ur": {
+          "path": "background/ur.png"
+        },
+        "w": {
+          "path": "background/w.png"
+        },
+        "wb": {
+          "path": "background/wb.png"
+        },
+        "wg": {
+          "path": "background/wg.png"
+        },
+        "wr": {
+          "path": "background/wr.png"
+        },
+        "wu": {
+          "path": "background/wu.png"
+        }
+      },
+      "half": 1,
+      "x": 425,
+      "y": 237
+    },
+    {
+      "name": "background_2",
+      "colorSlot": "background",
+      "colorVariants": {
+        "b": {
+          "path": "background/b.png"
+        },
+        "bg": {
+          "path": "background/bg.png"
+        },
+        "br": {
+          "path": "background/br.png"
+        },
+        "g": {
+          "path": "background/g.png"
+        },
+        "gold": {
+          "path": "background/gold.png"
+        },
+        "r": {
+          "path": "background/r.png"
+        },
+        "rg": {
+          "path": "background/rg.png"
+        },
+        "u": {
+          "path": "background/u.png"
+        },
+        "ub": {
+          "path": "background/ub.png"
+        },
+        "ug": {
+          "path": "background/ug.png"
+        },
+        "ur": {
+          "path": "background/ur.png"
+        },
+        "w": {
+          "path": "background/w.png"
+        },
+        "wb": {
+          "path": "background/wb.png"
+        },
+        "wg": {
+          "path": "background/wg.png"
+        },
+        "wr": {
+          "path": "background/wr.png"
+        },
+        "wu": {
+          "path": "background/wu.png"
+        }
+      },
+      "half": 2,
+      "x": 2337,
+      "y": 237
+    },
+    {
+      "name": "pinlines_boxes_1",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_boxes/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_boxes/b.png"
+        },
+        "bg": {
+          "path": "pinlines_boxes/bg.png"
+        },
+        "br": {
+          "path": "pinlines_boxes/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_boxes/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_boxes/g.png"
+        },
+        "gold": {
+          "path": "pinlines_boxes/gold.png"
+        },
+        "r": {
+          "path": "pinlines_boxes/r.png"
+        },
+        "rg": {
+          "path": "pinlines_boxes/rg.png"
+        },
+        "u": {
+          "path": "pinlines_boxes/u.png"
+        },
+        "ub": {
+          "path": "pinlines_boxes/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_boxes/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_boxes/ur.png"
+        },
+        "w": {
+          "path": "pinlines_boxes/w.png"
+        },
+        "wb": {
+          "path": "pinlines_boxes/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_boxes/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_boxes/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_boxes/wu.png"
+        }
+      },
+      "half": 1,
+      "x": 425,
+      "y": 237
+    },
+    {
+      "name": "pinlines_boxes_2",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_boxes/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_boxes/b.png"
+        },
+        "bg": {
+          "path": "pinlines_boxes/bg.png"
+        },
+        "br": {
+          "path": "pinlines_boxes/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_boxes/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_boxes/g.png"
+        },
+        "gold": {
+          "path": "pinlines_boxes/gold.png"
+        },
+        "r": {
+          "path": "pinlines_boxes/r.png"
+        },
+        "rg": {
+          "path": "pinlines_boxes/rg.png"
+        },
+        "u": {
+          "path": "pinlines_boxes/u.png"
+        },
+        "ub": {
+          "path": "pinlines_boxes/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_boxes/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_boxes/ur.png"
+        },
+        "w": {
+          "path": "pinlines_boxes/w.png"
+        },
+        "wb": {
+          "path": "pinlines_boxes/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_boxes/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_boxes/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_boxes/wu.png"
+        }
+      },
+      "half": 2,
+      "x": 2337,
+      "y": 237
+    },
+    {
+      "name": "pinlines_twins_1",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_twins/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_twins/b.png"
+        },
+        "bg": {
+          "path": "pinlines_twins/bg.png"
+        },
+        "br": {
+          "path": "pinlines_twins/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_twins/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_twins/g.png"
+        },
+        "gold": {
+          "path": "pinlines_twins/gold.png"
+        },
+        "r": {
+          "path": "pinlines_twins/r.png"
+        },
+        "rg": {
+          "path": "pinlines_twins/rg.png"
+        },
+        "u": {
+          "path": "pinlines_twins/u.png"
+        },
+        "ub": {
+          "path": "pinlines_twins/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_twins/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_twins/ur.png"
+        },
+        "w": {
+          "path": "pinlines_twins/w.png"
+        },
+        "wb": {
+          "path": "pinlines_twins/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_twins/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_twins/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_twins/wu.png"
+        }
+      },
+      "half": 1,
+      "x": 425,
+      "y": 237
+    },
+    {
+      "name": "pinlines_twins_2",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "artifact": {
+          "path": "pinlines_twins/artifact.png"
+        },
+        "b": {
+          "path": "pinlines_twins/b.png"
+        },
+        "bg": {
+          "path": "pinlines_twins/bg.png"
+        },
+        "br": {
+          "path": "pinlines_twins/br.png"
+        },
+        "colorless": {
+          "path": "pinlines_twins/colorless.png"
+        },
+        "g": {
+          "path": "pinlines_twins/g.png"
+        },
+        "gold": {
+          "path": "pinlines_twins/gold.png"
+        },
+        "r": {
+          "path": "pinlines_twins/r.png"
+        },
+        "rg": {
+          "path": "pinlines_twins/rg.png"
+        },
+        "u": {
+          "path": "pinlines_twins/u.png"
+        },
+        "ub": {
+          "path": "pinlines_twins/ub.png"
+        },
+        "ug": {
+          "path": "pinlines_twins/ug.png"
+        },
+        "ur": {
+          "path": "pinlines_twins/ur.png"
+        },
+        "w": {
+          "path": "pinlines_twins/w.png"
+        },
+        "wb": {
+          "path": "pinlines_twins/wb.png"
+        },
+        "wg": {
+          "path": "pinlines_twins/wg.png"
+        },
+        "wr": {
+          "path": "pinlines_twins/wr.png"
+        },
+        "wu": {
+          "path": "pinlines_twins/wu.png"
+        }
+      },
+      "half": 2,
+      "x": 2337,
+      "y": 237
+    },
+    {
+      "name": "textbox_1",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "b": {
+          "path": "textbox/b.png"
+        },
+        "bg": {
+          "path": "textbox/bg.png"
+        },
+        "br": {
+          "path": "textbox/br.png"
+        },
+        "g": {
+          "path": "textbox/g.png"
+        },
+        "gold": {
+          "path": "textbox/gold.png"
+        },
+        "r": {
+          "path": "textbox/r.png"
+        },
+        "rg": {
+          "path": "textbox/rg.png"
+        },
+        "u": {
+          "path": "textbox/u.png"
+        },
+        "ub": {
+          "path": "textbox/ub.png"
+        },
+        "ug": {
+          "path": "textbox/ug.png"
+        },
+        "ur": {
+          "path": "textbox/ur.png"
+        },
+        "w": {
+          "path": "textbox/w.png"
+        },
+        "wb": {
+          "path": "textbox/wb.png"
+        },
+        "wg": {
+          "path": "textbox/wg.png"
+        },
+        "wr": {
+          "path": "textbox/wr.png"
+        },
+        "wu": {
+          "path": "textbox/wu.png"
+        }
+      },
+      "half": 1,
+      "x": 425,
+      "y": 237
+    },
+    {
+      "name": "textbox_2",
+      "colorSlot": "pinlines",
+      "colorVariants": {
+        "b": {
+          "path": "textbox/b.png"
+        },
+        "bg": {
+          "path": "textbox/bg.png"
+        },
+        "br": {
+          "path": "textbox/br.png"
+        },
+        "g": {
+          "path": "textbox/g.png"
+        },
+        "gold": {
+          "path": "textbox/gold.png"
+        },
+        "r": {
+          "path": "textbox/r.png"
+        },
+        "rg": {
+          "path": "textbox/rg.png"
+        },
+        "u": {
+          "path": "textbox/u.png"
+        },
+        "ub": {
+          "path": "textbox/ub.png"
+        },
+        "ug": {
+          "path": "textbox/ug.png"
+        },
+        "ur": {
+          "path": "textbox/ur.png"
+        },
+        "w": {
+          "path": "textbox/w.png"
+        },
+        "wb": {
+          "path": "textbox/wb.png"
+        },
+        "wg": {
+          "path": "textbox/wg.png"
+        },
+        "wr": {
+          "path": "textbox/wr.png"
+        },
+        "wu": {
+          "path": "textbox/wu.png"
+        }
+      },
+      "half": 2,
+      "x": 2337,
+      "y": 237
+    },
+    {
+      "name": "name_title_boxes_1",
+      "colorSlot": "twins",
+      "colorVariants": {
+        "artifact": {
+          "path": "name_title_boxes/artifact.png"
+        },
+        "b": {
+          "path": "name_title_boxes/b.png"
+        },
+        "colorless": {
+          "path": "name_title_boxes/colorless.png"
+        },
+        "g": {
+          "path": "name_title_boxes/g.png"
+        },
+        "gold": {
+          "path": "name_title_boxes/gold.png"
+        },
+        "r": {
+          "path": "name_title_boxes/r.png"
+        },
+        "u": {
+          "path": "name_title_boxes/u.png"
+        },
+        "w": {
+          "path": "name_title_boxes/w.png"
+        }
+      },
+      "half": 1,
+      "x": 425,
+      "y": 237
+    },
+    {
+      "name": "name_title_boxes_2",
+      "colorSlot": "twins",
+      "colorVariants": {
+        "artifact": {
+          "path": "name_title_boxes/artifact.png"
+        },
+        "b": {
+          "path": "name_title_boxes/b.png"
+        },
+        "colorless": {
+          "path": "name_title_boxes/colorless.png"
+        },
+        "g": {
+          "path": "name_title_boxes/g.png"
+        },
+        "gold": {
+          "path": "name_title_boxes/gold.png"
+        },
+        "r": {
+          "path": "name_title_boxes/r.png"
+        },
+        "u": {
+          "path": "name_title_boxes/u.png"
+        },
+        "w": {
+          "path": "name_title_boxes/w.png"
+        }
+      },
+      "half": 2,
+      "x": 2337,
+      "y": 237
+    },
+    {
+      "name": "art_outline_1",
+      "colorVariants": {
+        "any": {
+          "path": "art_outline/any.png"
+        }
+      },
+      "half": 1,
+      "x": 425,
+      "y": 237
+    },
+    {
+      "name": "art_outline_2",
+      "colorVariants": {
+        "any": {
+          "path": "art_outline/any.png"
+        }
+      },
+      "half": 2,
+      "x": 2337,
+      "y": 237
+    },
+    {
+      "name": "border",
+      "colorVariants": {
+        "any": {
+          "path": "border/any.png"
+        }
+      }
+    },
+    {
+      "name": "border_fuse",
+      "condition": "fuse",
+      "colorVariants": {
+        "any": {
+          "path": "border_fuse/any.png"
+        }
+      }
+    },
+    {
+      "name": "fuse_textbox",
+      "condition": "fuse",
+      "colorSlot": "fuse",
+      "colorVariants": {
+        "b": {
+          "path": "fuse_textbox/b.png"
+        },
+        "g": {
+          "path": "fuse_textbox/g.png"
+        },
+        "gold": {
+          "path": "fuse_textbox/gold.png"
+        },
+        "r": {
+          "path": "fuse_textbox/r.png"
+        },
+        "u": {
+          "path": "fuse_textbox/u.png"
+        },
+        "w": {
+          "path": "fuse_textbox/w.png"
+        }
+      },
+      "x": 490,
+      "y": 2790,
+      "colorBlend": true
+    },
+    {
+      "name": "fuse_pinlines",
+      "condition": "fuse",
+      "colorSlot": "fuse_pinlines",
+      "colorVariants": {
+        "b": {
+          "path": "fuse_pinlines/b.png"
+        },
+        "g": {
+          "path": "fuse_pinlines/g.png"
+        },
+        "gold": {
+          "path": "fuse_pinlines/gold.png"
+        },
+        "r": {
+          "path": "fuse_pinlines/r.png"
+        },
+        "u": {
+          "path": "fuse_pinlines/u.png"
+        },
+        "w": {
+          "path": "fuse_pinlines/w.png"
+        }
+      },
+      "x": 490,
+      "y": 2790,
+      "colorBlend": true
+    }
+  ],
+  "textBoxes": {
+    "artist": {
+      "x": 332,
+      "y": 4094,
+      "width": 2100,
+      "height": 120,
+      "fontSize": 77,
+      "align": "left",
+      "color": "#FFFFFF",
+      "vAlign": "baseline",
+      "font": "small-caps",
+      "space": "output"
+    },
+    "copyright": {
+      "x": 1500,
+      "y": 4168,
+      "width": 1437,
+      "height": 120,
+      "fontSize": 68,
+      "align": "right",
+      "color": "#FFFFFF",
+      "vAlign": "baseline",
+      "tracking": 40,
+      "font": "info",
+      "space": "output"
+    },
+    "fuse": {
+      "x": 598,
+      "y": 2937,
+      "width": 3273,
+      "height": 200,
+      "fontSize": 113,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "tracking": 20,
+      "condition": "fuse"
+    },
+    "mana_1": {
+      "x": 1339,
+      "y": 502,
+      "width": 841,
+      "height": 200,
+      "fontSize": 174,
+      "align": "right",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "minFontSize": 174,
+      "shadow": {
+        "distance": 0.0907,
+        "angle": 25
+      },
+      "box": "mana",
+      "half": 1
+    },
+    "mana_2": {
+      "x": 3251,
+      "y": 502,
+      "width": 841,
+      "height": 200,
+      "fontSize": 174,
+      "align": "right",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "minFontSize": 174,
+      "shadow": {
+        "distance": 0.0907,
+        "angle": 25
+      },
+      "box": "mana",
+      "half": 2
+    },
+    "oracle_1": {
+      "x": 544,
+      "y": 1939,
+      "width": 1629,
+      "height": 1045,
+      "fontSize": 150,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 28,
+      "paddingY": 28,
+      "box": "oracle",
+      "half": 1
+    },
+    "oracle_2": {
+      "x": 2456,
+      "y": 1939,
+      "width": 1629,
+      "height": 1045,
+      "fontSize": 150,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 28,
+      "paddingY": 28,
+      "box": "oracle",
+      "half": 2
+    },
+    "oracle_fuse_1": {
+      "x": 544,
+      "y": 1939,
+      "width": 1629,
+      "height": 870,
+      "fontSize": 150,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 28,
+      "paddingY": 28,
+      "box": "oracle",
+      "condition": "fuse",
+      "half": 1
+    },
+    "oracle_fuse_2": {
+      "x": 2456,
+      "y": 1939,
+      "width": 1629,
+      "height": 870,
+      "fontSize": 150,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 28,
+      "paddingY": 28,
+      "box": "oracle",
+      "condition": "fuse",
+      "half": 2
+    },
+    "set": {
+      "x": 332,
+      "y": 4168,
+      "width": 1100,
+      "height": 120,
+      "fontSize": 68,
+      "align": "left",
+      "color": "#FFFFFF",
+      "vAlign": "baseline",
+      "font": "info",
+      "space": "output"
+    },
+    "title_1": {
+      "x": 570,
+      "y": 505,
+      "width": 1610,
+      "height": 200,
+      "fontSize": 151,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "font": "title",
+      "clearOf": "mana",
+      "box": "title",
+      "half": 1
+    },
+    "title_2": {
+      "x": 2482,
+      "y": 505,
+      "width": 1610,
+      "height": 200,
+      "fontSize": 151,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "font": "title",
+      "clearOf": "mana",
+      "box": "title",
+      "half": 2
+    },
+    "type_1": {
+      "x": 575,
+      "y": 1866,
+      "width": 1440,
+      "height": 200,
+      "fontSize": 102,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "font": "title",
+      "box": "type",
+      "half": 1
+    },
+    "type_2": {
+      "x": 2487,
+      "y": 1866,
+      "width": 1440,
+      "height": 200,
+      "fontSize": 102,
+      "align": "left",
+      "color": "#000000",
+      "vAlign": "baseline",
+      "font": "title",
+      "box": "type",
+      "half": 2
+    }
+  },
+  "arts": [
+    {
+      "x": 547,
+      "y": 601,
+      "width": 1624,
+      "height": 1127,
+      "after": "pinlines_boxes_2"
+    },
+    {
+      "x": 2459,
+      "y": 601,
+      "width": 1624,
+      "height": 1127,
+      "after": "pinlines_boxes_2"
+    }
+  ]
+}

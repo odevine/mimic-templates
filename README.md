@@ -86,7 +86,10 @@ layer PNGs, driven by a per-template recipe under `tools/psdextract/recipes`. It
 is a bootstrap tool: run it once to seed a template, or with `-png-only` to
 re-cut the art while leaving the tuned manifest alone. A recipe can read more
 than one PSD into a single manifest, which is how `transform` takes its front
-and back faces from `tf-front.psd` and `tf-back.psd`.
+and back faces from `tf-front.psd` and `tf-back.psd`. A recipe can also cut a layer
+once at one half of a split card and place it at both, apply a layer's Photoshop
+clipping, and tint a shape layer in a palette, which is how `split` is built from
+a single reading-view PSD.
 
 ## Repository layout
 
