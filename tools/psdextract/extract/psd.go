@@ -3,6 +3,7 @@ package extract
 import (
 	"fmt"
 	"image"
+	"image/color"
 	"os"
 	"strings"
 
@@ -111,33 +112,77 @@ func extractBounds(doc *psd.PSD, groupPath []string, layerName string) (image.Re
 	return l.Rect, nil
 }
 
-// renderLayer places a layer's pixels onto a full-canvas transparent buffer at
-// the layer's own offset. Frame layers are authored document-sized, so the
-// engine loads them at the origin, which is what this preserves. The layer's
-// stored visibility flag is ignored: PSD automation hides color-variant layers
-// and toggles them at render time, so exporting only visible layers would
-// leave most variants blank
-func renderLayer(doc *psd.PSD, l *psd.Layer) (*image.NRGBA, error) {
+// renderLayer places a layer's pixels onto a transparent buffer at the layer's
+// own offset, the whole canvas by default or the crop rectangle when one is
+// given, so a layer that fills only part of the document can be cut small.
+// Frame layers are authored document-sized, so the engine loads them at the
+// origin, which is what the default preserves. The layer's stored visibility flag
+// is ignored: PSD automation hides color-variant layers and toggles them at
+// render time, so exporting only visible layers would leave most variants blank.
+//
+// A non-nil base is the layer l is clipped to, and l's alpha is multiplied by
+// the base's, as Photoshop shows a clipped layer
+func renderLayer(doc *psd.PSD, l *psd.Layer, crop image.Rectangle, base *psd.Layer) (*image.NRGBA, error) {
 	if l.Picker == nil {
 		return nil, fmt.Errorf("layer %q has no pixel data", l.Name)
 	}
-	canvas := image.NewNRGBA(image.Rect(0, 0, doc.Config.Rect.Dx(), doc.Config.Rect.Dy()))
+	if crop.Empty() {
+		crop = image.Rect(0, 0, doc.Config.Rect.Dx(), doc.Config.Rect.Dy())
+	}
+	out := image.NewNRGBA(image.Rect(0, 0, crop.Dx(), crop.Dy()))
 	src := l.Picker
 	sb := src.Bounds()
-	// Copy the layer's pixels into the canvas at its PSD rectangle, keeping
-	// alpha. drawOver is not wanted here: this is a single isolated layer
+	// Copy the layer's pixels in at its PSD rectangle, keeping alpha. drawOver is
+	// not wanted here: this is a single isolated layer
 	for y := 0; y < sb.Dy(); y++ {
 		dy := l.Rect.Min.Y + y
-		if dy < 0 || dy >= canvas.Rect.Dy() {
+		if dy < crop.Min.Y || dy >= crop.Max.Y {
 			continue
 		}
 		for x := 0; x < sb.Dx(); x++ {
 			dx := l.Rect.Min.X + x
-			if dx < 0 || dx >= canvas.Rect.Dx() {
+			if dx < crop.Min.X || dx >= crop.Max.X {
 				continue
 			}
-			canvas.Set(dx, dy, src.At(sb.Min.X+x, sb.Min.Y+y))
+			c := src.At(sb.Min.X+x, sb.Min.Y+y)
+			if base != nil {
+				c = clipAlpha(c, alphaAt(base, dx, dy))
+			}
+			out.Set(dx-crop.Min.X, dy-crop.Min.Y, c)
 		}
 	}
-	return canvas, nil
+	return out, nil
+}
+
+// alphaAt is a layer's alpha at a document point, zero outside its rectangle
+func alphaAt(l *psd.Layer, x, y int) uint8 {
+	if l.Picker == nil || !image.Pt(x, y).In(l.Rect) {
+		return 0
+	}
+	b := l.Picker.Bounds()
+	_, _, _, a := l.Picker.At(b.Min.X+x-l.Rect.Min.X, b.Min.Y+y-l.Rect.Min.Y).RGBA()
+	return uint8(a >> 8)
+}
+
+// clipAlpha scales a color's alpha by a clip alpha out of 255
+func clipAlpha(c color.Color, clip uint8) color.NRGBA {
+	n := color.NRGBAModel.Convert(c).(color.NRGBA)
+	n.A = uint8(uint32(n.A) * uint32(clip) / 255)
+	return n
+}
+
+// clipBase is the layer a clipped layer at index i of a group is clipped to: the
+// nearest layer before it that is not itself clipped. The decoder lists a group
+// bottom to top, so a base comes before the layers clipped to it. It returns nil
+// for a layer that is not clipped, and for a clipped one with nothing below it
+func clipBase(group []psd.Layer, i int) *psd.Layer {
+	if !group[i].Clipping {
+		return nil
+	}
+	for j := i - 1; j >= 0; j-- {
+		if !group[j].Clipping {
+			return &group[j]
+		}
+	}
+	return nil
 }
