@@ -24,6 +24,14 @@
       "extra-files": [
         { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
       ]
+    },
+    "templates/split": {
+      "release-type": "simple",
+      "component": "split",
+      "last-release-sha": "459b61200a138d2b0d9459b0b54e87af19de0de8",
+      "extra-files": [
+        { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
+      ]
     }
   }
 }
