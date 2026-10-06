@@ -29,6 +29,19 @@
       ]
     },
     {
+      "name": "split",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "minEngine": "0.13.0",
+          "url": "https://github.com/odevine/mimic-templates/releases/download/split/v0.1.0/split.mimic",
+          "size": 96520412,
+          "sha256": "2a22b708ac3bf9a753ed11448c2fb1aacbe3b1eac3a72582ee4f5f329990262e"
+        }
+      ]
+    },
+    {
       "name": "transform",
       "latest": "0.1.0",
       "versions": [
