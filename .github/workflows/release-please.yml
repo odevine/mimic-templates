@@ -1,12 +1,10 @@
 name: release-please
 
 # release-please watches main for conventional commits and keeps one release
-# pull request open per template. Merging that pull request bumps the template's
-# bundle.json, creates its tag, and an empty GitHub Release. The bundle job then
-# repacks a bundle from the previous release's PNGs plus the edited manifest and
-# uploads it, so a routine manifest change ships without the source PSD. A brand
-# new template's first release is bootstrapped locally (see the Makefile), since
-# there is no previous bundle to carry PNGs from.
+# pull request open per template. Merging that pull request updates the version in
+# the template's template.json, creates its tag, and an empty GitHub Release. The
+# bundle job then packs the template from its folder with the engine's pack
+# command, uploads the bundle to that release, and rebuilds index.json.
 on:
   push:
     branches: [main]
@@ -51,7 +49,7 @@ jobs:
       - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
-          cache-dependency-path: go.sum
+          cache: false
 
       # CI on the release commit runs alongside this job rather than gating it, so
       # the tools are checked here before a bundle they build is published
@@ -60,36 +58,20 @@ jobs:
           go vet ./...
           go test ./...
 
-      - name: Pack or repack and upload each released template
+      - name: Pack and upload each released template
         env:
           GH_TOKEN: ${{ github.token }}
           PATHS: ${{ needs.release-please.outputs.paths_released }}
-          # The engine release whose pack command builds a template in the source form
+          # The engine release whose pack command builds a template
           ENGINE_VERSION: v0.18.0
         run: |
           mkdir -p build
           for path in $(echo "$PATHS" | jq -r '.[]'); do
             name="${path#templates/}"
-            # A template in the source form is packed from its folder, and the earlier
-            # kind is repacked from the bundle before it and its edited manifest
-            if [ -f "templates/$name/template.json" ]; then
-              version="$(jq -r .version "templates/$name/template.json")"
-              echo "packing $name/v$version"
-              go run "github.com/odevine/mimic/engine/cmd/pack@$ENGINE_VERSION" "templates/$name" -o "build/$name.mimic"
-              gh release upload "$name/v$version" "build/$name.mimic" --clobber
-              continue
-            fi
-            version="$(jq -r .version "templates/$name/bundle.json")"
-            tag="$name/v$version"
-            prev="$(jq -r --arg n "$name" '.templates[]|select(.name==$n)|.versions[0].url // empty' index.json)"
-            if [ -z "$prev" ]; then
-              echo "::error::no previous bundle for $name in index.json; bootstrap its first release locally (make pack + gh release create)"
-              exit 1
-            fi
-            echo "repacking $tag from $prev"
-            go run ./tools/pack -from-bundle "$prev" -manifest "templates/$name/manifest.json" \
-              -version "$version" -o "build/$name.mimic"
-            gh release upload "$tag" "build/$name.mimic" --clobber
+            version="$(jq -r .version "templates/$name/template.json")"
+            echo "packing $name/v$version"
+            go run "github.com/odevine/mimic/engine/cmd/pack@$ENGINE_VERSION" "templates/$name" -o "build/$name.mimic"
+            gh release upload "$name/v$version" "build/$name.mimic" --clobber
           done
 
       - name: Rebuild index.json

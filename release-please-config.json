@@ -4,41 +4,36 @@
   "tag-separator": "/",
   "bump-minor-pre-major": true,
   "changelog-sections": [
-    { "type": "feat", "section": "Features" },
-    { "type": "fix", "section": "Bug Fixes" },
-    { "type": "docs", "section": "Documentation", "hidden": true },
-    { "type": "chore", "section": "Miscellaneous Chores", "hidden": true }
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "docs",
+      "section": "Documentation",
+      "hidden": true
+    },
+    {
+      "type": "chore",
+      "section": "Miscellaneous Chores",
+      "hidden": true
+    }
   ],
   "packages": {
-    "templates/normal": {
-      "release-type": "simple",
-      "component": "normal",
-      "extra-files": [
-        { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
-      ]
-    },
-    "templates/transform": {
-      "release-type": "simple",
-      "component": "transform",
-      "last-release-sha": "9533bdb390636ed6ef8d4cbfcbd74b2a19048350",
-      "extra-files": [
-        { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
-      ]
-    },
     "templates/m15": {
       "release-type": "simple",
       "component": "m15",
       "initial-version": "0.1.0",
       "extra-files": [
-        { "type": "json", "path": "template.json", "jsonpath": "$.version" }
-      ]
-    },
-    "templates/split": {
-      "release-type": "simple",
-      "component": "split",
-      "last-release-sha": "6ffa8fc04e310a732bf7d6522de66bf5024bcbb0",
-      "extra-files": [
-        { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
+        {
+          "type": "json",
+          "path": "template.json",
+          "jsonpath": "$.version"
+        }
       ]
     }
   }
