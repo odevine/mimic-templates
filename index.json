@@ -3,6 +3,7 @@
   "templates": [
     {
       "name": "mimic.m15",
+      "title": "Modern frame (M15)",
       "description": "The modern card frame, with single color art blended for pairs",
       "shapes": [
         {
