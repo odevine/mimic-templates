@@ -19,12 +19,12 @@ go.work.sum
 *.psb
 /psd/
 
-# Generated layer PNGs of the templates that came before m15. Their manifest.json
-# and bundle.json are tracked and the extracted PNGs are not. A template in the
-# source form, one with a template.json, tracks its PNGs, so it is not listed here
-templates/normal/**/*.png
-templates/split/**/*.png
-templates/transform/**/*.png
+# The layer PNGs a checkout may still hold from the templates that came before
+# m15, which are not in the repository any more. A template in the source form,
+# one with a template.json, tracks its PNGs, so it is not listed here
+templates/normal/
+templates/split/
+templates/transform/
 
 # Built bundles and other build output. Bundles are release assets, uploaded to
 # GitHub Releases, not committed

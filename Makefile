@@ -1,71 +1,33 @@
-# The manifest is the source of truth and the layer PNGs are stable, so a
-# routine release carries the PNGs over from the previous bundle and pairs them
-# with the edited manifest (repack). That path needs no PSD and runs in CI. The
-# PSD is needed only to bootstrap a new template or re-cut its art.
-#
-#   make repack TEMPLATE=normal    build a bundle from the tracked manifest
-#   make extract TEMPLATE=normal   seed a new template from its PSD (once)
-#   make assets  TEMPLATE=normal   re-cut just the PNGs from a changed PSD
-#
-# TEMPLATE selects the template. PSD_DIR is where the source PSDs live locally,
-# and each recipe names its own files there, such as normal.psd, or tf-front.psd
-# and tf-back.psd for transform.
-
-TEMPLATE ?= normal
-PSD_DIR ?= psd
-VERSION = $(shell jq -r .version templates/$(TEMPLATE)/bundle.json)
-LATEST_URL = $(shell jq -r --arg n "$(TEMPLATE)" '.templates[]|select(.name==$$n)|.versions[0].url // empty' index.json 2>/dev/null)
-
-# A template in the source form, one with a template.json, is checked and built
-# with the engine's own commands, at the engine release CI uses:
+# A template is a folder under templates/ in the source form, with a template.json
+# and a file for each layout beside the PNGs of its parts. The engine's validate
+# and pack commands check it and build its bundle, at the engine release named by
+# ENGINE_VERSION, which is the one CI uses.
 #
 #   make validate TEMPLATE=m15     check a source folder and report every problem
 #   make bundle   TEMPLATE=m15     build build/m15.mimic from the source folder
+#   make release  TEMPLATE=m15     upload that bundle to the release release-please made
+#
+# TEMPLATE selects the template.
+
+TEMPLATE ?= m15
 ENGINE_VERSION ?= v0.18.0
+VERSION = $(shell jq -r .version templates/$(TEMPLATE)/template.json)
 
-.PHONY: extract assets pack repack release validate bundle
-
-# extract seeds a brand-new template from its PSD, writing both manifest.json
-# and the layer PNGs into templates/$(TEMPLATE)/. The manifest is a starting
-# point to hand-tune, and this overwrites any existing one, so use it only when
-# first adding a template.
-extract:
-	go run ./tools/psdextract -template $(TEMPLATE) -assets templates -psd-dir $(PSD_DIR)
-
-# assets re-cuts only the layer PNGs from the PSD, leaving the tuned manifest
-# untouched. Use it when the source art changes.
-assets:
-	go run ./tools/psdextract -template $(TEMPLATE) -assets templates -psd-dir $(PSD_DIR) -png-only
-
-# pack builds a full bundle from the local templates/$(TEMPLATE)/ directory
-# (tuned manifest plus local PNGs). Used for a template's first release, or after
-# re-cutting assets.
-pack:
-	mkdir -p build
-	go run ./tools/pack templates/$(TEMPLATE) -version $(VERSION) -o build/$(TEMPLATE).mimic
-
-# repack builds a bundle by carrying the PNGs over from the latest published
-# bundle and pairing them with the tracked manifest. This is what CI does on a
-# release; run it locally to test a manifest change without the PSD.
-repack:
-	mkdir -p build
-	@test -n "$(LATEST_URL)" || { echo "no published bundle for $(TEMPLATE) in index.json; use 'make pack' to bootstrap the first release"; exit 1; }
-	go run ./tools/pack -from-bundle "$(LATEST_URL)" -manifest templates/$(TEMPLATE)/manifest.json -version $(VERSION) -o build/$(TEMPLATE).mimic
-
-# release uploads a locally built bundle to the tag release-please created and
-# triggers the catalog rebuild. Build the bundle first with pack or repack.
-# Routine releases run in CI; this is the manual path, for a first release or a
-# release cut from your machine.
-release:
-	gh release upload $(TEMPLATE)/v$(VERSION) build/$(TEMPLATE).mimic --clobber
-	gh workflow run index.yml
+.PHONY: validate bundle release
 
 # validate checks a template in the source form, which is stricter than the app is
 validate:
 	GOWORK=off go run github.com/odevine/mimic/engine/cmd/validate@$(ENGINE_VERSION) templates/$(TEMPLATE)
 
-# bundle builds a template in the source form into a bundle, with the version in its
-# template.json. The same folder always builds the same bytes
+# bundle builds a template into a bundle, with the version in its template.json.
+# The same folder always builds the same bytes
 bundle:
 	mkdir -p build
 	GOWORK=off go run github.com/odevine/mimic/engine/cmd/pack@$(ENGINE_VERSION) templates/$(TEMPLATE) -o build/$(TEMPLATE).mimic
+
+# release uploads a locally built bundle to the tag release-please created and
+# triggers the catalog rebuild. Routine releases run in CI, and this is the manual
+# path for one cut from your machine. Build the bundle first with bundle
+release:
+	gh release upload $(TEMPLATE)/v$(VERSION) build/$(TEMPLATE).mimic --clobber
+	gh workflow run index.yml
