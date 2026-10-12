@@ -1,12 +1,46 @@
 {
-  "schema": 1,
+  "schema": 2,
   "templates": [
+    {
+      "name": "mimic.m15",
+      "description": "The modern card frame, with single color art blended for pairs",
+      "shapes": [
+        {
+          "role": "single",
+          "kind": "standard"
+        },
+        {
+          "role": "split",
+          "kind": "standard"
+        },
+        {
+          "role": "transform_back",
+          "kind": "standard"
+        },
+        {
+          "role": "transform_front",
+          "kind": "standard"
+        }
+      ],
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "format": 2,
+          "minEngine": "0.18.0",
+          "url": "https://github.com/odevine/mimic-templates/releases/download/m15/v0.1.0/m15.mimic",
+          "size": 234492064,
+          "sha256": "dcfe48ba983dbb978805a4eec4ab911e5fbbd419f336ddb73d70e813ef76a33f"
+        }
+      ]
+    },
     {
       "name": "normal",
       "latest": "0.3.0",
       "versions": [
         {
           "version": "0.3.0",
+          "format": 1,
           "minEngine": "0.10.0",
           "url": "https://github.com/odevine/mimic-templates/releases/download/normal/v0.3.0/normal.mimic",
           "size": 208308054,
@@ -14,6 +48,7 @@
         },
         {
           "version": "0.2.0",
+          "format": 1,
           "minEngine": "0.5.0",
           "url": "https://github.com/odevine/mimic-templates/releases/download/normal/v0.2.0/normal.mimic",
           "size": 208308016,
@@ -21,6 +56,7 @@
         },
         {
           "version": "0.1.0",
+          "format": 1,
           "minEngine": "0.5.0",
           "url": "https://github.com/odevine/mimic-templates/releases/download/normal/0.1.0/normal.mimic",
           "size": 208308016,
@@ -34,6 +70,7 @@
       "versions": [
         {
           "version": "0.1.0",
+          "format": 1,
           "minEngine": "0.13.0",
           "url": "https://github.com/odevine/mimic-templates/releases/download/split/v0.1.0/split.mimic",
           "size": 96520412,
@@ -47,6 +84,7 @@
       "versions": [
         {
           "version": "0.1.0",
+          "format": 1,
           "minEngine": "0.10.0",
           "url": "https://github.com/odevine/mimic-templates/releases/download/transform/v0.1.0/transform.mimic",
           "size": 229085939,
