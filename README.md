@@ -91,7 +91,7 @@ deflated.
 `tools/reindex` rebuilds `index.json` from the `.mimic` assets attached to this
 repo's releases. For each bundle it records the download URL, size, SHA-256,
 container format, and the `minEngine` it declares. For each template it records the
-description and the card shapes read from the newest bundle's manifest, so the app
+title, description, and card shapes read from the newest bundle's manifest, so the app
 can describe a template before it is installed. It runs in CI on release.
 
 ## Repository layout
@@ -134,6 +134,7 @@ from the network.
   "templates": [
     {
       "name": "mimic.m15",
+      "title": "Modern frame (M15)",
       "description": "The modern card frame, with single color art blended for pairs",
       "shapes": [{ "role": "single", "kind": "standard" }],
       "latest": "0.1.0",

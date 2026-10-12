@@ -4,7 +4,7 @@
 // tool lists every release, records each bundle's download URL, size, SHA-256,
 // container format, and the minEngine it declares, and writes them grouped by
 // template. A template is named by the id in its newest bundle's header, such as
-// mimic.m15, and carries that bundle's description and the card shapes it
+// mimic.m15, and carries that bundle's title, description, and the card shapes it
 // renders, so the app can describe a template before it is installed.
 //
 // It runs in CI on every published release with GH_TOKEN and GITHUB_REPOSITORY
@@ -49,6 +49,7 @@ type Index struct {
 // highest semver, so the app can install it without scanning the list
 type Template struct {
 	Name        string    `json:"name"`
+	Title       string    `json:"title,omitempty"`
 	Description string    `json:"description,omitempty"`
 	Shapes      []Shape   `json:"shapes,omitempty"`
 	Latest      string    `json:"latest"`
@@ -110,6 +111,7 @@ func run() error {
 	// downloaded, by the template it belongs to and the version it is
 	type described struct {
 		version     string
+		title       string
 		description string
 		shapes      []Shape
 	}
@@ -129,7 +131,7 @@ func run() error {
 
 		v := Version{Version: ver, URL: asset.BrowserDownloadURL, Size: asset.Size}
 		name := tagName
-		if prev, ok := known.versions[asset.BrowserDownloadURL]; ok && prev.Size == asset.Size {
+		if prev, ok := known.versions[asset.BrowserDownloadURL]; ok && prev.Size == asset.Size && !known.lacksTitle(asset.BrowserDownloadURL) {
 			v.SHA256, v.MinEngine, v.Format = prev.SHA256, prev.MinEngine, prev.Format
 			if prevName := known.names[asset.BrowserDownloadURL]; prevName != "" {
 				name = prevName
@@ -144,7 +146,7 @@ func run() error {
 				name = info.ID
 			}
 			if cur, ok := fresh[name]; !ok || less(cur.version, ver) {
-				fresh[name] = described{ver, info.Description, info.Shapes}
+				fresh[name] = described{ver, info.Title, info.Description, info.Shapes}
 			}
 		}
 		byTemplate[name] = append(byTemplate[name], v)
@@ -157,9 +159,9 @@ func run() error {
 		// The description and shapes are the newest bundle's. A bundle that was not
 		// downloaded this run keeps what the index already said about its template
 		if f, ok := fresh[name]; ok && f.version == t.Latest {
-			t.Description, t.Shapes = f.description, f.shapes
+			t.Title, t.Description, t.Shapes = f.title, f.description, f.shapes
 		} else if prev, ok := known.templates[name]; ok && prev.Latest == t.Latest {
-			t.Description, t.Shapes = prev.Description, prev.Shapes
+			t.Title, t.Description, t.Shapes = prev.Title, prev.Description, prev.Shapes
 		}
 		idx.Templates = append(idx.Templates, t)
 	}
@@ -185,6 +187,12 @@ type knownIndex struct {
 	versions  map[string]Version
 	names     map[string]string
 	templates map[string]Template
+}
+
+// lacksTitle reports whether an indexed bundle of a format that names its template
+// was indexed before the index kept titles, so it is read again once
+func (k knownIndex) lacksTitle(url string) bool {
+	return k.versions[url].Format >= 2 && k.templates[k.names[url]].Title == ""
 }
 
 // loadKnown reads an existing index.json. A missing or unreadable file, or one
@@ -317,6 +325,7 @@ type bundleInfo struct {
 	Format      int
 	ID          string
 	MinEngine   string
+	Title       string
 	Description string
 	Shapes      []Shape
 }
@@ -402,6 +411,7 @@ func readBundleInfo(r io.ReaderAt, size int64) (bundleInfo, error) {
 		return info, nil
 	}
 	var m struct {
+		Name        string `json:"name"`
 		Description string `json:"description"`
 		Layouts     map[string]struct {
 			Serves []Shape `json:"serves"`
@@ -410,7 +420,7 @@ func readBundleInfo(r io.ReaderAt, size int64) (bundleInfo, error) {
 	if err := decodeEntry(manifest, &m); err != nil {
 		return bundleInfo{}, err
 	}
-	info.Description = m.Description
+	info.Title, info.Description = m.Name, m.Description
 	seen := map[Shape]bool{}
 	for _, l := range m.Layouts {
 		for _, sh := range l.Serves {
