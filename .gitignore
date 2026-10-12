@@ -19,10 +19,12 @@ go.work.sum
 *.psb
 /psd/
 
-# Generated layer PNGs. The manifest.json and bundle.json beside them are
-# tracked, so the geometry stays reviewable, but the extracted PNGs are large
-# and are rebuilt from the source PSD on demand
-templates/**/*.png
+# Generated layer PNGs of the templates that came before m15. Their manifest.json
+# and bundle.json are tracked and the extracted PNGs are not. A template in the
+# source form, one with a template.json, tracks its PNGs, so it is not listed here
+templates/normal/**/*.png
+templates/split/**/*.png
+templates/transform/**/*.png
 
 # Built bundles and other build output. Bundles are release assets, uploaded to
 # GitHub Releases, not committed

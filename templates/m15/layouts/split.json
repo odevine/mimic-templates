@@ -1,0 +1,385 @@
+{
+ "serves": [
+  {
+   "role": "split",
+   "kind": "standard"
+  }
+ ],
+ "canvas": {
+  "width": 4440,
+  "height": 3264,
+  "dpi": 1200,
+  "rotate": 270
+ },
+ "stack": [
+  {
+   "id": "background_1",
+   "part": "split_background_1",
+   "face": "first"
+  },
+  {
+   "id": "background_2",
+   "part": "split_background_1",
+   "face": "second",
+   "at": {
+    "x": 2337,
+    "y": 237
+   }
+  },
+  {
+   "id": "pinlines_boxes_1",
+   "part": "split_pinlines_boxes_1",
+   "face": "first"
+  },
+  {
+   "id": "pinlines_boxes_2",
+   "part": "split_pinlines_boxes_1",
+   "face": "second",
+   "at": {
+    "x": 2337,
+    "y": 237
+   }
+  },
+  {
+   "id": "pinlines_twins_1",
+   "part": "split_pinlines_twins_1",
+   "face": "first"
+  },
+  {
+   "id": "pinlines_twins_2",
+   "part": "split_pinlines_twins_1",
+   "face": "second",
+   "at": {
+    "x": 2337,
+    "y": 237
+   }
+  },
+  {
+   "id": "textbox_1",
+   "part": "split_textbox_1",
+   "face": "first"
+  },
+  {
+   "id": "textbox_2",
+   "part": "split_textbox_1",
+   "face": "second",
+   "at": {
+    "x": 2337,
+    "y": 237
+   }
+  },
+  {
+   "id": "name_title_boxes_1",
+   "part": "split_name_title_boxes_1",
+   "face": "first"
+  },
+  {
+   "id": "name_title_boxes_2",
+   "part": "split_name_title_boxes_1",
+   "face": "second",
+   "at": {
+    "x": 2337,
+    "y": 237
+   }
+  },
+  {
+   "id": "art_outline_1",
+   "part": "split_art_outline_1",
+   "face": "first"
+  },
+  {
+   "id": "art_outline_2",
+   "part": "split_art_outline_1",
+   "face": "second",
+   "at": {
+    "x": 2337,
+    "y": 237
+   }
+  },
+  {
+   "id": "border",
+   "part": "split_border"
+  },
+  {
+   "id": "border_fuse",
+   "part": "split_border_fuse",
+   "condition": "fuse"
+  },
+  {
+   "id": "fuse_textbox",
+   "part": "split_fuse_textbox",
+   "condition": "fuse"
+  },
+  {
+   "id": "fuse_pinlines",
+   "part": "split_fuse_pinlines",
+   "condition": "fuse"
+  }
+ ],
+ "textBoxes": {
+  "artist": {
+   "rect": {
+    "x": 332,
+    "y": 4094,
+    "width": 2100,
+    "height": 120
+   },
+   "text": {
+    "fontSize": 77,
+    "font": "small-caps",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "space": "output"
+  },
+  "copyright": {
+   "rect": {
+    "x": 1500,
+    "y": 4168,
+    "width": 1437,
+    "height": 120
+   },
+   "text": {
+    "fontSize": 68,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "right",
+    "vAlign": "baseline",
+    "tracking": 40
+   },
+   "flow": {},
+   "space": "output"
+  },
+  "fuse": {
+   "rect": {
+    "x": 598,
+    "y": 2937,
+    "width": 3273,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 113,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline",
+    "tracking": 20
+   },
+   "flow": {},
+   "condition": "fuse"
+  },
+  "mana_1": {
+   "rect": {
+    "x": 1339,
+    "y": 502,
+    "width": 841,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 174,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 174,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {},
+   "draws": "mana",
+   "face": "first"
+  },
+  "mana_2": {
+   "rect": {
+    "x": 3251,
+    "y": 502,
+    "width": 841,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 174,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 174,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {},
+   "draws": "mana",
+   "face": "second"
+  },
+  "oracle_1": {
+   "rect": {
+    "x": 544,
+    "y": 1939,
+    "width": 1629,
+    "height": 1045
+   },
+   "text": {
+    "fontSize": 150,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingX": 28,
+    "paddingY": 28
+   },
+   "flow": {},
+   "draws": "oracle",
+   "face": "first",
+   "when": [
+    {
+     "condition": "fuse",
+     "rect": {
+      "height": 870
+     }
+    }
+   ]
+  },
+  "oracle_2": {
+   "rect": {
+    "x": 2456,
+    "y": 1939,
+    "width": 1629,
+    "height": 1045
+   },
+   "text": {
+    "fontSize": 150,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingX": 28,
+    "paddingY": 28
+   },
+   "flow": {},
+   "draws": "oracle",
+   "face": "second",
+   "when": [
+    {
+     "condition": "fuse",
+     "rect": {
+      "height": 870
+     }
+    }
+   ]
+  },
+  "set": {
+   "rect": {
+    "x": 332,
+    "y": 4168,
+    "width": 1100,
+    "height": 120
+   },
+   "text": {
+    "fontSize": 68,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "space": "output"
+  },
+  "title_1": {
+   "rect": {
+    "x": 570,
+    "y": 505,
+    "width": 1610,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 151,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "mana_1"
+   },
+   "draws": "title",
+   "face": "first"
+  },
+  "title_2": {
+   "rect": {
+    "x": 2482,
+    "y": 505,
+    "width": 1610,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 151,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "mana_2"
+   },
+   "draws": "title",
+   "face": "second"
+  },
+  "type_1": {
+   "rect": {
+    "x": 575,
+    "y": 1866,
+    "width": 1440,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 102,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "face": "first"
+  },
+  "type_2": {
+   "rect": {
+    "x": 2487,
+    "y": 1866,
+    "width": 1440,
+    "height": 200
+   },
+   "text": {
+    "fontSize": 102,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "face": "second"
+  }
+ },
+ "art": [
+  {
+   "x": 547,
+   "y": 601,
+   "width": 1624,
+   "height": 1127,
+   "after": "pinlines_boxes_2",
+   "face": "first"
+  },
+  {
+   "x": 2459,
+   "y": 601,
+   "width": 1624,
+   "height": 1127,
+   "after": "pinlines_boxes_2",
+   "face": "second"
+  }
+ ],
+ "symbols": {}
+}

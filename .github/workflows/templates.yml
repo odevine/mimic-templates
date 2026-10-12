@@ -1,0 +1,71 @@
+name: templates
+
+# Checks every template in the source form, one with a template.json, and builds
+# its bundle without publishing it. The validate and pack commands come from the
+# engine release named below, so a template is checked by the engine it is built
+# for. Release-please publishes a bundle from the same pack command when its
+# release pull request is merged.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "templates/**/template.json"
+      - "templates/**/layouts/**"
+      - "templates/**/*.png"
+      - ".github/workflows/templates.yml"
+  pull_request:
+    paths:
+      - "templates/**/template.json"
+      - "templates/**/layouts/**"
+      - "templates/**/*.png"
+      - ".github/workflows/templates.yml"
+
+permissions:
+  contents: read
+
+env:
+  # The engine release whose validate and pack commands run here. Raise it when a
+  # template needs a newer engine, which its minEngine then says
+  ENGINE_VERSION: v0.18.0
+
+jobs:
+  templates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          # The commands are run at a version of their own and use nothing from this
+          # module, so there is nothing to cache from it
+          cache: false
+
+      - name: Validate
+        run: |
+          status=0
+          for file in templates/*/template.json; do
+            [ -e "$file" ] || continue
+            dir="$(dirname "$file")"
+            echo "::group::validate $dir"
+            go run "github.com/odevine/mimic/engine/cmd/validate@$ENGINE_VERSION" "$dir" || status=1
+            echo "::endgroup::"
+          done
+          exit $status
+
+      - name: Pack twice and compare
+        run: |
+          mkdir -p build
+          for file in templates/*/template.json; do
+            [ -e "$file" ] || continue
+            dir="$(dirname "$file")"
+            name="$(basename "$dir")"
+            go run "github.com/odevine/mimic/engine/cmd/pack@$ENGINE_VERSION" "$dir" -o "build/$name.mimic"
+            go run "github.com/odevine/mimic/engine/cmd/pack@$ENGINE_VERSION" "$dir" -o "build/$name.again.mimic"
+            if ! cmp -s "build/$name.mimic" "build/$name.again.mimic"; then
+              echo "::error::two packs of $dir are not the same bytes"
+              exit 1
+            fi
+            size="$(wc -c < "build/$name.mimic" | tr -d ' ')"
+            echo "$name: $size bytes" >> "$GITHUB_STEP_SUMMARY"
+          done
