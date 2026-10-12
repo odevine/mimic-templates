@@ -1,7 +1,7 @@
 {
  "contract": "1.0",
  "id": "mimic.m15",
- "version": "0.0.0",
+ "version": "0.1.0",
  "minEngine": "0.18.0",
  "name": "Modern frame (M15)",
  "description": "The modern card frame, with single color art blended for pairs",
@@ -173,7 +173,7 @@
     "seams": {
      "2": [
       {
-       "center": -863.0,
+       "center": -863,
        "width": 586
       }
      ]
@@ -193,7 +193,7 @@
     "seams": {
      "2": [
       {
-       "center": -863.0,
+       "center": -863,
        "width": 586
       }
      ]
@@ -268,17 +268,17 @@
      "3": [
       {
        "center": -865.8,
-       "width": 222.0
+       "width": 222
       },
       {
        "center": 1043.4,
-       "width": 222.0
+       "width": 222
       }
      ],
      "4": [
       {
        "center": -865.8,
-       "width": 222.0
+       "width": 222
       },
       {
        "center": 88.8,
@@ -286,7 +286,7 @@
       },
       {
        "center": 1043.4,
-       "width": 222.0
+       "width": 222
       }
      ]
     }
@@ -311,17 +311,17 @@
      "3": [
       {
        "center": -865.8,
-       "width": 222.0
+       "width": 222
       },
       {
        "center": 1043.4,
-       "width": 222.0
+       "width": 222
       }
      ],
      "4": [
       {
        "center": -865.8,
-       "width": 222.0
+       "width": 222
       },
       {
        "center": 88.8,
@@ -329,7 +329,7 @@
       },
       {
        "center": 1043.4,
-       "width": 222.0
+       "width": 222
       }
      ]
     }
