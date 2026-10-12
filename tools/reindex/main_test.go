@@ -82,7 +82,7 @@ func TestReadBundleInfoOfTheFirstFormat(t *testing.T) {
 func TestReadBundleInfoOfAnIdentifiedTemplate(t *testing.T) {
 	b := bundleOf(t, map[string]string{
 		"bundle.json": `{"format":2,"id":"mimic.m15","version":"0.1.0","minEngine":"0.18.0"}`,
-		"manifest.json": `{"description":"The modern card frame","layouts":{
+		"manifest.json": `{"name":"Modern frame (M15)","description":"The modern card frame","layouts":{
 			"normal":{"serves":[{"role":"single","kind":"standard"}]},
 			"transform":{"serves":[{"role":"transform_front","kind":"standard"},{"role":"transform_back","kind":"standard"}]},
 			"again":{"serves":[{"role":"single","kind":"standard"}]}}}`,
@@ -91,7 +91,7 @@ func TestReadBundleInfoOfAnIdentifiedTemplate(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if got.Format != 2 || got.ID != "mimic.m15" || got.MinEngine != "0.18.0" || got.Description != "The modern card frame" {
+	if got.Format != 2 || got.ID != "mimic.m15" || got.MinEngine != "0.18.0" || got.Description != "The modern card frame" || got.Title != "Modern frame (M15)" {
 		t.Errorf("info = %+v", got)
 	}
 	want := []Shape{{"single", "standard"}, {"transform_back", "standard"}, {"transform_front", "standard"}}
@@ -128,5 +128,26 @@ func TestLoadKnownIgnoresAnIndexOfAnOlderSchema(t *testing.T) {
 	k := loadKnown(write(indexSchema))
 	if k.versions["u"].Format != 2 || k.names["u"] != "mimic.m15" || k.templates["mimic.m15"].Latest != "0.1.0" {
 		t.Errorf("known = %+v", k)
+	}
+}
+
+func TestAnIdentifiedBundleIndexedWithoutATitleIsReadAgain(t *testing.T) {
+	k := knownIndex{
+		versions: map[string]Version{"new": {Format: 2}, "old": {Format: 1}, "titled": {Format: 2}},
+		names:    map[string]string{"new": "mimic.m15", "old": "normal", "titled": "mimic.other"},
+		templates: map[string]Template{
+			"mimic.m15":   {Name: "mimic.m15"},
+			"normal":      {Name: "normal"},
+			"mimic.other": {Name: "mimic.other", Title: "Other"},
+		},
+	}
+	if !k.lacksTitle("new") {
+		t.Error("a format 2 bundle with no title was kept as it was")
+	}
+	if k.lacksTitle("old") {
+		t.Error("a bundle of the first format, which has no title to read, is read again every run")
+	}
+	if k.lacksTitle("titled") {
+		t.Error("a bundle with a title is read again")
 	}
 }
