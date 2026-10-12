@@ -2,7 +2,10 @@
 // repo's GitHub Releases. index.json is the one file the app fetches to
 // discover templates, so it must always reflect the live release assets: this
 // tool lists every release, records each bundle's download URL, size, SHA-256,
-// and the minEngine it declares, and writes them grouped by template.
+// container format, and the minEngine it declares, and writes them grouped by
+// template. A template is named by the id in its newest bundle's header, such as
+// mimic.m15, and carries that bundle's description and the card shapes it
+// renders, so the app can describe a template before it is installed.
 //
 // It runs in CI on every published release with GH_TOKEN and GITHUB_REPOSITORY
 // in the environment. Release assets are immutable once published, so a bundle
@@ -34,7 +37,7 @@ import (
 
 // indexSchema is the index.json schema version, bumped only when the index
 // structure itself changes incompatibly
-const indexSchema = 1
+const indexSchema = 2
 
 // Index is the whole catalog the app reads
 type Index struct {
@@ -45,16 +48,26 @@ type Index struct {
 // Template groups every published version of one template. Latest is the
 // highest semver, so the app can install it without scanning the list
 type Template struct {
-	Name     string    `json:"name"`
-	Latest   string    `json:"latest"`
-	Versions []Version `json:"versions"`
+	Name        string    `json:"name"`
+	Description string    `json:"description,omitempty"`
+	Shapes      []Shape   `json:"shapes,omitempty"`
+	Latest      string    `json:"latest"`
+	Versions    []Version `json:"versions"`
+}
+
+// Shape is one face a template renders, as the engine names it
+type Shape struct {
+	Role string `json:"role"`
+	Kind string `json:"kind"`
 }
 
 // Version is one downloadable bundle. SHA256 is the download-integrity check;
-// MinEngine is copied up from the bundle so the app can filter incompatible
-// versions before downloading anything
+// Format and MinEngine are copied up from the bundle so the app can filter
+// incompatible versions before downloading anything. A version with no Format is
+// from the first container format
 type Version struct {
 	Version   string `json:"version"`
+	Format    int    `json:"format,omitempty"`
 	MinEngine string `json:"minEngine"`
 	URL       string `json:"url"`
 	Size      int64  `json:"size"`
@@ -83,8 +96,8 @@ func run() error {
 		http:  &http.Client{Timeout: 10 * time.Minute},
 	}
 
-	// Reuse SHA-256 and minEngine for assets already indexed. Release assets
-	// are immutable, so a matching URL and size means the bundle is unchanged
+	// Reuse what is known about assets already indexed. Release assets are
+	// immutable, so a matching URL and size means the bundle is unchanged
 	known := loadKnown(*out)
 
 	releases, err := gh.releases()
@@ -93,11 +106,19 @@ func run() error {
 	}
 
 	byTemplate := map[string][]Version{}
+	// described holds the description and shapes read from a bundle this run
+	// downloaded, by the template it belongs to and the version it is
+	type described struct {
+		version     string
+		description string
+		shapes      []Shape
+	}
+	fresh := map[string]described{}
 	for _, rel := range releases {
 		if rel.Draft {
 			continue
 		}
-		name, ver, ok := splitTag(rel.TagName)
+		tagName, ver, ok := splitTag(rel.TagName)
 		if !ok {
 			continue
 		}
@@ -107,14 +128,24 @@ func run() error {
 		}
 
 		v := Version{Version: ver, URL: asset.BrowserDownloadURL, Size: asset.Size}
-		if prev, ok := known[asset.BrowserDownloadURL]; ok && prev.Size == asset.Size {
-			v.SHA256, v.MinEngine = prev.SHA256, prev.MinEngine
+		name := tagName
+		if prev, ok := known.versions[asset.BrowserDownloadURL]; ok && prev.Size == asset.Size {
+			v.SHA256, v.MinEngine, v.Format = prev.SHA256, prev.MinEngine, prev.Format
+			if prevName := known.names[asset.BrowserDownloadURL]; prevName != "" {
+				name = prevName
+			}
 		} else {
-			sum, minEngine, err := gh.inspect(asset.BrowserDownloadURL)
+			info, err := gh.inspect(asset.BrowserDownloadURL)
 			if err != nil {
 				return fmt.Errorf("inspecting %s: %w", asset.BrowserDownloadURL, err)
 			}
-			v.SHA256, v.MinEngine = sum, minEngine
+			v.SHA256, v.MinEngine, v.Format = info.SHA256, info.MinEngine, info.Format
+			if info.ID != "" {
+				name = info.ID
+			}
+			if cur, ok := fresh[name]; !ok || less(cur.version, ver) {
+				fresh[name] = described{ver, info.Description, info.Shapes}
+			}
 		}
 		byTemplate[name] = append(byTemplate[name], v)
 	}
@@ -122,11 +153,15 @@ func run() error {
 	idx := Index{Schema: indexSchema}
 	for name, versions := range byTemplate {
 		sort.Slice(versions, func(i, j int) bool { return less(versions[j].Version, versions[i].Version) })
-		idx.Templates = append(idx.Templates, Template{
-			Name:     name,
-			Latest:   versions[0].Version,
-			Versions: versions,
-		})
+		t := Template{Name: name, Latest: versions[0].Version, Versions: versions}
+		// The description and shapes are the newest bundle's. A bundle that was not
+		// downloaded this run keeps what the index already said about its template
+		if f, ok := fresh[name]; ok && f.version == t.Latest {
+			t.Description, t.Shapes = f.description, f.shapes
+		} else if prev, ok := known.templates[name]; ok && prev.Latest == t.Latest {
+			t.Description, t.Shapes = prev.Description, prev.Shapes
+		}
+		idx.Templates = append(idx.Templates, t)
 	}
 	sort.Slice(idx.Templates, func(i, j int) bool { return idx.Templates[i].Name < idx.Templates[j].Name })
 
@@ -142,22 +177,34 @@ func run() error {
 	return nil
 }
 
-// loadKnown indexes an existing index.json by download URL so unchanged assets
-// need not be re-downloaded. A missing or unreadable file yields an empty map,
-// so a first run simply fetches everything
-func loadKnown(path string) map[string]Version {
-	known := map[string]Version{}
+// knownIndex is what an existing index.json says, so unchanged assets need not
+// be downloaded again
+type knownIndex struct {
+	// versions are the bundles by download URL, and names the template each
+	// belongs to
+	versions  map[string]Version
+	names     map[string]string
+	templates map[string]Template
+}
+
+// loadKnown reads an existing index.json. A missing or unreadable file, or one
+// from an older schema, yields nothing known, so a first run simply fetches
+// everything and an older index is rebuilt with the new fields
+func loadKnown(path string) knownIndex {
+	known := knownIndex{versions: map[string]Version{}, names: map[string]string{}, templates: map[string]Template{}}
 	raw, err := os.ReadFile(path)
 	if err != nil {
 		return known
 	}
 	var idx Index
-	if json.Unmarshal(raw, &idx) != nil {
+	if json.Unmarshal(raw, &idx) != nil || idx.Schema != indexSchema {
 		return known
 	}
 	for _, t := range idx.Templates {
+		known.templates[t.Name] = t
 		for _, v := range t.Versions {
-			known[v.URL] = v
+			known.versions[v.URL] = v
+			known.names[v.URL] = t.Name
 		}
 	}
 	return known
@@ -264,27 +311,37 @@ func (c *client) releases() ([]release, error) {
 	}
 }
 
-// inspect downloads a bundle to a temp file, returning its SHA-256 and the
-// minEngine its bundle.json declares. The file is streamed through the hash so
-// a multi-hundred-MB bundle never sits fully in memory
-func (c *client) inspect(url string) (sha, minEngine string, err error) {
+// bundleInfo is what a downloaded bundle says about itself
+type bundleInfo struct {
+	SHA256      string
+	Format      int
+	ID          string
+	MinEngine   string
+	Description string
+	Shapes      []Shape
+}
+
+// inspect downloads a bundle to a temp file, returning its SHA-256 and what its
+// header and manifest declare. The file is streamed through the hash so a
+// multi-hundred-MB bundle never sits fully in memory
+func (c *client) inspect(url string) (bundleInfo, error) {
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
-		return "", "", err
+		return bundleInfo{}, err
 	}
 	c.auth(req)
 	resp, err := c.http.Do(req)
 	if err != nil {
-		return "", "", err
+		return bundleInfo{}, err
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != http.StatusOK {
-		return "", "", fmt.Errorf("downloading: %s", resp.Status)
+		return bundleInfo{}, fmt.Errorf("downloading: %s", resp.Status)
 	}
 
 	tmp, err := os.CreateTemp("", "reindex-*.mimic")
 	if err != nil {
-		return "", "", err
+		return bundleInfo{}, err
 	}
 	defer os.Remove(tmp.Name())
 	defer tmp.Close()
@@ -292,14 +349,15 @@ func (c *client) inspect(url string) (sha, minEngine string, err error) {
 	h := sha256.New()
 	size, err := io.Copy(io.MultiWriter(tmp, h), resp.Body)
 	if err != nil {
-		return "", "", err
+		return bundleInfo{}, err
 	}
 
-	minEngine, err = readMinEngine(tmp, size)
+	info, err := readBundleInfo(tmp, size)
 	if err != nil {
-		return "", "", err
+		return bundleInfo{}, err
 	}
-	return hex.EncodeToString(h.Sum(nil)), minEngine, nil
+	info.SHA256 = hex.EncodeToString(h.Sum(nil))
+	return info, nil
 }
 
 func (c *client) auth(req *http.Request) {
@@ -308,28 +366,74 @@ func (c *client) auth(req *http.Request) {
 	}
 }
 
-// readMinEngine opens the bundle's zip and reads bundle.json's minEngine
-func readMinEngine(r io.ReaderAt, size int64) (string, error) {
+// readBundleInfo opens the bundle's zip and reads bundle.json, and from a bundle
+// in a format that has an id, the description and the shapes its manifest says
+// its layouts serve
+func readBundleInfo(r io.ReaderAt, size int64) (bundleInfo, error) {
 	zr, err := zip.NewReader(r, size)
 	if err != nil {
-		return "", err
+		return bundleInfo{}, err
 	}
+	var header *zip.File
+	var manifest *zip.File
 	for _, f := range zr.File {
-		if f.Name != "bundle.json" {
-			continue
+		switch f.Name {
+		case "bundle.json":
+			header = f
+		case "manifest.json":
+			manifest = f
 		}
-		rc, err := f.Open()
-		if err != nil {
-			return "", err
-		}
-		defer rc.Close()
-		var b struct {
-			MinEngine string `json:"minEngine"`
-		}
-		if err := json.NewDecoder(rc).Decode(&b); err != nil {
-			return "", err
-		}
-		return b.MinEngine, nil
 	}
-	return "", fmt.Errorf("bundle.json not found in archive")
+	if header == nil {
+		return bundleInfo{}, fmt.Errorf("bundle.json not found in archive")
+	}
+	var info bundleInfo
+	var b struct {
+		Format    int    `json:"format"`
+		ID        string `json:"id"`
+		MinEngine string `json:"minEngine"`
+	}
+	if err := decodeEntry(header, &b); err != nil {
+		return bundleInfo{}, err
+	}
+	info.Format, info.ID, info.MinEngine = b.Format, b.ID, b.MinEngine
+	// The first container format has no id and a manifest this tool does not read
+	if b.ID == "" || manifest == nil {
+		return info, nil
+	}
+	var m struct {
+		Description string `json:"description"`
+		Layouts     map[string]struct {
+			Serves []Shape `json:"serves"`
+		} `json:"layouts"`
+	}
+	if err := decodeEntry(manifest, &m); err != nil {
+		return bundleInfo{}, err
+	}
+	info.Description = m.Description
+	seen := map[Shape]bool{}
+	for _, l := range m.Layouts {
+		for _, sh := range l.Serves {
+			if !seen[sh] {
+				seen[sh] = true
+				info.Shapes = append(info.Shapes, sh)
+			}
+		}
+	}
+	sort.Slice(info.Shapes, func(i, j int) bool {
+		if info.Shapes[i].Role != info.Shapes[j].Role {
+			return info.Shapes[i].Role < info.Shapes[j].Role
+		}
+		return info.Shapes[i].Kind < info.Shapes[j].Kind
+	})
+	return info, nil
+}
+
+func decodeEntry(f *zip.File, v any) error {
+	rc, err := f.Open()
+	if err != nil {
+		return err
+	}
+	defer rc.Close()
+	return json.NewDecoder(rc).Decode(v)
 }

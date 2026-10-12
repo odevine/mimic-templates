@@ -25,6 +25,14 @@
         { "type": "json", "path": "bundle.json", "jsonpath": "$.version" }
       ]
     },
+    "templates/m15": {
+      "release-type": "simple",
+      "component": "m15",
+      "initial-version": "0.1.0",
+      "extra-files": [
+        { "type": "json", "path": "template.json", "jsonpath": "$.version" }
+      ]
+    },
     "templates/split": {
       "release-type": "simple",
       "component": "split",

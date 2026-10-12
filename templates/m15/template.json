@@ -1,0 +1,538 @@
+{
+ "contract": "1.0",
+ "id": "mimic.m15",
+ "version": "0.0.0",
+ "minEngine": "0.18.0",
+ "name": "Modern frame (M15)",
+ "description": "The modern card frame, with single color art blended for pairs",
+ "author": {
+  "name": "mimic"
+ },
+ "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+ "credits": [
+  {
+   "name": "Proxyshop",
+   "url": "https://github.com/Investigamer/Proxyshop",
+   "note": "The frame art is cut from the M15 templates it distributes, which remain the work of their original designers and are redistributed with attribution"
+  }
+ ],
+ "parts": {
+  "normal_background": {
+   "dir": "normal/background",
+   "slot": "background",
+   "origin": {
+    "x": 251,
+    "y": 257
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "normal_nyx": {
+   "dir": "normal/nyx",
+   "slot": "background",
+   "origin": {
+    "x": 0,
+    "y": 1
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "normal_companion": {
+   "dir": "normal/companion",
+   "slot": "pinlines",
+   "origin": {
+    "x": 623,
+    "y": 243
+   }
+  },
+  "normal_shadows": {
+   "dir": "normal/shadows",
+   "origin": {
+    "x": 264,
+    "y": 296
+   }
+  },
+  "normal_land_pinlines_textbox": {
+   "dir": "normal/land_pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 317
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "normal_pinlines_textbox": {
+   "dir": "normal/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 317
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "normal_legendary_crown": {
+   "dir": "normal/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 219
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "normal_border": {
+   "dir": "normal/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_border_legendary": {
+   "dir": "normal/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_border_fullart": {
+   "dir": "normal/border_fullart",
+   "origin": {
+    "x": 0,
+    "y": 2706
+   }
+  },
+  "normal_name_title_boxes": {
+   "dir": "normal/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 338
+   }
+  },
+  "normal_color_indicator": {
+   "dir": "normal/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2550
+   }
+  },
+  "normal_pt_box": {
+   "dir": "normal/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 2441,
+    "y": 3847
+   }
+  },
+  "normal_divider": {
+   "dir": "normal/divider"
+  },
+  "split_background_1": {
+   "dir": "split/background",
+   "slot": "background",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 1,
+    "seams": {
+     "2": [
+      {
+       "center": -853.7,
+       "width": 523
+      }
+     ]
+    }
+   }
+  },
+  "split_pinlines_boxes_1": {
+   "dir": "split/pinlines_boxes",
+   "slot": "pinlines",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "shape": "linear",
+    "end": 1,
+    "seams": {
+     "2": [
+      {
+       "center": -863.0,
+       "width": 586
+      }
+     ]
+    }
+   }
+  },
+  "split_pinlines_twins_1": {
+   "dir": "split/pinlines_twins",
+   "slot": "pinlines",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "shape": "linear",
+    "end": 1,
+    "seams": {
+     "2": [
+      {
+       "center": -863.0,
+       "width": 586
+      }
+     ]
+    }
+   }
+  },
+  "split_textbox_1": {
+   "dir": "split/textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 1,
+    "seams": {
+     "2": [
+      {
+       "center": -853.7,
+       "width": 523
+      }
+     ]
+    }
+   }
+  },
+  "split_name_title_boxes_1": {
+   "dir": "split/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 425,
+    "y": 237
+   }
+  },
+  "split_art_outline_1": {
+   "dir": "split/art_outline",
+   "origin": {
+    "x": 425,
+    "y": 237
+   }
+  },
+  "split_border": {
+   "dir": "split/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "split_border_fuse": {
+   "dir": "split/border_fuse",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "split_fuse_textbox": {
+   "dir": "split/fuse_textbox",
+   "slot": "fuse",
+   "origin": {
+    "x": 490,
+    "y": 2790
+   },
+   "blend": {
+    "shape": "linear",
+    "seams": {
+     "2": [
+      {
+       "center": 88.8,
+       "width": 177.6
+      }
+     ],
+     "3": [
+      {
+       "center": -865.8,
+       "width": 222.0
+      },
+      {
+       "center": 1043.4,
+       "width": 222.0
+      }
+     ],
+     "4": [
+      {
+       "center": -865.8,
+       "width": 222.0
+      },
+      {
+       "center": 88.8,
+       "width": 177.6
+      },
+      {
+       "center": 1043.4,
+       "width": 222.0
+      }
+     ]
+    }
+   }
+  },
+  "split_fuse_pinlines": {
+   "dir": "split/fuse_pinlines",
+   "slot": "fuse_pinlines",
+   "origin": {
+    "x": 490,
+    "y": 2790
+   },
+   "blend": {
+    "shape": "linear",
+    "seams": {
+     "2": [
+      {
+       "center": 88.8,
+       "width": 177.6
+      }
+     ],
+     "3": [
+      {
+       "center": -865.8,
+       "width": 222.0
+      },
+      {
+       "center": 1043.4,
+       "width": 222.0
+      }
+     ],
+     "4": [
+      {
+       "center": -865.8,
+       "width": 222.0
+      },
+      {
+       "center": 88.8,
+       "width": 177.6
+      },
+      {
+       "center": 1043.4,
+       "width": 222.0
+      }
+     ]
+    }
+   }
+  },
+  "transform_background_front": {
+   "dir": "transform/background_front",
+   "slot": "background",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_background_back": {
+   "dir": "transform/background_back",
+   "slot": "background",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_shadows_front": {
+   "dir": "transform/shadows_front",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_shadows_back": {
+   "dir": "transform/shadows_back",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_land_pinlines_textbox_front": {
+   "dir": "transform/land_pinlines_textbox_front",
+   "slot": "pinlines",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_land_pinlines_textbox_back": {
+   "dir": "transform/land_pinlines_textbox_back",
+   "slot": "pinlines",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_pinlines_textbox_front": {
+   "dir": "transform/pinlines_textbox_front",
+   "slot": "pinlines",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_pinlines_textbox_back": {
+   "dir": "transform/pinlines_textbox_back",
+   "slot": "pinlines",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_legendary_crown": {
+   "dir": "transform/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 0,
+    "y": 0
+   },
+   "blend": {
+    "shape": "smooth",
+    "end": 0.94
+   }
+  },
+  "transform_border_front": {
+   "dir": "transform/border_front",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_border_back": {
+   "dir": "transform/border_back",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_border_legendary_front": {
+   "dir": "transform/border_legendary_front",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_border_legendary_back": {
+   "dir": "transform/border_legendary_back",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_border_fullart": {
+   "dir": "transform/border_fullart",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_name_title_boxes_front": {
+   "dir": "transform/name_title_boxes_front",
+   "slot": "twins",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_name_title_boxes_back": {
+   "dir": "transform/name_title_boxes_back",
+   "slot": "twins",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_transform_circle": {
+   "dir": "transform/transform_circle",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_transform_icon_front": {
+   "dir": "transform/transform_icon_front",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_transform_icon_back": {
+   "dir": "transform/transform_icon_back",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_color_indicator": {
+   "dir": "transform/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_pt_box_front": {
+   "dir": "transform/pt_box_front",
+   "slot": "ptBox",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_pt_box_back": {
+   "dir": "transform/pt_box_back",
+   "slot": "ptBox",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "transform_divider": {
+   "dir": "transform/divider"
+  }
+ }
+}

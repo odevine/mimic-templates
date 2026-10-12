@@ -3,6 +3,9 @@ package main
 import (
 	"archive/zip"
 	"bytes"
+	"fmt"
+	"os"
+	"path/filepath"
 	"testing"
 )
 
@@ -45,39 +48,85 @@ func TestLess(t *testing.T) {
 	}
 }
 
-func TestReadMinEngine(t *testing.T) {
+// bundleOf builds a bundle zip holding the named files
+func bundleOf(t *testing.T, files map[string]string) []byte {
+	t.Helper()
 	var buf bytes.Buffer
 	zw := zip.NewWriter(&buf)
-	w, err := zw.Create("bundle.json")
-	if err != nil {
-		t.Fatal(err)
-	}
-	if _, err := w.Write([]byte(`{"format":1,"template":"normal","version":"1.2.0","minEngine":"0.3.0"}`)); err != nil {
-		t.Fatal(err)
+	for name, body := range files {
+		w, err := zw.Create(name)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if _, err := w.Write([]byte(body)); err != nil {
+			t.Fatal(err)
+		}
 	}
 	if err := zw.Close(); err != nil {
 		t.Fatal(err)
 	}
+	return buf.Bytes()
+}
 
-	got, err := readMinEngine(bytes.NewReader(buf.Bytes()), int64(buf.Len()))
+func TestReadBundleInfoOfTheFirstFormat(t *testing.T) {
+	b := bundleOf(t, map[string]string{"bundle.json": `{"format":1,"template":"normal","version":"1.2.0","minEngine":"0.3.0"}`, "manifest.json": `{"template":"normal"}`})
+	got, err := readBundleInfo(bytes.NewReader(b), int64(len(b)))
 	if err != nil {
 		t.Fatal(err)
 	}
-	if got != "0.3.0" {
-		t.Fatalf("minEngine = %q, want 0.3.0", got)
+	if got.Format != 1 || got.MinEngine != "0.3.0" || got.ID != "" || got.Description != "" || len(got.Shapes) != 0 {
+		t.Fatalf("info = %+v", got)
 	}
 }
 
-func TestReadMinEngineMissing(t *testing.T) {
-	var buf bytes.Buffer
-	zw := zip.NewWriter(&buf)
-	if _, err := zw.Create("manifest.json"); err != nil {
+func TestReadBundleInfoOfAnIdentifiedTemplate(t *testing.T) {
+	b := bundleOf(t, map[string]string{
+		"bundle.json": `{"format":2,"id":"mimic.m15","version":"0.1.0","minEngine":"0.18.0"}`,
+		"manifest.json": `{"description":"The modern card frame","layouts":{
+			"normal":{"serves":[{"role":"single","kind":"standard"}]},
+			"transform":{"serves":[{"role":"transform_front","kind":"standard"},{"role":"transform_back","kind":"standard"}]},
+			"again":{"serves":[{"role":"single","kind":"standard"}]}}}`,
+	})
+	got, err := readBundleInfo(bytes.NewReader(b), int64(len(b)))
+	if err != nil {
 		t.Fatal(err)
 	}
-	if err := zw.Close(); err != nil {
-		t.Fatal(err)
+	if got.Format != 2 || got.ID != "mimic.m15" || got.MinEngine != "0.18.0" || got.Description != "The modern card frame" {
+		t.Errorf("info = %+v", got)
 	}
-	if _, err := readMinEngine(bytes.NewReader(buf.Bytes()), int64(buf.Len())); err == nil {
+	want := []Shape{{"single", "standard"}, {"transform_back", "standard"}, {"transform_front", "standard"}}
+	if len(got.Shapes) != len(want) {
+		t.Fatalf("shapes = %v, want %v", got.Shapes, want)
+	}
+	for i := range want {
+		if got.Shapes[i] != want[i] {
+			t.Errorf("shapes[%d] = %v, want %v", i, got.Shapes[i], want[i])
+		}
+	}
+}
+
+func TestReadBundleInfoMissingHeader(t *testing.T) {
+	b := bundleOf(t, map[string]string{"manifest.json": "{}"})
+	if _, err := readBundleInfo(bytes.NewReader(b), int64(len(b))); err == nil {
 		t.Fatal("expected an error when bundle.json is absent")
+	}
+}
+
+func TestLoadKnownIgnoresAnIndexOfAnOlderSchema(t *testing.T) {
+	dir := t.TempDir()
+	write := func(schema int) string {
+		path := filepath.Join(dir, "index.json")
+		body := fmt.Sprintf(`{"schema":%d,"templates":[{"name":"mimic.m15","latest":"0.1.0","versions":[{"version":"0.1.0","format":2,"minEngine":"0.18.0","url":"u","size":1,"sha256":"s"}]}]}`, schema)
+		if err := os.WriteFile(path, []byte(body), 0o644); err != nil {
+			t.Fatal(err)
+		}
+		return path
+	}
+	if k := loadKnown(write(1)); len(k.versions) != 0 {
+		t.Errorf("an older index was trusted: %+v", k.versions)
+	}
+	k := loadKnown(write(indexSchema))
+	if k.versions["u"].Format != 2 || k.names["u"] != "mimic.m15" || k.templates["mimic.m15"].Latest != "0.1.0" {
+		t.Errorf("known = %+v", k)
 	}
 }

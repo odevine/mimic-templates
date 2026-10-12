@@ -16,7 +16,14 @@ PSD_DIR ?= psd
 VERSION = $(shell jq -r .version templates/$(TEMPLATE)/bundle.json)
 LATEST_URL = $(shell jq -r --arg n "$(TEMPLATE)" '.templates[]|select(.name==$$n)|.versions[0].url // empty' index.json 2>/dev/null)
 
-.PHONY: extract assets pack repack release
+# A template in the source form, one with a template.json, is checked and built
+# with the engine's own commands, at the engine release CI uses:
+#
+#   make validate TEMPLATE=m15     check a source folder and report every problem
+#   make bundle   TEMPLATE=m15     build build/m15.mimic from the source folder
+ENGINE_VERSION ?= v0.18.0
+
+.PHONY: extract assets pack repack release validate bundle
 
 # extract seeds a brand-new template from its PSD, writing both manifest.json
 # and the layer PNGs into templates/$(TEMPLATE)/. The manifest is a starting
@@ -52,3 +59,13 @@ repack:
 release:
 	gh release upload $(TEMPLATE)/v$(VERSION) build/$(TEMPLATE).mimic --clobber
 	gh workflow run index.yml
+
+# validate checks a template in the source form, which is stricter than the app is
+validate:
+	GOWORK=off go run github.com/odevine/mimic/engine/cmd/validate@$(ENGINE_VERSION) templates/$(TEMPLATE)
+
+# bundle builds a template in the source form into a bundle, with the version in its
+# template.json. The same folder always builds the same bytes
+bundle:
+	mkdir -p build
+	GOWORK=off go run github.com/odevine/mimic/engine/cmd/pack@$(ENGINE_VERSION) templates/$(TEMPLATE) -o build/$(TEMPLATE).mimic

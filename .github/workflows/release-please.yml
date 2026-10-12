@@ -60,14 +60,25 @@ jobs:
           go vet ./...
           go test ./...
 
-      - name: Repack and upload each released template
+      - name: Pack or repack and upload each released template
         env:
           GH_TOKEN: ${{ github.token }}
           PATHS: ${{ needs.release-please.outputs.paths_released }}
+          # The engine release whose pack command builds a template in the source form
+          ENGINE_VERSION: v0.18.0
         run: |
           mkdir -p build
           for path in $(echo "$PATHS" | jq -r '.[]'); do
             name="${path#templates/}"
+            # A template in the source form is packed from its folder, and the earlier
+            # kind is repacked from the bundle before it and its edited manifest
+            if [ -f "templates/$name/template.json" ]; then
+              version="$(jq -r .version "templates/$name/template.json")"
+              echo "packing $name/v$version"
+              go run "github.com/odevine/mimic/engine/cmd/pack@$ENGINE_VERSION" "templates/$name" -o "build/$name.mimic"
+              gh release upload "$name/v$version" "build/$name.mimic" --clobber
+              continue
+            fi
             version="$(jq -r .version "templates/$name/bundle.json")"
             tag="$name/v$version"
             prev="$(jq -r --arg n "$name" '.templates[]|select(.name==$n)|.versions[0].url // empty' index.json)"
