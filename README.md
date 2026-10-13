@@ -25,6 +25,7 @@ templates/m15/
 ├── template.json      id, version, credits, features, and the parts
 ├── layouts/           normal.json, split.json, transform.json
 ├── normal/background/ w.png u.png b.png r.png g.png gold.png ...
+├── font/              font files, only when the template ships its own
 └── ...                one folder for each part
 ```
 
@@ -35,6 +36,45 @@ three layouts: `normal` for standard cards, `split` for split cards, and
 `validate -schema template` and `validate -schema layout`, from the commands
 below, print the JSON Schema of `template.json` and of a layout file, for an editor
 that checks them as they are written.
+
+## Fonts
+
+The engine ships the fonts printed on cards, and a template draws its text with
+them unless it says otherwise. Each text box names a role, and a role is bound to a
+font. The standard roles are `title`, `body`, `body-italic`, `mana`, `small-caps`
+and `info`, and the engine gives each one a built-in font:
+
+| Built-in id             | Font                    | Standard role |
+| ----------------------- | ----------------------- | ------------- |
+| `mimic-m15-title`       | Beleren Proxy Bold      | `title`       |
+| `mimic-m15-body`        | Plantin MT Pro Regular  | `body`        |
+| `mimic-m15-body-italic` | Plantin MT Pro Italic   | `body-italic` |
+| `mimic-m15-mana`        | Mana                    | `mana`        |
+| `mimic-m15-small-caps`  | Beleren Small Caps Bold | `small-caps`  |
+| `mimic-m15-info`        | Gotham Medium           | `info`        |
+
+`templates/m15` uses only these, so it has no `font/` folder. A template that wants
+a role of its own, or a different font for one, adds a `roles` table to
+`template.json`, and a `fonts` table when the font is a file it ships. Each font
+file sits directly in `font/`, and a role names either a shipped font or a built-in
+id:
+
+```json
+"fonts": {
+  "script": { "file": "font/Script.ttf" }
+},
+"roles": {
+  "saga-chapter": { "label": "Chapter text", "font": "script" },
+  "saga-name":    { "label": "Chapter name", "builtin": "mimic-m15-title" }
+}
+```
+
+A text box then sets `"font": "saga-chapter"`. The packer reads each file, records
+its sha256 and, when the table leaves them out, its family and style. A template
+with `fonts` or `roles` sets `"contract": "1.1"` and a `minEngine` of 0.19.0 or
+newer, because an older engine would draw its text with other fonts. The engine
+also lets a caller assign a font of the user's own to any role, whatever the
+template chose.
 
 ## Checking and building
 
@@ -61,7 +101,8 @@ central directory, so the engine can open one image without reading the rest.
 m15.mimic  (zip)
 ├── bundle.json        format, id, version, and minEngine, read first
 ├── manifest.json      the layouts, parts, and features, with nothing left to resolve
-└── assets/<hash>.png  every image, named by the hash of its content
+├── assets/<hash>.png  every image, named by the hash of its content
+└── font/<file>        the fonts the template ships, when it has any
 ```
 
 `bundle.json` is small and read before the manifest, so the app can check
@@ -82,9 +123,8 @@ name, in the form `owner.name`, and `version` is the template's own version.
 `minEngine` is the oldest engine that renders it.
 
 The packer cuts each part to the pixels it uses, and names each image by the hash
-of its content, so two identical images are stored once. PNG entries are stored
-uncompressed, since a PNG is compressed already, and the two JSON files are
-deflated.
+of its content, so two identical images are stored once. PNG and font entries are
+stored uncompressed, and the two JSON files are deflated.
 
 ## Tools
 
