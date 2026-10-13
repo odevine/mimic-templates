@@ -10,7 +10,7 @@
 # TEMPLATE selects the template.
 
 TEMPLATE ?= m15
-ENGINE_VERSION ?= v0.18.0
+ENGINE_VERSION ?= v0.19.0
 VERSION = $(shell jq -r .version templates/$(TEMPLATE)/template.json)
 
 .PHONY: validate bundle release
