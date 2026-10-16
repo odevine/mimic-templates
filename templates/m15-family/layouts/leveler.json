@@ -1,0 +1,376 @@
+{
+ "serves": [
+  {
+   "role": "single",
+   "kind": "leveler"
+  }
+ ],
+ "canvas": {
+  "width": 3264,
+  "height": 4440
+ },
+ "stack": [
+  {
+   "id": "background",
+   "part": "leveler_background"
+  },
+  {
+   "id": "shadows",
+   "part": "leveler_shadows"
+  },
+  {
+   "id": "pinlines_textbox",
+   "part": "leveler_pinlines_textbox"
+  },
+  {
+   "id": "legendary_crown",
+   "part": "leveler_legendary_crown",
+   "condition": "legendary"
+  },
+  {
+   "id": "border",
+   "part": "leveler_border",
+   "condition": "nonlegendary"
+  },
+  {
+   "id": "border_legendary",
+   "part": "leveler_border_legendary",
+   "condition": "legendary"
+  },
+  {
+   "id": "name_title_boxes",
+   "part": "leveler_name_title_boxes"
+  },
+  {
+   "id": "pt_and_level_boxes",
+   "part": "leveler_pt_and_level_boxes"
+  },
+  {
+   "id": "color_indicator",
+   "part": "leveler_color_indicator",
+   "condition": "color_indicator"
+  }
+ ],
+ "textBoxes": {
+  "mana": {
+   "rect": {
+    "x": 2047,
+    "y": 498,
+    "width": 866,
+    "height": 232
+   },
+   "text": {
+    "fontSize": 179,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 179,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {}
+  },
+  "title": {
+   "rect": {
+    "x": 386,
+    "y": 502,
+    "width": 2526,
+    "height": 203
+   },
+   "text": {
+    "fontSize": 156,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "mana"
+   }
+  },
+  "type_full": {
+   "rect": {
+    "x": 385,
+    "y": 2642,
+    "width": 2586,
+    "height": 171
+   },
+   "text": {
+    "fontSize": 132,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "when": [
+    {
+     "condition": "set_symbol",
+     "rect": {
+      "width": 2132
+     }
+    },
+    {
+     "condition": "color_indicator",
+     "rect": {
+      "x": 514,
+      "width": 2457
+     }
+    },
+    {
+     "condition": "color_indicator,set_symbol",
+     "rect": {
+      "x": 514,
+      "width": 2003
+     }
+    }
+   ]
+  },
+  "collector": {
+   "rect": {
+    "x": 327,
+    "y": 4102,
+    "width": 2645,
+    "height": 89
+   },
+   "text": {
+    "fontSize": 68,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "tracking": 125
+   },
+   "flow": {}
+  },
+  "set": {
+   "rect": {
+    "x": 326,
+    "y": 4178,
+    "width": 2645,
+    "height": 89
+   },
+   "text": {
+    "fontSize": 68,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "artist": {
+   "rect": {
+    "x": 729,
+    "y": 4178,
+    "width": 2645,
+    "height": 115
+   },
+   "text": {
+    "fontSize": 77,
+    "font": "small-caps",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "copyright": {
+   "rect": {
+    "x": 1405,
+    "y": 4102,
+    "width": 1587,
+    "height": 120
+   },
+   "text": {
+    "fontSize": 68,
+    "color": "#FFFFFF",
+    "align": "right",
+    "vAlign": "baseline",
+    "tracking": 40
+   },
+   "flow": {}
+  },
+  "level_up": {
+   "rect": {
+    "x": 389,
+    "y": 2742,
+    "width": 2043,
+    "height": 418
+   },
+   "text": {
+    "fontSize": 133,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1
+   },
+   "flow": {}
+  },
+  "pt": {
+   "rect": {
+    "x": 2478,
+    "y": 3007,
+    "width": 498,
+    "height": 206
+   },
+   "text": {
+    "fontSize": 159,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "level_label_1": {
+   "rect": {
+    "x": 320,
+    "y": 3326,
+    "width": 297,
+    "height": 75
+   },
+   "text": {
+    "fontSize": 58,
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "level_label"
+  },
+  "level_1": {
+   "rect": {
+    "x": 306,
+    "y": 3440,
+    "width": 327,
+    "height": 161
+   },
+   "text": {
+    "fontSize": 124,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "level_1_text": {
+   "rect": {
+    "x": 776,
+    "y": 3156,
+    "width": 1656,
+    "height": 417
+   },
+   "text": {
+    "fontSize": 133,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1
+   },
+   "flow": {}
+  },
+  "level_1_pt": {
+   "rect": {
+    "x": 2478,
+    "y": 3421,
+    "width": 498,
+    "height": 206
+   },
+   "text": {
+    "fontSize": 159,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "level_label_2": {
+   "rect": {
+    "x": 320,
+    "y": 3739,
+    "width": 297,
+    "height": 75
+   },
+   "text": {
+    "fontSize": 58,
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "level_label"
+  },
+  "level_2": {
+   "rect": {
+    "x": 315,
+    "y": 3853,
+    "width": 310,
+    "height": 161
+   },
+   "text": {
+    "fontSize": 124,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "level_2_text": {
+   "rect": {
+    "x": 776,
+    "y": 3569,
+    "width": 1656,
+    "height": 417
+   },
+   "text": {
+    "fontSize": 133,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1
+   },
+   "flow": {}
+  },
+  "level_2_pt": {
+   "rect": {
+    "x": 2478,
+    "y": 3834,
+    "width": 498,
+    "height": 206
+   },
+   "text": {
+    "fontSize": 159,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  }
+ },
+ "art": [
+  {
+   "x": 356,
+   "y": 599,
+   "width": 2552,
+   "height": 1856
+  }
+ ],
+ "symbols": {
+  "set": {
+   "x": 2459,
+   "y": 2514,
+   "width": 440,
+   "height": 176,
+   "align": "right",
+   "vAlign": "center"
+  }
+ }
+}

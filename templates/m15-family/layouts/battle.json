@@ -1,0 +1,253 @@
+{
+ "serves": [
+  {
+   "role": "transform_front",
+   "kind": "battle"
+  }
+ ],
+ "canvas": {
+  "width": 2960,
+  "height": 2176,
+  "dpi": 800,
+  "rotate": 270
+ },
+ "stack": [
+  {
+   "id": "border",
+   "part": "battle_border"
+  },
+  {
+   "id": "textbox",
+   "part": "battle_textbox"
+  },
+  {
+   "id": "pinlines",
+   "part": "battle_pinlines"
+  },
+  {
+   "id": "name_title_boxes",
+   "part": "battle_name_title_boxes"
+  },
+  {
+   "id": "color_indicator",
+   "part": "battle_color_indicator",
+   "condition": "color_indicator"
+  },
+  {
+   "id": "defense_box",
+   "part": "battle_defense_box"
+  },
+  {
+   "id": "transform_circle",
+   "part": "battle_transform_circle"
+  },
+  {
+   "id": "transform_icon_front",
+   "part": "battle_transform_icon_front"
+  }
+ ],
+ "textBoxes": {
+  "mana": {
+   "rect": {
+    "x": 2081,
+    "y": 305,
+    "width": 578,
+    "height": 155
+   },
+   "text": {
+    "fontSize": 119,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 119,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {}
+  },
+  "title": {
+   "rect": {
+    "x": 605,
+    "y": 306,
+    "width": 2053,
+    "height": 133
+   },
+   "text": {
+    "fontSize": 102,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "mana"
+   }
+  },
+  "type_full": {
+   "rect": {
+    "x": 441,
+    "y": 1345,
+    "width": 2225,
+    "height": 116
+   },
+   "text": {
+    "fontSize": 89,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "when": [
+    {
+     "condition": "set_symbol",
+     "rect": {
+      "width": 1968
+     }
+    },
+    {
+     "condition": "color_indicator",
+     "rect": {
+      "x": 537,
+      "width": 2129
+     }
+    },
+    {
+     "condition": "color_indicator,set_symbol",
+     "rect": {
+      "x": 537,
+      "width": 1872
+     }
+    }
+   ]
+  },
+  "oracle": {
+   "rect": {
+    "x": 421,
+    "y": 1411,
+    "width": 2245,
+    "height": 576
+   },
+   "text": {
+    "fontSize": 100,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingX": 36,
+    "paddingY": 36
+   },
+   "flow": {
+    "avoidLayer": "defense_box",
+    "divider": "battle_divider"
+   }
+  },
+  "flipside_pt": {
+   "rect": {
+    "x": 2427,
+    "y": 1757,
+    "width": 230,
+    "height": 95
+   },
+   "text": {
+    "fontSize": 73,
+    "font": "title",
+    "color": "#636363",
+    "align": "right",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "defense": {
+   "rect": {
+    "x": 2572,
+    "y": 1957,
+    "width": 220,
+    "height": 136
+   },
+   "text": {
+    "fontSize": 104,
+    "font": "title",
+    "color": "#FFFFFF",
+    "align": "center",
+    "vAlign": "baseline",
+    "tracking": -20
+   },
+   "flow": {}
+  },
+  "artist": {
+   "rect": {
+    "x": 487,
+    "y": 2777,
+    "width": 1450,
+    "height": 97
+   },
+   "text": {
+    "fontSize": 51,
+    "font": "small-caps",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "space": "output"
+  },
+  "set": {
+   "rect": {
+    "x": 218,
+    "y": 2777,
+    "width": 1450,
+    "height": 80
+   },
+   "text": {
+    "fontSize": 46,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "tracking": 40
+   },
+   "flow": {},
+   "space": "output"
+  },
+  "collector": {
+   "rect": {
+    "x": 218,
+    "y": 2726,
+    "width": 1450,
+    "height": 80
+   },
+   "text": {
+    "fontSize": 46,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "tracking": 125
+   },
+   "flow": {},
+   "space": "output"
+  }
+ },
+ "art": [
+  {
+   "x": 305,
+   "y": 171,
+   "width": 2482,
+   "height": 1831
+  }
+ ],
+ "symbols": {
+  "set": {
+   "x": 2382,
+   "y": 1264,
+   "width": 272,
+   "height": 109,
+   "align": "right",
+   "vAlign": "center"
+  }
+ }
+}

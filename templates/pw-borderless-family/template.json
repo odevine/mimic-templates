@@ -1,0 +1,797 @@
+{
+ "contract": "1.2",
+ "id": "proxyshop.pw-borderless-family",
+ "version": "0.0.0",
+ "name": "Planeswalker Borderless",
+ "description": "A full-bleed, borderless planeswalker frame, for a single-faced planeswalker and both faces of a planeswalker MDFC or transform card.",
+ "author": {
+  "name": "mimic"
+ },
+ "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+ "credits": [
+  {
+   "name": "Proxyshop",
+   "url": "https://github.com/Investigamer/Proxyshop",
+   "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution"
+  }
+ ],
+ "parts": {
+  "back_badge_minus": {
+   "dir": "back/badge_minus",
+   "origin": {
+    "x": 254,
+    "y": 2852
+   }
+  },
+  "back_badge_plus": {
+   "dir": "back/badge_plus",
+   "origin": {
+    "x": 254,
+    "y": 2799
+   }
+  },
+  "back_badge_zero": {
+   "dir": "back/badge_zero",
+   "origin": {
+    "x": 255,
+    "y": 2843
+   }
+  },
+  "back_bg": {
+   "dir": "back/bg",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "back_loyalty_box": {
+   "dir": "back/loyalty_box",
+   "origin": {
+    "x": 2531,
+    "y": 3814
+   }
+  },
+  "back_mdfc_bottom": {
+   "dir": "back/mdfc_bottom",
+   "slot": "twins",
+   "origin": {
+    "x": 202,
+    "y": 3823
+   }
+  },
+  "back_mdfc_top": {
+   "dir": "back/mdfc_top",
+   "slot": "twins",
+   "origin": {
+    "x": 245,
+    "y": 277
+   }
+  },
+  "back_pw3_outline": {
+   "dir": "back/pw3_outline",
+   "origin": {
+    "x": 270,
+    "y": 250
+   }
+  },
+  "back_pw4_outline": {
+   "dir": "back/pw4_outline",
+   "origin": {
+    "x": 270,
+    "y": 250
+   }
+  },
+  "back_transform_circle": {
+   "dir": "back/transform_circle",
+   "origin": {
+    "x": 290,
+    "y": 271
+   }
+  },
+  "back_transform_icon_back": {
+   "dir": "back/transform_icon_back",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 307,
+    "y": 290
+   }
+  },
+  "front_badge_minus": {
+   "dir": "front/badge_minus",
+   "origin": {
+    "x": 254,
+    "y": 2852
+   }
+  },
+  "front_badge_plus": {
+   "dir": "front/badge_plus",
+   "origin": {
+    "x": 254,
+    "y": 2799
+   }
+  },
+  "front_badge_zero": {
+   "dir": "front/badge_zero",
+   "origin": {
+    "x": 255,
+    "y": 2843
+   }
+  },
+  "front_band_bottom": {
+   "dir": "front/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2978
+   }
+  },
+  "front_band_top": {
+   "dir": "front/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3396
+   }
+  },
+  "front_bg": {
+   "dir": "front/bg",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "front_loyalty_box": {
+   "dir": "front/loyalty_box",
+   "origin": {
+    "x": 2531,
+    "y": 3814
+   }
+  },
+  "front_mdfc_bottom": {
+   "dir": "front/mdfc_bottom",
+   "slot": "twins",
+   "origin": {
+    "x": 202,
+    "y": 3823
+   }
+  },
+  "front_mdfc_top": {
+   "dir": "front/mdfc_top",
+   "slot": "twins",
+   "origin": {
+    "x": 245,
+    "y": 277
+   }
+  },
+  "front_pw3_color_indicator": {
+   "dir": "front/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "front_pw3_name_title_boxes": {
+   "dir": "front/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "front_pw3_outline": {
+   "dir": "front/pw3_outline",
+   "origin": {
+    "x": 269,
+    "y": 249
+   }
+  },
+  "front_pw4_color_indicator": {
+   "dir": "front/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "front_pw4_name_title_boxes": {
+   "dir": "front/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "front_pw4_outline": {
+   "dir": "front/pw4_outline",
+   "origin": {
+    "x": 269,
+    "y": 249
+   }
+  },
+  "front_transform_circle": {
+   "dir": "front/transform_circle",
+   "origin": {
+    "x": 289,
+    "y": 271
+   }
+  },
+  "front_transform_icon_front": {
+   "dir": "front/transform_icon_front",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 306,
+    "y": 289
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_band_bottom": {
+   "dir": "proxyshop-pw-mdfc-extended/back/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2732
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_band_top": {
+   "dir": "proxyshop-pw-mdfc-extended/back/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3150
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw3_band": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw3_color_indicator": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw3_name_title_boxes": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw3_pinlines": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw3_shadows": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw3_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw3_textbox": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw4_band": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw4_color_indicator": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw4_name_title_boxes": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw4_pinlines": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw4_shadows": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw4_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-mdfc-extended_back_pw4_textbox": {
+   "dir": "proxyshop-pw-mdfc-extended/back/pw4_textbox",
+   "origin": {
+    "x": 483,
+    "y": 2464
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw3_band": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw3_pinlines": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw3_shadows": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw3_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw3_textbox": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2748
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw4_band": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw4_pinlines": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw4_shadows": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw4_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-mdfc-extended_front_pw4_textbox": {
+   "dir": "proxyshop-pw-mdfc-extended/front/pw4_textbox",
+   "origin": {
+    "x": 483,
+    "y": 2464
+   }
+  },
+  "proxyshop-pw-transform-extended_back_band_bottom": {
+   "dir": "proxyshop-pw-transform-extended/back/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2978
+   }
+  },
+  "proxyshop-pw-transform-extended_back_band_top": {
+   "dir": "proxyshop-pw-transform-extended/back/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3396
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw3_band": {
+   "dir": "proxyshop-pw-transform-extended/back/pw3_band",
+   "origin": {
+    "x": 496,
+    "y": 2761
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw3_color_indicator": {
+   "dir": "proxyshop-pw-transform-extended/back/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw3_name_title_boxes": {
+   "dir": "proxyshop-pw-transform-extended/back/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw3_pinlines": {
+   "dir": "proxyshop-pw-transform-extended/back/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 274,
+    "y": 255
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw3_shadows": {
+   "dir": "proxyshop-pw-transform-extended/back/pw3_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw3_textbox": {
+   "dir": "proxyshop-pw-transform-extended/back/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw4_band": {
+   "dir": "proxyshop-pw-transform-extended/back/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw4_color_indicator": {
+   "dir": "proxyshop-pw-transform-extended/back/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw4_name_title_boxes": {
+   "dir": "proxyshop-pw-transform-extended/back/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw4_pinlines": {
+   "dir": "proxyshop-pw-transform-extended/back/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 274,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw4_shadows": {
+   "dir": "proxyshop-pw-transform-extended/back/pw4_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-transform-extended_back_pw4_textbox": {
+   "dir": "proxyshop-pw-transform-extended/back/pw4_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw3_band": {
+   "dir": "proxyshop-pw-transform-extended/front/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw3_pinlines": {
+   "dir": "proxyshop-pw-transform-extended/front/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 274,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw3_shadows": {
+   "dir": "proxyshop-pw-transform-extended/front/pw3_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw3_textbox": {
+   "dir": "proxyshop-pw-transform-extended/front/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw4_band": {
+   "dir": "proxyshop-pw-transform-extended/front/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw4_pinlines": {
+   "dir": "proxyshop-pw-transform-extended/front/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 274,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw4_shadows": {
+   "dir": "proxyshop-pw-transform-extended/front/pw4_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "proxyshop-pw-transform-extended_front_pw4_textbox": {
+   "dir": "proxyshop-pw-transform-extended/front/pw4_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "pw_extended_badge_minus": {
+   "dir": "pw_extended/badge_minus",
+   "origin": {
+    "x": 254,
+    "y": 2852
+   }
+  },
+  "pw_extended_badge_plus": {
+   "dir": "pw_extended/badge_plus",
+   "origin": {
+    "x": 254,
+    "y": 2799
+   }
+  },
+  "pw_extended_badge_zero": {
+   "dir": "pw_extended/badge_zero",
+   "origin": {
+    "x": 255,
+    "y": 2843
+   }
+  },
+  "pw_extended_band_bottom": {
+   "dir": "pw_extended/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2978
+   }
+  },
+  "pw_extended_band_top": {
+   "dir": "pw_extended/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3396
+   }
+  },
+  "pw_extended_bg": {
+   "dir": "pw_extended/bg",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "pw_extended_loyalty_box": {
+   "dir": "pw_extended/loyalty_box",
+   "origin": {
+    "x": 2531,
+    "y": 3814
+   }
+  },
+  "pw_extended_pw3_band": {
+   "dir": "pw_extended/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "pw_extended_pw3_color_indicator": {
+   "dir": "pw_extended/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "pw_extended_pw3_name_title_boxes": {
+   "dir": "pw_extended/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "pw_extended_pw3_pinlines": {
+   "dir": "pw_extended/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 277,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "pw_extended_pw3_shadows": {
+   "dir": "pw_extended/pw3_shadows",
+   "origin": {
+    "x": 0,
+    "y": 251
+   }
+  },
+  "pw_extended_pw3_textbox": {
+   "dir": "pw_extended/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "pw_extended_pw4_band": {
+   "dir": "pw_extended/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "pw_extended_pw4_color_indicator": {
+   "dir": "pw_extended/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "pw_extended_pw4_name_title_boxes": {
+   "dir": "pw_extended/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "pw_extended_pw4_pinlines": {
+   "dir": "pw_extended/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 277,
+    "y": 255
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "pw_extended_pw4_shadows": {
+   "dir": "pw_extended/pw4_shadows",
+   "origin": {
+    "x": 0,
+    "y": 249
+   }
+  },
+  "pw_extended_pw4_textbox": {
+   "dir": "pw_extended/pw4_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  }
+ }
+}

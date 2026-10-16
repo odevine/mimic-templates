@@ -1,0 +1,869 @@
+{
+ "format": 1,
+ "sources": {
+  "leveler": "leveler.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.leveler",
+  "version": "0.1.0",
+  "name": "Proxyshop leveler",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "leveler_background": {
+   "source": "leveler",
+   "dir": "leveler/background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "leveler_shadows": {
+   "source": "leveler",
+   "dir": "leveler/shadows",
+   "render": {
+    "target": [
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "leveler_pinlines_textbox": {
+   "source": "leveler",
+   "dir": "leveler/pinlines_textbox",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines & Textbox"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "G"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "leveler_legendary_crown": {
+   "source": "leveler",
+   "dir": "leveler/legendary_crown",
+   "slot": "crown",
+   "render": {
+    "target": [
+     "Legendary Crown"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Legendary Crown",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Legendary Crown",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Legendary Crown",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Legendary Crown",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Legendary Crown",
+        "G"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "leveler_border": {
+   "source": "leveler",
+   "dir": "leveler/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Normal Border"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Legendary Border"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "leveler_border_legendary": {
+   "source": "leveler",
+   "dir": "leveler/border_legendary",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Legendary Border"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Normal Border"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "leveler_name_title_boxes": {
+   "source": "leveler",
+   "dir": "leveler/name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "leveler_pt_and_level_boxes": {
+   "source": "leveler",
+   "dir": "leveler/pt_and_level_boxes",
+   "slot": "ptBox",
+   "render": {
+    "target": [
+     "PT and Level Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "PT and Level Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "PT and Level Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "PT and Level Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "PT and Level Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "PT and Level Boxes",
+        "G"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "leveler_color_indicator": {
+   "source": "leveler",
+   "dir": "leveler/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  }
+ },
+ "layouts": {
+  "leveler": {
+   "serves": [
+    {
+     "role": "single",
+     "kind": "leveler"
+    }
+   ],
+   "canvas": {
+    "width": 3264,
+    "height": 4440
+   },
+   "stack": [
+    {
+     "id": "background",
+     "part": "leveler_background"
+    },
+    {
+     "id": "shadows",
+     "part": "leveler_shadows"
+    },
+    {
+     "id": "pinlines_textbox",
+     "part": "leveler_pinlines_textbox"
+    },
+    {
+     "id": "legendary_crown",
+     "part": "leveler_legendary_crown",
+     "condition": "legendary"
+    },
+    {
+     "id": "border",
+     "part": "leveler_border",
+     "condition": "nonlegendary"
+    },
+    {
+     "id": "border_legendary",
+     "part": "leveler_border_legendary",
+     "condition": "legendary"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "leveler_name_title_boxes"
+    },
+    {
+     "id": "pt_and_level_boxes",
+     "part": "leveler_pt_and_level_boxes"
+    },
+    {
+     "id": "color_indicator",
+     "part": "leveler_color_indicator",
+     "condition": "color_indicator"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2047,
+      "y": 498,
+      "width": 866,
+      "height": 232
+     },
+     "text": {
+      "fontSize": 179,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 179,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 386,
+      "y": 502,
+      "width": 2526,
+      "height": 203
+     },
+     "text": {
+      "fontSize": 156,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 385,
+      "y": 2642,
+      "width": 2586,
+      "height": 171
+     },
+     "text": {
+      "fontSize": 132,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 2132
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 514,
+        "width": 2457
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 514,
+        "width": 2003
+       }
+      }
+     ]
+    },
+    "collector": {
+     "rect": {
+      "x": 327,
+      "y": 4102,
+      "width": 2645,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {}
+    },
+    "set": {
+     "rect": {
+      "x": 326,
+      "y": 4178,
+      "width": 2645,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 729,
+      "y": 4178,
+      "width": 2645,
+      "height": 115
+     },
+     "text": {
+      "fontSize": 77,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "copyright": {
+     "rect": {
+      "x": 1405,
+      "y": 4102,
+      "width": 1587,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {}
+    },
+    "level_up": {
+     "rect": {
+      "x": 389,
+      "y": 2742,
+      "width": 2043,
+      "height": 418
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1
+     },
+     "flow": {}
+    },
+    "pt": {
+     "rect": {
+      "x": 2478,
+      "y": 3007,
+      "width": 498,
+      "height": 206
+     },
+     "text": {
+      "fontSize": 159,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "level_label_1": {
+     "rect": {
+      "x": 320,
+      "y": 3326,
+      "width": 297,
+      "height": 75
+     },
+     "text": {
+      "fontSize": 58,
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "level_label"
+    },
+    "level_1": {
+     "rect": {
+      "x": 306,
+      "y": 3440,
+      "width": 327,
+      "height": 161
+     },
+     "text": {
+      "fontSize": 124,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "level_1_text": {
+     "rect": {
+      "x": 776,
+      "y": 3156,
+      "width": 1656,
+      "height": 417
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1
+     },
+     "flow": {}
+    },
+    "level_1_pt": {
+     "rect": {
+      "x": 2478,
+      "y": 3421,
+      "width": 498,
+      "height": 206
+     },
+     "text": {
+      "fontSize": 159,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "level_label_2": {
+     "rect": {
+      "x": 320,
+      "y": 3739,
+      "width": 297,
+      "height": 75
+     },
+     "text": {
+      "fontSize": 58,
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "level_label"
+    },
+    "level_2": {
+     "rect": {
+      "x": 315,
+      "y": 3853,
+      "width": 310,
+      "height": 161
+     },
+     "text": {
+      "fontSize": 124,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "level_2_text": {
+     "rect": {
+      "x": 776,
+      "y": 3569,
+      "width": 1656,
+      "height": 417
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1
+     },
+     "flow": {}
+    },
+    "level_2_pt": {
+     "rect": {
+      "x": 2478,
+      "y": 3834,
+      "width": 498,
+      "height": 206
+     },
+     "text": {
+      "fontSize": 159,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    }
+   },
+   "art": [
+    {
+     "x": 356,
+     "y": 599,
+     "width": 2552,
+     "height": 1856
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2459,
+     "y": 2514,
+     "width": 440,
+     "height": 176,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}

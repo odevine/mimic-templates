@@ -1,0 +1,2840 @@
+{
+ "format": 1,
+ "sources": {
+  "normal_vector": "normal-vector.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.normal-vector",
+  "version": "0.1.0",
+  "name": "Proxyshop normal-vector",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "normal_vector_background": {
+   "source": "normal_vector",
+   "dir": "normal_vector/background",
+   "slot": "background",
+   "blend": {
+    "shape": "smooth",
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Background",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Background",
+        "Land"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "Background",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_background_nyx": {
+   "source": "normal_vector",
+   "dir": "normal_vector/background_nyx",
+   "slot": "background",
+   "blend": {
+    "shape": "smooth",
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W Nyx"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U Nyx"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B Nyx"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R Nyx"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G Nyx"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold Nyx"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Background",
+        "Artifact Nyx"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_pinlines": {
+   "source": "normal_vector",
+   "dir": "normal_vector/pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f6ef"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0075be"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#272624"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ef3827"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#007b43"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6d262"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ae9787"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_legendary_crown": {
+   "source": "normal_vector",
+   "dir": "normal_vector/legendary_crown",
+   "slot": "crown",
+   "render": {
+    "target": [
+     "Legendary Crown"
+    ],
+    "show": [
+     [
+      "Legendary Crown"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#f6f6ef"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#0075be"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#272624"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#ef3827"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#007b43"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#f6d262"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown",
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#ae9787"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_border": {
+   "source": "normal_vector",
+   "dir": "normal_vector/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Normal MDFC"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Legendary Extended Transform"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "normal_vector_border_legendary": {
+   "source": "normal_vector",
+   "dir": "normal_vector/border_legendary",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Legendary Extended Transform"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Normal MDFC"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "normal_vector_name_title_boxes": {
+   "source": "normal_vector",
+   "dir": "normal_vector/name_title_boxes",
+   "slot": "twins",
+   "blend": {
+    "shape": "smooth",
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_name_title_boxes_back": {
+   "source": "normal_vector",
+   "dir": "normal_vector/name_title_boxes_back",
+   "slot": "twins",
+   "blend": {
+    "shape": "smooth",
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W Back"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U Back"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B Back"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R Back"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G Back"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold Back"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact Back"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_pt_box": {
+   "source": "normal_vector",
+   "dir": "normal_vector/pt_box",
+   "slot": "ptBox",
+   "blend": {
+    "shape": "smooth",
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "PT Box"
+    ],
+    "show": [
+     [
+      "PT Box"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "PT Box",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "PT Box",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "PT Box",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "PT Box",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "PT Box",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "PT Box",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "PT Box",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "PT Box",
+        "Colourless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "PT Box",
+        "Land"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "PT Box",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_color_indicator": {
+   "source": "normal_vector",
+   "dir": "normal_vector/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "show": [
+     [
+      "Color Indicator"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#f8f4f0"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006dae"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#393431"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#de3c23"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006d42"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_vector_divider": {
+   "source": "normal_vector",
+   "dir": "normal_vector/divider",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Divider"
+    ],
+    "show": [
+     [
+      "Text and Icons",
+      "Divider"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "normal_vector_storybook_top_shadow": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_top_shadow",
+   "render": {
+    "target": [
+     "Storybook",
+     "Top Shadow"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "normal_vector_storybook_wings": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_wings",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Storybook",
+     "Wings"
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#d5cbb5"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#b5c6d5"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#a29b98"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#c08e73"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#aeae9b"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#d5cbb5",
+           "location": 0.4
+          },
+          {
+           "color": "#b5c6d5",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#b5c6d5",
+           "location": 0.4
+          },
+          {
+           "color": "#a29b98",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#a29b98",
+           "location": 0.4
+          },
+          {
+           "color": "#c08e73",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#c08e73",
+           "location": 0.4
+          },
+          {
+           "color": "#aeae9b",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#aeae9b",
+           "location": 0.4
+          },
+          {
+           "color": "#d5cbb5",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#d5cbb5",
+           "location": 0.4
+          },
+          {
+           "color": "#a29b98",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#a29b98",
+           "location": 0.4
+          },
+          {
+           "color": "#aeae9b",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#aeae9b",
+           "location": 0.4
+          },
+          {
+           "color": "#b5c6d5",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#b5c6d5",
+           "location": 0.4
+          },
+          {
+           "color": "#c08e73",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#c08e73",
+           "location": 0.4
+          },
+          {
+           "color": "#d5cbb5",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#c4ac83"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Wings"
+        ],
+        "clip": true,
+        "color": "#c2b2b1"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "normal_vector_storybook_right": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_right",
+   "slot": "pinlines",
+   "blend": {
+    "shape": "smooth",
+    "end": 0.999,
+    "seams": {
+     "2": [
+      {
+       "center": 369.5,
+       "width": 446.5
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Storybook",
+     "Right"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Storybook",
+        "Right",
+        "Colorless"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "normal_vector_storybook_left": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_left",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Storybook",
+     "Left"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Storybook",
+        "Left",
+        "Land"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "normal_vector_storybook_adventure_name": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_adventure_name",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Storybook",
+     "Adventure Name"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "Gold"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Name",
+        "Land"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "normal_vector_storybook_adventure_typeline_accent": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_adventure_typeline_accent",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Storybook",
+     "Adventure Typeline Accent"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "Gold"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline Accent",
+        "Land"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "normal_vector_storybook_adventure_typeline": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_adventure_typeline",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Storybook",
+     "Adventure Typeline"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "Gold"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Storybook",
+        "Adventure Typeline",
+        "Land"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "normal_vector_storybook_shading_outlines": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_shading_outlines",
+   "render": {
+    "target": [
+     "Storybook",
+     "Shading & Outlines"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "normal_vector_storybook_pinlines": {
+   "source": "normal_vector",
+   "dir": "normal_vector/storybook_pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Storybook",
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f6ef"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0075be"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#272624"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ef3827"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#007b43"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6d262"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Storybook",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ae9787"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  }
+ },
+ "layouts": {
+  "normal_vector": {
+   "serves": [
+    {
+     "role": "adventure",
+     "kind": "standard"
+    }
+   ],
+   "canvas": {
+    "width": 2176,
+    "height": 2960
+   },
+   "stack": [
+    {
+     "id": "background",
+     "part": "normal_vector_background"
+    },
+    {
+     "id": "background_nyx",
+     "part": "normal_vector_background_nyx",
+     "condition": "nyx"
+    },
+    {
+     "id": "pinlines",
+     "part": "normal_vector_pinlines"
+    },
+    {
+     "id": "legendary_crown",
+     "part": "normal_vector_legendary_crown",
+     "condition": "legendary"
+    },
+    {
+     "id": "storybook_top_shadow",
+     "part": "normal_vector_storybook_top_shadow"
+    },
+    {
+     "id": "storybook_wings",
+     "part": "normal_vector_storybook_wings"
+    },
+    {
+     "id": "storybook_right",
+     "part": "normal_vector_storybook_right"
+    },
+    {
+     "id": "storybook_left",
+     "part": "normal_vector_storybook_left",
+     "face": "second"
+    },
+    {
+     "id": "storybook_adventure_name",
+     "part": "normal_vector_storybook_adventure_name",
+     "face": "second"
+    },
+    {
+     "id": "storybook_adventure_typeline_accent",
+     "part": "normal_vector_storybook_adventure_typeline_accent",
+     "face": "second"
+    },
+    {
+     "id": "storybook_adventure_typeline",
+     "part": "normal_vector_storybook_adventure_typeline",
+     "face": "second"
+    },
+    {
+     "id": "storybook_shading_outlines",
+     "part": "normal_vector_storybook_shading_outlines"
+    },
+    {
+     "id": "storybook_pinlines_2",
+     "part": "normal_vector_storybook_pinlines"
+    },
+    {
+     "id": "border",
+     "part": "normal_vector_border",
+     "condition": "nonlegendary"
+    },
+    {
+     "id": "border_legendary",
+     "part": "normal_vector_border_legendary",
+     "condition": "legendary"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "normal_vector_name_title_boxes"
+    },
+    {
+     "id": "name_title_boxes_back",
+     "part": "normal_vector_name_title_boxes_back",
+     "condition": "back"
+    },
+    {
+     "id": "pt_box",
+     "part": "normal_vector_pt_box",
+     "condition": "creature"
+    },
+    {
+     "id": "color_indicator",
+     "part": "normal_vector_color_indicator",
+     "condition": "color_indicator"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 1367,
+      "y": 338,
+      "width": 566,
+      "height": 152
+     },
+     "text": {
+      "fontSize": 117,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 117,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {},
+     "face": "first"
+    },
+    "title": {
+     "rect": {
+      "x": 264,
+      "y": 342,
+      "width": 1668,
+      "height": 134
+     },
+     "text": {
+      "fontSize": 103,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     },
+     "face": "first"
+    },
+    "type_full": {
+     "rect": {
+      "x": 263,
+      "y": 1757,
+      "width": 1686,
+      "height": 112
+     },
+     "text": {
+      "fontSize": 86,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 1421
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 353,
+        "width": 1596
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 353,
+        "width": 1331
+       }
+      }
+     ],
+     "face": "first"
+    },
+    "oracle": {
+     "rect": {
+      "x": 1088,
+      "y": 1831,
+      "width": 861,
+      "height": 819
+     },
+     "text": {
+      "fontSize": 88,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 26,
+      "paddingY": 26
+     },
+     "flow": {
+      "avoidLayer": "pt_box",
+      "divider": "normal_vector_divider"
+     },
+     "face": "first"
+    },
+    "pt": {
+     "rect": {
+      "x": 1643,
+      "y": 2672,
+      "width": 318,
+      "height": 134
+     },
+     "text": {
+      "fontSize": 103,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "face": "first"
+    },
+    "collector": {
+     "rect": {
+      "x": 222,
+      "y": 2730,
+      "width": 1732,
+      "height": 59
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {}
+    },
+    "set": {
+     "rect": {
+      "x": 222,
+      "y": 2781,
+      "width": 1732,
+      "height": 59
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 490,
+      "y": 2781,
+      "width": 1732,
+      "height": 76
+     },
+     "text": {
+      "fontSize": 51,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "copyright": {
+     "rect": {
+      "x": 907,
+      "y": 2730,
+      "width": 1039,
+      "height": 80
+     },
+     "text": {
+      "fontSize": 46,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {
+      "duck": {
+       "layer": "pt_box",
+       "row": "artist"
+      }
+     }
+    },
+    "adventure_mana": {
+     "rect": {
+      "x": 673,
+      "y": 1922,
+      "width": 380,
+      "height": 124
+     },
+     "text": {
+      "fontSize": 96,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 96,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {},
+     "draws": "mana",
+     "face": "second"
+    },
+    "adventure_title": {
+     "rect": {
+      "x": 258,
+      "y": 1925,
+      "width": 795,
+      "height": 107
+     },
+     "text": {
+      "fontSize": 82,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "adventure_mana"
+     },
+     "draws": "title",
+     "face": "second"
+    },
+    "adventure_type": {
+     "rect": {
+      "x": 258,
+      "y": 2041,
+      "width": 831,
+      "height": 107
+     },
+     "text": {
+      "fontSize": 82,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "face": "second"
+    },
+    "adventure_oracle": {
+     "rect": {
+      "x": 258,
+      "y": 2077,
+      "width": 799,
+      "height": 573
+     },
+     "text": {
+      "fontSize": 88,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingY": 26
+     },
+     "flow": {},
+     "draws": "oracle",
+     "face": "second"
+    }
+   },
+   "art": [
+    {
+     "x": 248,
+     "y": 404,
+     "width": 1679,
+     "height": 1230
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 1650,
+     "y": 1678,
+     "width": 272,
+     "height": 109,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}

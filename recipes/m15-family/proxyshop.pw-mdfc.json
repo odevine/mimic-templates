@@ -1,0 +1,4510 @@
+{
+ "format": 1,
+ "sources": {
+  "back": "pw-mdfc-back.psd",
+  "front": "pw-mdfc-front.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.pw-mdfc",
+  "version": "0.1.0",
+  "name": "Proxyshop pwmdfc",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "front_bg": {
+   "source": "front",
+   "dir": "front/bg",
+   "render": {
+    "target": [
+     "BG"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw4_background": {
+   "source": "front",
+   "dir": "front/pw4_background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "pw-4",
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw4_shadows": {
+   "source": "front",
+   "dir": "front/pw4_shadows",
+   "render": {
+    "target": [
+     "pw-4",
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw4_border": {
+   "source": "front",
+   "dir": "front/pw4_border",
+   "render": {
+    "target": [
+     "pw-4",
+     "Border"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw4_textbox": {
+   "source": "front",
+   "dir": "front/pw4_textbox",
+   "render": {
+    "target": [
+     "pw-4",
+     "Textbox"
+    ],
+    "hide": [
+     [
+      "pw-4",
+      "Textbox",
+      "Ability Dividers"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw4_pinlines": {
+   "source": "front",
+   "dir": "front/pw4_pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "pw-4",
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw4_name_title_boxes": {
+   "source": "front",
+   "dir": "front/pw4_name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "pw-4",
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw4_color_indicator": {
+   "source": "front",
+   "dir": "front/pw4_color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "pw-4",
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw3_background": {
+   "source": "front",
+   "dir": "front/pw3_background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "pw-3",
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw3_shadows": {
+   "source": "front",
+   "dir": "front/pw3_shadows",
+   "render": {
+    "target": [
+     "pw-3",
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw3_border": {
+   "source": "front",
+   "dir": "front/pw3_border",
+   "render": {
+    "target": [
+     "pw-3",
+     "Border"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw3_textbox": {
+   "source": "front",
+   "dir": "front/pw3_textbox",
+   "render": {
+    "target": [
+     "pw-3",
+     "Textbox"
+    ],
+    "hide": [
+     [
+      "pw-3",
+      "Textbox",
+      "Ability Dividers"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_pw3_pinlines": {
+   "source": "front",
+   "dir": "front/pw3_pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "pw-3",
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw3_name_title_boxes": {
+   "source": "front",
+   "dir": "front/pw3_name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "pw-3",
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pw3_color_indicator": {
+   "source": "front",
+   "dir": "front/pw3_color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "pw-3",
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_loyalty_box": {
+   "source": "front",
+   "dir": "front/loyalty_box",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "Starting Loyalty"
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "Starting Loyalty",
+      "Text"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_badge_plus": {
+   "source": "front",
+   "dir": "front/badge_plus",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "+"
+    ],
+    "show": [
+     [
+      "Loyalty Graphics",
+      "+"
+     ]
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "+",
+      "Cost"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_badge_minus": {
+   "source": "front",
+   "dir": "front/badge_minus",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "-"
+    ],
+    "show": [
+     [
+      "Loyalty Graphics",
+      "-"
+     ]
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "-",
+      "Cost"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_badge_zero": {
+   "source": "front",
+   "dir": "front/badge_zero",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "0"
+    ],
+    "show": [
+     [
+      "Loyalty Graphics",
+      "0"
+     ]
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "0",
+      "Cost"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_band_top": {
+   "source": "front",
+   "dir": "front/band_top",
+   "crop": {
+    "x0": 495,
+    "y0": 3150,
+    "x1": 2903,
+    "y1": 3214
+   },
+   "render": {
+    "target": [
+     "pw-3",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-3",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "Masks",
+       "Bottom"
+      ]
+     },
+     {
+      "target": [
+       "pw-3",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "front_band_bottom": {
+   "source": "front",
+   "dir": "front/band_bottom",
+   "crop": {
+    "x0": 494,
+    "y0": 2732,
+    "x1": 2903,
+    "y1": 2795
+   },
+   "render": {
+    "target": [
+     "pw-4",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-4",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "Masks",
+       "Top"
+      ]
+     },
+     {
+      "target": [
+       "pw-4",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "front_pw3_band": {
+   "source": "front",
+   "dir": "front/pw3_band",
+   "render": {
+    "target": [
+     "pw-3",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-3",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "pw-3",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "front_pw4_band": {
+   "source": "front",
+   "dir": "front/pw4_band",
+   "render": {
+    "target": [
+     "pw-4",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-4",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "pw-4",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "front_mdfc_bottom": {
+   "source": "front",
+   "dir": "front/mdfc_bottom",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "MDFC Front",
+     "Bottom"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "MDFC Front",
+        "Bottom",
+        "Colorless"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "front_mdfc_top": {
+   "source": "front",
+   "dir": "front/mdfc_top",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "MDFC Front",
+     "Top"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "MDFC Front",
+        "Top",
+        "Colorless"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "back_bg": {
+   "source": "back",
+   "dir": "back/bg",
+   "render": {
+    "target": [
+     "BG"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw4_background": {
+   "source": "back",
+   "dir": "back/pw4_background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "pw-4",
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-4",
+        "Background",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw4_shadows": {
+   "source": "back",
+   "dir": "back/pw4_shadows",
+   "render": {
+    "target": [
+     "pw-4",
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw4_border": {
+   "source": "back",
+   "dir": "back/pw4_border",
+   "render": {
+    "target": [
+     "pw-4",
+     "Border"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw4_textbox": {
+   "source": "back",
+   "dir": "back/pw4_textbox",
+   "render": {
+    "target": [
+     "pw-4",
+     "Textbox"
+    ],
+    "hide": [
+     [
+      "pw-4",
+      "Textbox",
+      "Ability Dividers"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw4_pinlines": {
+   "source": "back",
+   "dir": "back/pw4_pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "pw-4",
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw4_name_title_boxes": {
+   "source": "back",
+   "dir": "back/pw4_name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "pw-4",
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-4",
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw4_color_indicator": {
+   "source": "back",
+   "dir": "back/pw4_color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "pw-4",
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "pw-4",
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw3_background": {
+   "source": "back",
+   "dir": "back/pw3_background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "pw-3",
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-3",
+        "Background",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw3_shadows": {
+   "source": "back",
+   "dir": "back/pw3_shadows",
+   "render": {
+    "target": [
+     "pw-3",
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw3_border": {
+   "source": "back",
+   "dir": "back/pw3_border",
+   "render": {
+    "target": [
+     "pw-3",
+     "Border"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw3_textbox": {
+   "source": "back",
+   "dir": "back/pw3_textbox",
+   "render": {
+    "target": [
+     "pw-3",
+     "Textbox"
+    ],
+    "hide": [
+     [
+      "pw-3",
+      "Textbox",
+      "Ability Dividers"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_pw3_pinlines": {
+   "source": "back",
+   "dir": "back/pw3_pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "pw-3",
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw3_name_title_boxes": {
+   "source": "back",
+   "dir": "back/pw3_name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "pw-3",
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "pw-3",
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pw3_color_indicator": {
+   "source": "back",
+   "dir": "back/pw3_color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "pw-3",
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "pw-3",
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_loyalty_box": {
+   "source": "back",
+   "dir": "back/loyalty_box",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "Starting Loyalty"
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "Starting Loyalty",
+      "Text"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_badge_plus": {
+   "source": "back",
+   "dir": "back/badge_plus",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "+"
+    ],
+    "show": [
+     [
+      "Loyalty Graphics",
+      "+"
+     ]
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "+",
+      "Cost"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_badge_minus": {
+   "source": "back",
+   "dir": "back/badge_minus",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "-"
+    ],
+    "show": [
+     [
+      "Loyalty Graphics",
+      "-"
+     ]
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "-",
+      "Cost"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_badge_zero": {
+   "source": "back",
+   "dir": "back/badge_zero",
+   "render": {
+    "target": [
+     "Loyalty Graphics",
+     "0"
+    ],
+    "show": [
+     [
+      "Loyalty Graphics",
+      "0"
+     ]
+    ],
+    "hide": [
+     [
+      "Loyalty Graphics",
+      "0",
+      "Cost"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_band_top": {
+   "source": "back",
+   "dir": "back/band_top",
+   "crop": {
+    "x0": 495,
+    "y0": 3150,
+    "x1": 2903,
+    "y1": 3214
+   },
+   "render": {
+    "target": [
+     "pw-3",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-3",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "Masks",
+       "Bottom"
+      ]
+     },
+     {
+      "target": [
+       "pw-3",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "back_band_bottom": {
+   "source": "back",
+   "dir": "back/band_bottom",
+   "crop": {
+    "x0": 494,
+    "y0": 2732,
+    "x1": 2903,
+    "y1": 2795
+   },
+   "render": {
+    "target": [
+     "pw-4",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-4",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "Masks",
+       "Top"
+      ]
+     },
+     {
+      "target": [
+       "pw-4",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "back_pw3_band": {
+   "source": "back",
+   "dir": "back/pw3_band",
+   "render": {
+    "target": [
+     "pw-3",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-3",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "pw-3",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-3",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "back_pw4_band": {
+   "source": "back",
+   "dir": "back/pw4_band",
+   "render": {
+    "target": [
+     "pw-4",
+     "Textbox",
+     "Ability Dividers",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "pw-4",
+      "Textbox",
+      "Ability Dividers",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    },
+    "cut": [
+     {
+      "target": [
+       "pw-4",
+       "Pinlines"
+      ],
+      "show": [
+       [
+        "pw-4",
+        "Pinlines",
+        "Gold"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "back_mdfc_bottom": {
+   "source": "back",
+   "dir": "back/mdfc_bottom",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "MDFC Back",
+     "Bottom"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "Gold"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "MDFC Back",
+        "Bottom",
+        "Colorless"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "back_mdfc_top": {
+   "source": "back",
+   "dir": "back/mdfc_top",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "MDFC Back",
+     "Top"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "MDFC Back",
+        "Top",
+        "Colorless"
+       ]
+      ]
+     }
+    }
+   }
+  }
+ },
+ "layouts": {
+  "front": {
+   "serves": [
+    {
+     "role": "mdfc_front",
+     "kind": "planeswalker"
+    }
+   ],
+   "canvas": {
+    "width": 3264,
+    "height": 4440
+   },
+   "stack": [
+    {
+     "id": "bg",
+     "part": "front_bg"
+    },
+    {
+     "id": "pw4_background",
+     "part": "front_pw4_background",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_shadows",
+     "part": "front_pw4_shadows",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_border",
+     "part": "front_pw4_border",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_textbox",
+     "part": "front_pw4_textbox",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_pinlines",
+     "part": "front_pw4_pinlines",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_name_title_boxes",
+     "part": "front_pw4_name_title_boxes",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_color_indicator",
+     "part": "front_pw4_color_indicator",
+     "condition": "color_indicator,rows>3"
+    },
+    {
+     "id": "pw3_background",
+     "part": "front_pw3_background",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_shadows",
+     "part": "front_pw3_shadows",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_border",
+     "part": "front_pw3_border",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_textbox",
+     "part": "front_pw3_textbox",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_pinlines",
+     "part": "front_pw3_pinlines",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_name_title_boxes",
+     "part": "front_pw3_name_title_boxes",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_color_indicator",
+     "part": "front_pw3_color_indicator",
+     "condition": "color_indicator,rows<4"
+    },
+    {
+     "id": "mdfc_bottom",
+     "part": "front_mdfc_bottom",
+     "face": "other"
+    },
+    {
+     "id": "mdfc_top",
+     "part": "front_mdfc_top"
+    },
+    {
+     "id": "loyalty_box",
+     "part": "front_loyalty_box",
+     "condition": "loyalty"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2047,
+      "y": 443,
+      "width": 866,
+      "height": 232
+     },
+     "text": {
+      "fontSize": 179,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 179,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 613,
+      "y": 448,
+      "width": 2300,
+      "height": 203
+     },
+     "text": {
+      "fontSize": 156,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 385,
+      "y": 2642,
+      "width": 2530,
+      "height": 171
+     },
+     "text": {
+      "fontSize": 132,
+      "font": "title",
+      "color": "#010101",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol,rows>3",
+       "rect": {
+        "y": 2358,
+        "width": 2132
+       }
+      },
+      {
+       "condition": "color_indicator,rows>3",
+       "rect": {
+        "x": 514,
+        "y": 2358,
+        "width": 2401
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol,rows>3",
+       "rect": {
+        "x": 514,
+        "y": 2358,
+        "width": 2003
+       }
+      },
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 2132
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 514,
+        "width": 2401
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 514,
+        "width": 2003
+       }
+      },
+      {
+       "condition": "rows>3",
+       "rect": {
+        "y": 2358,
+        "width": 2529
+       }
+      }
+     ]
+    },
+    "collector": {
+     "rect": {
+      "x": 327,
+      "y": 4104,
+      "width": 2589,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {},
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 2588
+       }
+      }
+     ]
+    },
+    "set": {
+     "rect": {
+      "x": 326,
+      "y": 4180,
+      "width": 2589,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 2588
+       }
+      }
+     ]
+    },
+    "artist": {
+     "rect": {
+      "x": 729,
+      "y": 4180,
+      "width": 2589,
+      "height": 115
+     },
+     "text": {
+      "fontSize": 77,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 2588
+       }
+      }
+     ]
+    },
+    "copyright": {
+     "rect": {
+      "x": 1383,
+      "y": 4104,
+      "width": 1553,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {
+      "duck": {
+       "layer": "loyalty_box",
+       "row": "artist"
+      }
+     },
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 1552
+       }
+      }
+     ]
+    },
+    "loyalty": {
+     "rect": {
+      "x": 2532,
+      "y": 4025,
+      "width": 460,
+      "height": 218
+     },
+     "text": {
+      "fontSize": 168,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "flipside_mana": {
+     "rect": {
+      "x": 329,
+      "y": 3950,
+      "width": 1105,
+      "height": 151
+     },
+     "text": {
+      "fontSize": 116,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "flipside_type": {
+     "rect": {
+      "x": 329,
+      "y": 3948,
+      "width": 1105,
+      "height": 123
+     },
+     "text": {
+      "fontSize": 94,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "flipside_mana"
+     }
+    }
+   },
+   "sections": {
+    "abilities_3": {
+     "split": "loyalty",
+     "rect": {
+      "x": 482,
+      "y": 2746,
+      "width": 2433,
+      "height": 1111
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "lineSpacing": 1
+     },
+     "body": {
+      "x": 675,
+      "width": 2212
+     },
+     "plain": {
+      "x": 549,
+      "width": 2338
+     },
+     "gap": 64,
+     "items": [
+      {
+       "for": "cost",
+       "parts": {
+        "plus": "front_badge_plus",
+        "minus": "front_badge_minus",
+        "zero": "front_badge_zero"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 264,
+        "y": 2985,
+        "width": 335,
+        "height": 168
+       },
+       "text": {
+        "fontSize": 130,
+        "font": "title",
+        "color": "#FFFFFF",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 549,
+        "y": 2972,
+        "width": 156,
+        "height": 203
+       },
+       "text": {
+        "fontSize": 156,
+        "color": "#000000",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "format": ":",
+       "y": 2937,
+       "anchor": "first-line"
+      }
+     ],
+     "avoidLayer": "loyalty_box",
+     "above": "pw3_color_indicator",
+     "bands": {
+      "part": "front_pw3_band",
+      "rows": "even",
+      "top": {
+       "part": "front_band_top",
+       "y": 3214
+      },
+      "bottom": {
+       "part": "front_band_bottom",
+       "y": 2732
+      }
+     },
+     "condition": "rows<4"
+    },
+    "abilities_4": {
+     "split": "loyalty",
+     "rect": {
+      "x": 481,
+      "y": 2462,
+      "width": 2433,
+      "height": 1391
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "lineSpacing": 1
+     },
+     "body": {
+      "x": 675,
+      "width": 2212
+     },
+     "plain": {
+      "x": 549,
+      "width": 2338
+     },
+     "gap": 64,
+     "items": [
+      {
+       "for": "cost",
+       "parts": {
+        "plus": "front_badge_plus",
+        "minus": "front_badge_minus",
+        "zero": "front_badge_zero"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 264,
+        "y": 2985,
+        "width": 335,
+        "height": 168
+       },
+       "text": {
+        "fontSize": 130,
+        "font": "title",
+        "color": "#FFFFFF",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 549,
+        "y": 2972,
+        "width": 156,
+        "height": 203
+       },
+       "text": {
+        "fontSize": 156,
+        "color": "#000000",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "format": ":",
+       "y": 2937,
+       "anchor": "first-line"
+      }
+     ],
+     "avoidLayer": "loyalty_box",
+     "above": "pw3_color_indicator",
+     "bands": {
+      "part": "front_pw4_band",
+      "rows": "even",
+      "top": {
+       "part": "front_band_top",
+       "y": 3214
+      },
+      "bottom": {
+       "part": "front_band_bottom",
+       "y": 2732
+      }
+     },
+     "condition": "rows>3"
+    }
+   },
+   "art": [
+    {
+     "x": 344,
+     "y": 551,
+     "width": 2575,
+     "height": 3427,
+     "after": "bg"
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2459,
+     "y": 2514,
+     "width": 440,
+     "height": 176,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  },
+  "back": {
+   "serves": [
+    {
+     "role": "mdfc_back",
+     "kind": "planeswalker"
+    }
+   ],
+   "canvas": {
+    "width": 3264,
+    "height": 4440
+   },
+   "stack": [
+    {
+     "id": "bg",
+     "part": "back_bg"
+    },
+    {
+     "id": "pw4_background",
+     "part": "back_pw4_background",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_shadows",
+     "part": "back_pw4_shadows",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_border",
+     "part": "back_pw4_border",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_textbox",
+     "part": "back_pw4_textbox",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_pinlines",
+     "part": "back_pw4_pinlines",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_name_title_boxes",
+     "part": "back_pw4_name_title_boxes",
+     "condition": "rows>3"
+    },
+    {
+     "id": "pw4_color_indicator",
+     "part": "back_pw4_color_indicator",
+     "condition": "color_indicator,rows>3"
+    },
+    {
+     "id": "pw3_background",
+     "part": "back_pw3_background",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_shadows",
+     "part": "back_pw3_shadows",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_border",
+     "part": "back_pw3_border",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_textbox",
+     "part": "back_pw3_textbox",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_pinlines",
+     "part": "back_pw3_pinlines",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_name_title_boxes",
+     "part": "back_pw3_name_title_boxes",
+     "condition": "rows<4"
+    },
+    {
+     "id": "pw3_color_indicator",
+     "part": "back_pw3_color_indicator",
+     "condition": "color_indicator,rows<4"
+    },
+    {
+     "id": "mdfc_bottom",
+     "part": "back_mdfc_bottom",
+     "face": "other"
+    },
+    {
+     "id": "mdfc_top",
+     "part": "back_mdfc_top"
+    },
+    {
+     "id": "loyalty_box",
+     "part": "back_loyalty_box",
+     "condition": "loyalty"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2047,
+      "y": 443,
+      "width": 866,
+      "height": 232
+     },
+     "text": {
+      "fontSize": 179,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 179,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 613,
+      "y": 448,
+      "width": 2300,
+      "height": 203
+     },
+     "text": {
+      "fontSize": 156,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 385,
+      "y": 2642,
+      "width": 2521,
+      "height": 171
+     },
+     "text": {
+      "fontSize": 132,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol,rows>3",
+       "rect": {
+        "y": 2358,
+        "width": 2121
+       }
+      },
+      {
+       "condition": "color_indicator,rows>3",
+       "rect": {
+        "x": 514,
+        "y": 2358,
+        "width": 2392
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol,rows>3",
+       "rect": {
+        "x": 514,
+        "y": 2358,
+        "width": 1992
+       }
+      },
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 2121
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 514,
+        "width": 2392
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 514,
+        "width": 1992
+       }
+      },
+      {
+       "condition": "rows>3",
+       "rect": {
+        "y": 2358,
+        "width": 2519
+       }
+      }
+     ]
+    },
+    "collector": {
+     "rect": {
+      "x": 327,
+      "y": 4104,
+      "width": 2580,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {},
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 2578
+       }
+      }
+     ]
+    },
+    "set": {
+     "rect": {
+      "x": 326,
+      "y": 4180,
+      "width": 2580,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 2578
+       }
+      }
+     ]
+    },
+    "artist": {
+     "rect": {
+      "x": 729,
+      "y": 4180,
+      "width": 2580,
+      "height": 115
+     },
+     "text": {
+      "fontSize": 77,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 2578
+       }
+      }
+     ]
+    },
+    "copyright": {
+     "rect": {
+      "x": 1379,
+      "y": 4104,
+      "width": 1548,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {
+      "duck": {
+       "layer": "loyalty_box",
+       "row": "artist"
+      }
+     },
+     "when": [
+      {
+       "condition": "rows>3",
+       "rect": {
+        "width": 1546
+       }
+      }
+     ]
+    },
+    "loyalty": {
+     "rect": {
+      "x": 2532,
+      "y": 4025,
+      "width": 460,
+      "height": 218
+     },
+     "text": {
+      "fontSize": 168,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "flipside_mana": {
+     "rect": {
+      "x": 329,
+      "y": 3950,
+      "width": 1105,
+      "height": 151
+     },
+     "text": {
+      "fontSize": 116,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "flipside_type": {
+     "rect": {
+      "x": 329,
+      "y": 3948,
+      "width": 1105,
+      "height": 123
+     },
+     "text": {
+      "fontSize": 94,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "flipside_mana"
+     }
+    }
+   },
+   "sections": {
+    "abilities_3": {
+     "split": "loyalty",
+     "rect": {
+      "x": 489,
+      "y": 2798,
+      "width": 2417,
+      "height": 1009
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "lineSpacing": 1
+     },
+     "body": {
+      "x": 675,
+      "width": 2212
+     },
+     "plain": {
+      "x": 549,
+      "width": 2338
+     },
+     "gap": 64,
+     "items": [
+      {
+       "for": "cost",
+       "parts": {
+        "plus": "back_badge_plus",
+        "minus": "back_badge_minus",
+        "zero": "back_badge_zero"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 264,
+        "y": 2985,
+        "width": 335,
+        "height": 168
+       },
+       "text": {
+        "fontSize": 130,
+        "font": "title",
+        "color": "#FFFFFF",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 549,
+        "y": 2972,
+        "width": 156,
+        "height": 203
+       },
+       "text": {
+        "fontSize": 156,
+        "color": "#000000",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "format": ":",
+       "y": 2937,
+       "anchor": "first-line"
+      }
+     ],
+     "avoidLayer": "loyalty_box",
+     "above": "pw3_color_indicator",
+     "bands": {
+      "part": "back_pw3_band",
+      "rows": "even",
+      "top": {
+       "part": "back_band_top",
+       "y": 3214
+      },
+      "bottom": {
+       "part": "back_band_bottom",
+       "y": 2732
+      }
+     },
+     "condition": "rows<4"
+    },
+    "abilities_4": {
+     "split": "loyalty",
+     "rect": {
+      "x": 487,
+      "y": 2513,
+      "width": 2417,
+      "height": 1290
+     },
+     "text": {
+      "fontSize": 133,
+      "color": "#000000",
+      "lineSpacing": 1
+     },
+     "body": {
+      "x": 675,
+      "width": 2212
+     },
+     "plain": {
+      "x": 549,
+      "width": 2338
+     },
+     "gap": 64,
+     "items": [
+      {
+       "for": "cost",
+       "parts": {
+        "plus": "back_badge_plus",
+        "minus": "back_badge_minus",
+        "zero": "back_badge_zero"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 264,
+        "y": 2985,
+        "width": 335,
+        "height": 168
+       },
+       "text": {
+        "fontSize": 130,
+        "font": "title",
+        "color": "#FFFFFF",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "y": 2937,
+       "anchor": "first-line"
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 549,
+        "y": 2972,
+        "width": 156,
+        "height": 203
+       },
+       "text": {
+        "fontSize": 156,
+        "color": "#000000",
+        "align": "center",
+        "vAlign": "baseline"
+       },
+       "format": ":",
+       "y": 2937,
+       "anchor": "first-line"
+      }
+     ],
+     "avoidLayer": "loyalty_box",
+     "above": "pw3_color_indicator",
+     "bands": {
+      "part": "back_pw4_band",
+      "rows": "even",
+      "top": {
+       "part": "back_band_top",
+       "y": 3214
+      },
+      "bottom": {
+       "part": "back_band_bottom",
+       "y": 2732
+      }
+     },
+     "condition": "rows>3"
+    }
+   },
+   "art": [
+    {
+     "x": 344,
+     "y": 551,
+     "width": 2575,
+     "height": 3427,
+     "after": "bg"
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2448,
+     "y": 2515,
+     "width": 440,
+     "height": 176,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}

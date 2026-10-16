@@ -1,0 +1,729 @@
+{
+ "format": 1,
+ "sources": {
+  "normal_classic": "normal-classic.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.normal-classic",
+  "version": "0.1.0",
+  "name": "Proxyshop normal-classic",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "normal_classic_land": {
+   "source": "normal_classic",
+   "dir": "normal_classic/land",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Land"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Land",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Land",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Land",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Land",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Land",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Land",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Land",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Land",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Land",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Land",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Land",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Land",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Land",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Land",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Land",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Land",
+        "Gold"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Land",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_classic_nonland": {
+   "source": "normal_classic",
+   "dir": "normal_classic/nonland",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Nonland"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Nonland",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Nonland",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Nonland",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Nonland",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Nonland",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Nonland",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Nonland",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Nonland",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Nonland",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Nonland",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Nonland",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Nonland",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Nonland",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Nonland",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Nonland",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Nonland",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Nonland",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Nonland",
+        "Colorless"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "Nonland",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_classic_border": {
+   "source": "normal_classic",
+   "dir": "normal_classic/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "normal_classic_color_indicator": {
+   "source": "normal_classic",
+   "dir": "normal_classic/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "normal_classic_divider": {
+   "source": "normal_classic",
+   "dir": "normal_classic/divider",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Divider"
+    ],
+    "show": [
+     [
+      "Text and Icons",
+      "Divider"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  }
+ },
+ "layouts": {
+  "normal_classic": {
+   "serves": [
+    {
+     "role": "single",
+     "kind": "standard"
+    }
+   ],
+   "canvas": {
+    "width": 3264,
+    "height": 4440
+   },
+   "stack": [
+    {
+     "id": "land",
+     "part": "normal_classic_land",
+     "condition": "land"
+    },
+    {
+     "id": "nonland",
+     "part": "normal_classic_nonland",
+     "condition": "nonland"
+    },
+    {
+     "id": "border",
+     "part": "normal_classic_border"
+    },
+    {
+     "id": "color_indicator",
+     "part": "normal_classic_color_indicator",
+     "condition": "color_indicator"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2031,
+      "y": 460,
+      "width": 872,
+      "height": 234
+     },
+     "text": {
+      "fontSize": 180,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 180,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 456,
+      "y": 461,
+      "width": 2446,
+      "height": 234
+     },
+     "text": {
+      "fontSize": 180,
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "shadow": {
+       "distance": 0.0509,
+       "angle": 315
+      }
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 447,
+      "y": 2581,
+      "width": 2381,
+      "height": 187
+     },
+     "text": {
+      "fontSize": 144,
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "shadow": {
+       "distance": 0.0574,
+       "angle": 315
+      }
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 2038
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 575,
+        "width": 2253
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 575,
+        "width": 1910
+       }
+      }
+     ]
+    },
+    "oracle": {
+     "rect": {
+      "x": 437,
+      "y": 2651,
+      "width": 2391,
+      "height": 1170
+     },
+     "text": {
+      "fontSize": 150,
+      "color": "#010101",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 40,
+      "paddingY": 40
+     },
+     "flow": {
+      "divider": "normal_classic_divider"
+     }
+    },
+    "pt": {
+     "rect": {
+      "x": 2517,
+      "y": 4039,
+      "width": 472,
+      "height": 243
+     },
+     "text": {
+      "fontSize": 187,
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline",
+      "shadow": {
+       "distance": 0.1183,
+       "angle": 315
+      }
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 381,
+      "y": 3979,
+      "width": 2502,
+      "height": 152
+     },
+     "text": {
+      "fontSize": 117,
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline",
+      "shadow": {
+       "distance": 0.0667,
+       "angle": 315
+      },
+      "prefix": "Illus. "
+     },
+     "flow": {}
+    },
+    "collector": {
+     "rect": {
+      "x": 381,
+      "y": 4062,
+      "width": 2502,
+      "height": 87
+     },
+     "text": {
+      "fontSize": 67,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline",
+      "tracking": 80,
+      "shadow": {
+       "distance": 0.1173,
+       "angle": 315
+      }
+     },
+     "flow": {}
+    }
+   },
+   "art": [
+    {
+     "x": 421,
+     "y": 516,
+     "width": 2420,
+     "height": 3352
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2436,
+     "y": 2449,
+     "width": 395,
+     "height": 158,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}

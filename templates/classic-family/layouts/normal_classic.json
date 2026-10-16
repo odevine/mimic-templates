@@ -1,0 +1,216 @@
+{
+ "serves": [
+  {
+   "role": "single",
+   "kind": "standard"
+  }
+ ],
+ "canvas": {
+  "width": 3264,
+  "height": 4440
+ },
+ "stack": [
+  {
+   "id": "land",
+   "part": "normal_classic_land",
+   "condition": "land"
+  },
+  {
+   "id": "nonland",
+   "part": "normal_classic_nonland",
+   "condition": "nonland"
+  },
+  {
+   "id": "border",
+   "part": "normal_classic_border"
+  },
+  {
+   "id": "color_indicator",
+   "part": "normal_classic_color_indicator",
+   "condition": "color_indicator"
+  }
+ ],
+ "textBoxes": {
+  "mana": {
+   "rect": {
+    "x": 2031,
+    "y": 460,
+    "width": 872,
+    "height": 234
+   },
+   "text": {
+    "fontSize": 180,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 180,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {}
+  },
+  "title": {
+   "rect": {
+    "x": 456,
+    "y": 461,
+    "width": 2446,
+    "height": 234
+   },
+   "text": {
+    "fontSize": 180,
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "shadow": {
+     "distance": 0.0509,
+     "angle": 315
+    }
+   },
+   "flow": {
+    "clearOf": "mana"
+   }
+  },
+  "type_full": {
+   "rect": {
+    "x": 447,
+    "y": 2581,
+    "width": 2381,
+    "height": 187
+   },
+   "text": {
+    "fontSize": 144,
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "shadow": {
+     "distance": 0.0574,
+     "angle": 315
+    }
+   },
+   "flow": {},
+   "draws": "type",
+   "when": [
+    {
+     "condition": "set_symbol",
+     "rect": {
+      "width": 2038
+     }
+    },
+    {
+     "condition": "color_indicator",
+     "rect": {
+      "x": 575,
+      "width": 2253
+     }
+    },
+    {
+     "condition": "color_indicator,set_symbol",
+     "rect": {
+      "x": 575,
+      "width": 1910
+     }
+    }
+   ]
+  },
+  "oracle": {
+   "rect": {
+    "x": 437,
+    "y": 2651,
+    "width": 2391,
+    "height": 1170
+   },
+   "text": {
+    "fontSize": 150,
+    "color": "#010101",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingX": 40,
+    "paddingY": 40
+   },
+   "flow": {
+    "divider": "normal_classic_divider"
+   }
+  },
+  "pt": {
+   "rect": {
+    "x": 2517,
+    "y": 4039,
+    "width": 472,
+    "height": 243
+   },
+   "text": {
+    "fontSize": 187,
+    "color": "#FFFFFF",
+    "align": "center",
+    "vAlign": "baseline",
+    "shadow": {
+     "distance": 0.1183,
+     "angle": 315
+    }
+   },
+   "flow": {}
+  },
+  "artist": {
+   "rect": {
+    "x": 381,
+    "y": 3979,
+    "width": 2502,
+    "height": 152
+   },
+   "text": {
+    "fontSize": 117,
+    "color": "#FFFFFF",
+    "align": "center",
+    "vAlign": "baseline",
+    "shadow": {
+     "distance": 0.0667,
+     "angle": 315
+    },
+    "prefix": "Illus. "
+   },
+   "flow": {}
+  },
+  "collector": {
+   "rect": {
+    "x": 381,
+    "y": 4062,
+    "width": 2502,
+    "height": 87
+   },
+   "text": {
+    "fontSize": 67,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "center",
+    "vAlign": "baseline",
+    "tracking": 80,
+    "shadow": {
+     "distance": 0.1173,
+     "angle": 315
+    }
+   },
+   "flow": {}
+  }
+ },
+ "art": [
+  {
+   "x": 421,
+   "y": 516,
+   "width": 2420,
+   "height": 3352
+  }
+ ],
+ "symbols": {
+  "set": {
+   "x": 2436,
+   "y": 2449,
+   "width": 395,
+   "height": 158,
+   "align": "right",
+   "vAlign": "center"
+  }
+ }
+}
