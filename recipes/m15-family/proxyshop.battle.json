@@ -1,0 +1,1085 @@
+{
+ "format": 1,
+ "sources": {
+  "battle": "battle.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.battle",
+  "version": "0.1.0",
+  "name": "Proxyshop battle",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "battle_border": {
+   "source": "battle",
+   "dir": "battle/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "battle_textbox": {
+   "source": "battle",
+   "dir": "battle/textbox",
+   "slot": "pinlines",
+   "blend": {
+    "shape": "smooth",
+    "end": 0.999,
+    "seams": {
+     "2": [
+      {
+       "center": 14,
+       "width": 388
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Textbox",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Textbox",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Textbox",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Textbox",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Textbox",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Textbox",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "battle_pinlines": {
+   "source": "battle",
+   "dir": "battle/pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f6ef"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0075be"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#272624"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ef3827"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#007b43"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.4
+          },
+          {
+           "color": "#272624",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.4
+          },
+          {
+           "color": "#007b43",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.4
+          },
+          {
+           "color": "#0075be",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.4
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6d262"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ae9787"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "battle_name_title_boxes": {
+   "source": "battle",
+   "dir": "battle/name_title_boxes",
+   "slot": "twins",
+   "blend": {
+    "shape": "smooth",
+    "end": 0.999,
+    "seams": {
+     "2": [
+      {
+       "center": 14,
+       "width": 388
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "battle_color_indicator": {
+   "source": "battle",
+   "dir": "battle/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "show": [
+     [
+      "Color Indicator"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#f8f4f0"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006dae"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#393431"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#de3c23"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006d42"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "battle_defense_box": {
+   "source": "battle",
+   "dir": "battle/defense_box",
+   "render": {
+    "target": [
+     "Defense Box"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "battle_divider": {
+   "source": "battle",
+   "dir": "battle/divider",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Divider"
+    ],
+    "show": [
+     [
+      "Text and Icons",
+      "Divider"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "battle_transform_circle": {
+   "source": "battle",
+   "dir": "battle/transform_circle",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Transform",
+     "Circle"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "battle_transform_icon_front": {
+   "source": "battle",
+   "dir": "battle/transform_icon_front",
+   "slot": "transform_icon",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Transform",
+     "Front"
+    ],
+    "variants": {
+     "compasslanddfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "compasslanddfc"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "originpwdfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "originpwdfc"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "mooneldrazidfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "mooneldrazidfc"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "sunmoondfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "sunmoondfc"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "convertdfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "upsidedowndfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "upsidedowndfc"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "lesson": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "lesson"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "fandfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "fandfc"
+       ]
+      ],
+      "hide": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     }
+    }
+   }
+  }
+ },
+ "layouts": {
+  "battle": {
+   "serves": [
+    {
+     "role": "transform_front",
+     "kind": "battle"
+    }
+   ],
+   "canvas": {
+    "width": 2960,
+    "height": 2176,
+    "dpi": 800,
+    "rotate": 270
+   },
+   "stack": [
+    {
+     "id": "border",
+     "part": "battle_border"
+    },
+    {
+     "id": "textbox",
+     "part": "battle_textbox"
+    },
+    {
+     "id": "pinlines",
+     "part": "battle_pinlines"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "battle_name_title_boxes"
+    },
+    {
+     "id": "color_indicator",
+     "part": "battle_color_indicator",
+     "condition": "color_indicator"
+    },
+    {
+     "id": "defense_box",
+     "part": "battle_defense_box"
+    },
+    {
+     "id": "transform_circle",
+     "part": "battle_transform_circle"
+    },
+    {
+     "id": "transform_icon_front",
+     "part": "battle_transform_icon_front"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2081,
+      "y": 305,
+      "width": 578,
+      "height": 155
+     },
+     "text": {
+      "fontSize": 119,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 119,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 605,
+      "y": 306,
+      "width": 2053,
+      "height": 133
+     },
+     "text": {
+      "fontSize": 102,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 441,
+      "y": 1345,
+      "width": 2225,
+      "height": 116
+     },
+     "text": {
+      "fontSize": 89,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 1968
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 537,
+        "width": 2129
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 537,
+        "width": 1872
+       }
+      }
+     ]
+    },
+    "oracle": {
+     "rect": {
+      "x": 421,
+      "y": 1411,
+      "width": 2245,
+      "height": 576
+     },
+     "text": {
+      "fontSize": 100,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 36,
+      "paddingY": 36
+     },
+     "flow": {
+      "avoidLayer": "defense_box",
+      "divider": "battle_divider"
+     }
+    },
+    "flipside_pt": {
+     "rect": {
+      "x": 2427,
+      "y": 1757,
+      "width": 230,
+      "height": 95
+     },
+     "text": {
+      "fontSize": 73,
+      "font": "title",
+      "color": "#636363",
+      "align": "right",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "defense": {
+     "rect": {
+      "x": 2572,
+      "y": 1957,
+      "width": 220,
+      "height": 136
+     },
+     "text": {
+      "fontSize": 104,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline",
+      "tracking": -20
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 487,
+      "y": 2777,
+      "width": 1450,
+      "height": 97
+     },
+     "text": {
+      "fontSize": 51,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "space": "output"
+    },
+    "set": {
+     "rect": {
+      "x": 218,
+      "y": 2777,
+      "width": 1450,
+      "height": 80
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {},
+     "space": "output"
+    },
+    "collector": {
+     "rect": {
+      "x": 218,
+      "y": 2726,
+      "width": 1450,
+      "height": 80
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {},
+     "space": "output"
+    }
+   },
+   "art": [
+    {
+     "x": 305,
+     "y": 171,
+     "width": 2482,
+     "height": 1831
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2382,
+     "y": 1264,
+     "width": 272,
+     "height": 109,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}

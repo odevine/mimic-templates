@@ -1,0 +1,95 @@
+{
+ "contract": "1.2",
+ "id": "proxyshop.classic-family",
+ "version": "0.0.0",
+ "name": "Classic (retro)",
+ "description": "The old rounded, mana-colored border frame, for standard cards and basic lands.",
+ "author": {
+  "name": "mimic"
+ },
+ "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+ "credits": [
+  {
+   "name": "Proxyshop",
+   "url": "https://github.com/Investigamer/Proxyshop",
+   "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution"
+  }
+ ],
+ "parts": {
+  "basic_classic_basic": {
+   "dir": "basic_classic/basic",
+   "slot": "pinlines",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "basic_classic_border": {
+   "dir": "basic_classic/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_classic_border": {
+   "dir": "normal_classic/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_classic_color_indicator": {
+   "dir": "normal_classic/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 431,
+    "y": 2475
+   }
+  },
+  "normal_classic_divider": {
+   "dir": "normal_classic/divider",
+   "origin": {
+    "x": 465,
+    "y": 3264
+   }
+  },
+  "normal_classic_land": {
+   "dir": "normal_classic/land",
+   "slot": "pinlines",
+   "origin": {
+    "x": 131,
+    "y": 129
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 888
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "normal_classic_nonland": {
+   "dir": "normal_classic/nonland",
+   "slot": "pinlines",
+   "origin": {
+    "x": 131,
+    "y": 129
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -2.5,
+       "width": 763
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  }
+ }
+}

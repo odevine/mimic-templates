@@ -1,0 +1,389 @@
+{
+ "serves": [
+  {
+   "role": "adventure",
+   "kind": "standard"
+  }
+ ],
+ "canvas": {
+  "width": 2176,
+  "height": 2960
+ },
+ "stack": [
+  {
+   "id": "background",
+   "part": "normal_vector_background"
+  },
+  {
+   "id": "background_nyx",
+   "part": "normal_vector_background_nyx",
+   "condition": "nyx"
+  },
+  {
+   "id": "pinlines",
+   "part": "normal_vector_pinlines"
+  },
+  {
+   "id": "legendary_crown",
+   "part": "normal_vector_legendary_crown",
+   "condition": "legendary"
+  },
+  {
+   "id": "storybook_top_shadow",
+   "part": "normal_vector_storybook_top_shadow"
+  },
+  {
+   "id": "storybook_wings",
+   "part": "normal_vector_storybook_wings"
+  },
+  {
+   "id": "storybook_right",
+   "part": "normal_vector_storybook_right"
+  },
+  {
+   "id": "storybook_left",
+   "part": "normal_vector_storybook_left",
+   "face": "second"
+  },
+  {
+   "id": "storybook_adventure_name",
+   "part": "normal_vector_storybook_adventure_name",
+   "face": "second"
+  },
+  {
+   "id": "storybook_adventure_typeline_accent",
+   "part": "normal_vector_storybook_adventure_typeline_accent",
+   "face": "second"
+  },
+  {
+   "id": "storybook_adventure_typeline",
+   "part": "normal_vector_storybook_adventure_typeline",
+   "face": "second"
+  },
+  {
+   "id": "storybook_shading_outlines",
+   "part": "normal_vector_storybook_shading_outlines"
+  },
+  {
+   "id": "storybook_pinlines_2",
+   "part": "normal_vector_storybook_pinlines"
+  },
+  {
+   "id": "border",
+   "part": "normal_vector_border",
+   "condition": "nonlegendary"
+  },
+  {
+   "id": "border_legendary",
+   "part": "normal_vector_border_legendary",
+   "condition": "legendary"
+  },
+  {
+   "id": "name_title_boxes",
+   "part": "normal_vector_name_title_boxes"
+  },
+  {
+   "id": "name_title_boxes_back",
+   "part": "normal_vector_name_title_boxes_back",
+   "condition": "back"
+  },
+  {
+   "id": "pt_box",
+   "part": "normal_vector_pt_box",
+   "condition": "creature"
+  },
+  {
+   "id": "color_indicator",
+   "part": "normal_vector_color_indicator",
+   "condition": "color_indicator"
+  }
+ ],
+ "textBoxes": {
+  "mana": {
+   "rect": {
+    "x": 1367,
+    "y": 338,
+    "width": 566,
+    "height": 152
+   },
+   "text": {
+    "fontSize": 117,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 117,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {},
+   "face": "first"
+  },
+  "title": {
+   "rect": {
+    "x": 264,
+    "y": 342,
+    "width": 1668,
+    "height": 134
+   },
+   "text": {
+    "fontSize": 103,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "mana"
+   },
+   "face": "first"
+  },
+  "type_full": {
+   "rect": {
+    "x": 263,
+    "y": 1757,
+    "width": 1686,
+    "height": 112
+   },
+   "text": {
+    "fontSize": 86,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "when": [
+    {
+     "condition": "set_symbol",
+     "rect": {
+      "width": 1421
+     }
+    },
+    {
+     "condition": "color_indicator",
+     "rect": {
+      "x": 353,
+      "width": 1596
+     }
+    },
+    {
+     "condition": "color_indicator,set_symbol",
+     "rect": {
+      "x": 353,
+      "width": 1331
+     }
+    }
+   ],
+   "face": "first"
+  },
+  "oracle": {
+   "rect": {
+    "x": 1088,
+    "y": 1831,
+    "width": 861,
+    "height": 819
+   },
+   "text": {
+    "fontSize": 88,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingX": 26,
+    "paddingY": 26
+   },
+   "flow": {
+    "avoidLayer": "pt_box",
+    "divider": "normal_vector_divider"
+   },
+   "face": "first"
+  },
+  "pt": {
+   "rect": {
+    "x": 1643,
+    "y": 2672,
+    "width": 318,
+    "height": 134
+   },
+   "text": {
+    "fontSize": 103,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "face": "first"
+  },
+  "collector": {
+   "rect": {
+    "x": 222,
+    "y": 2730,
+    "width": 1732,
+    "height": 59
+   },
+   "text": {
+    "fontSize": 46,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "tracking": 125
+   },
+   "flow": {}
+  },
+  "set": {
+   "rect": {
+    "x": 222,
+    "y": 2781,
+    "width": 1732,
+    "height": 59
+   },
+   "text": {
+    "fontSize": 46,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "artist": {
+   "rect": {
+    "x": 490,
+    "y": 2781,
+    "width": 1732,
+    "height": 76
+   },
+   "text": {
+    "fontSize": 51,
+    "font": "small-caps",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "copyright": {
+   "rect": {
+    "x": 907,
+    "y": 2730,
+    "width": 1039,
+    "height": 80
+   },
+   "text": {
+    "fontSize": 46,
+    "color": "#FFFFFF",
+    "align": "right",
+    "vAlign": "baseline",
+    "tracking": 40
+   },
+   "flow": {
+    "duck": {
+     "layer": "pt_box",
+     "row": "artist"
+    }
+   }
+  },
+  "adventure_mana": {
+   "rect": {
+    "x": 673,
+    "y": 1922,
+    "width": 380,
+    "height": 124
+   },
+   "text": {
+    "fontSize": 96,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 96,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {},
+   "draws": "mana",
+   "face": "second"
+  },
+  "adventure_title": {
+   "rect": {
+    "x": 258,
+    "y": 1925,
+    "width": 795,
+    "height": 107
+   },
+   "text": {
+    "fontSize": 82,
+    "font": "title",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "adventure_mana"
+   },
+   "draws": "title",
+   "face": "second"
+  },
+  "adventure_type": {
+   "rect": {
+    "x": 258,
+    "y": 2041,
+    "width": 831,
+    "height": 107
+   },
+   "text": {
+    "fontSize": 82,
+    "font": "title",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "face": "second"
+  },
+  "adventure_oracle": {
+   "rect": {
+    "x": 258,
+    "y": 2077,
+    "width": 799,
+    "height": 573
+   },
+   "text": {
+    "fontSize": 88,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingY": 26
+   },
+   "flow": {},
+   "draws": "oracle",
+   "face": "second"
+  }
+ },
+ "art": [
+  {
+   "x": 248,
+   "y": 404,
+   "width": 1679,
+   "height": 1230
+  }
+ ],
+ "symbols": {
+  "set": {
+   "x": 1650,
+   "y": 1678,
+   "width": 272,
+   "height": 109,
+   "align": "right",
+   "vAlign": "center"
+  }
+ }
+}

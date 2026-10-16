@@ -1,0 +1,1489 @@
+{
+ "format": 1,
+ "sources": {
+  "split": "split.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.split",
+  "version": "0.1.0",
+  "name": "Proxyshop split",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "split_background": {
+   "source": "split",
+   "dir": "split/background",
+   "slot": "background",
+   "crop": {
+    "x0": 425,
+    "y0": 237,
+    "x1": 2289,
+    "y1": 3018
+   },
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "show": [
+     [
+      "Background"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "split_textbox": {
+   "source": "split",
+   "dir": "split/textbox",
+   "slot": "pinlines",
+   "crop": {
+    "x0": 425,
+    "y0": 237,
+    "x1": 2289,
+    "y1": 3018
+   },
+   "render": {
+    "target": [
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Textbox",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Textbox",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Textbox",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Textbox",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Textbox",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Textbox",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Textbox",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Textbox",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Textbox",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Textbox",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Textbox",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Textbox",
+        "Gold"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "split_pinlines": {
+   "source": "split",
+   "dir": "split/pinlines",
+   "slot": "pinlines",
+   "crop": {
+    "x0": 425,
+    "y0": 237,
+    "x1": 2289,
+    "y1": 3018
+   },
+   "render": {
+    "target": [
+     "Left",
+     "Pinlines"
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f6ef"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0075be"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#272624"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ef3827"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#007b43"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.28
+          },
+          {
+           "color": "#0075be",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.28
+          },
+          {
+           "color": "#272624",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.28
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.28
+          },
+          {
+           "color": "#007b43",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.28
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f6ef",
+           "location": 0.28
+          },
+          {
+           "color": "#272624",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#272624",
+           "location": 0.28
+          },
+          {
+           "color": "#007b43",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#007b43",
+           "location": 0.28
+          },
+          {
+           "color": "#0075be",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0075be",
+           "location": 0.28
+          },
+          {
+           "color": "#ef3827",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ef3827",
+           "location": 0.28
+          },
+          {
+           "color": "#f6f6ef",
+           "location": 0.33
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6d262"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Left",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ae9787"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "split_name_title_boxes": {
+   "source": "split",
+   "dir": "split/name_title_boxes",
+   "slot": "twins",
+   "crop": {
+    "x0": 425,
+    "y0": 237,
+    "x1": 2289,
+    "y1": 3018
+   },
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "show": [
+     [
+      "Name & Title Boxes"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "split_art_outline": {
+   "source": "split",
+   "dir": "split/art_outline",
+   "crop": {
+    "x0": 425,
+    "y0": 237,
+    "x1": 2289,
+    "y1": 3018
+   },
+   "render": {
+    "target": [
+     "Left",
+     "Art Outline"
+    ],
+    "show": [
+     [
+      "Left",
+      "Art Outline"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "split_border": {
+   "source": "split",
+   "dir": "split/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "split_border_fuse": {
+   "source": "split",
+   "dir": "split/border_fuse",
+   "render": {
+    "target": [
+     "Border Fuse"
+    ],
+    "show": [
+     [
+      "Border Fuse"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "split_fuse_textbox": {
+   "source": "split",
+   "dir": "split/fuse_textbox",
+   "slot": "fuse",
+   "blend": {
+    "shape": "linear",
+    "seams": {
+     "2": [
+      {
+       "center": 88.8,
+       "width": 177.6
+      }
+     ],
+     "3": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ],
+     "4": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 88.8,
+       "width": 177.6
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Fuse",
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Fuse"
+     ],
+     [
+      "Fuse",
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Fuse",
+        "Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Fuse",
+        "Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Fuse",
+        "Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Fuse",
+        "Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Fuse",
+        "Textbox",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Fuse",
+        "Textbox",
+        "Gold"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "split_fuse_pinlines": {
+   "source": "split",
+   "dir": "split/fuse_pinlines",
+   "slot": "fuse_pinlines",
+   "blend": {
+    "shape": "linear",
+    "seams": {
+     "2": [
+      {
+       "center": 88.8,
+       "width": 177.6
+      }
+     ],
+     "3": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ],
+     "4": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 88.8,
+       "width": 177.6
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ]
+    }
+   },
+   "render": {
+    "target": [
+     "Fuse",
+     "Pinlines"
+    ],
+    "show": [
+     [
+      "Fuse"
+     ],
+     [
+      "Fuse",
+      "Pinlines"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f6ef"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0075be"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#272624"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ef3827"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#007b43"
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6d262"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e6ecf2"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Fuse",
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ae9787"
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ "layouts": {
+  "split": {
+   "serves": [
+    {
+     "role": "split",
+     "kind": "standard"
+    }
+   ],
+   "canvas": {
+    "width": 4440,
+    "height": 3264,
+    "dpi": 1200,
+    "rotate": 270
+   },
+   "stack": [
+    {
+     "id": "background_1",
+     "part": "split_background",
+     "face": "first"
+    },
+    {
+     "id": "background_2",
+     "part": "split_background",
+     "face": "second",
+     "at": {
+      "x": 2337,
+      "y": 237
+     }
+    },
+    {
+     "id": "textbox_1",
+     "part": "split_textbox",
+     "face": "first"
+    },
+    {
+     "id": "textbox_2",
+     "part": "split_textbox",
+     "face": "second",
+     "at": {
+      "x": 2337,
+      "y": 237
+     }
+    },
+    {
+     "id": "pinlines_1",
+     "part": "split_pinlines",
+     "face": "first"
+    },
+    {
+     "id": "pinlines_2",
+     "part": "split_pinlines",
+     "face": "second",
+     "at": {
+      "x": 2337,
+      "y": 237
+     }
+    },
+    {
+     "id": "name_title_boxes_1",
+     "part": "split_name_title_boxes",
+     "face": "first"
+    },
+    {
+     "id": "name_title_boxes_2",
+     "part": "split_name_title_boxes",
+     "face": "second",
+     "at": {
+      "x": 2337,
+      "y": 237
+     }
+    },
+    {
+     "id": "art_outline_1",
+     "part": "split_art_outline",
+     "face": "first"
+    },
+    {
+     "id": "art_outline_2",
+     "part": "split_art_outline",
+     "face": "second",
+     "at": {
+      "x": 2337,
+      "y": 237
+     }
+    },
+    {
+     "id": "border",
+     "part": "split_border"
+    },
+    {
+     "id": "border_fuse",
+     "part": "split_border_fuse",
+     "condition": "fuse"
+    },
+    {
+     "id": "fuse_textbox",
+     "part": "split_fuse_textbox",
+     "condition": "fuse"
+    },
+    {
+     "id": "fuse_pinlines",
+     "part": "split_fuse_pinlines",
+     "condition": "fuse"
+    }
+   ],
+   "textBoxes": {
+    "mana_1": {
+     "rect": {
+      "x": 1340,
+      "y": 502,
+      "width": 841,
+      "height": 226
+     },
+     "text": {
+      "fontSize": 174,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 174,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {},
+     "draws": "mana",
+     "face": "first"
+    },
+    "title_1": {
+     "rect": {
+      "x": 570,
+      "y": 505,
+      "width": 1603,
+      "height": 197
+     },
+     "text": {
+      "fontSize": 151,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana_1"
+     },
+     "draws": "title",
+     "face": "first"
+    },
+    "type_1": {
+     "rect": {
+      "x": 575,
+      "y": 1866,
+      "width": 1440,
+      "height": 133
+     },
+     "text": {
+      "fontSize": 102,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "face": "first"
+    },
+    "oracle_1": {
+     "rect": {
+      "x": 544,
+      "y": 1939,
+      "width": 1629,
+      "height": 1045
+     },
+     "text": {
+      "fontSize": 150,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 28,
+      "paddingY": 28
+     },
+     "flow": {},
+     "draws": "oracle",
+     "face": "first",
+     "when": [
+      {
+       "condition": "fuse",
+       "rect": {
+        "height": 870
+       }
+      }
+     ]
+    },
+    "mana_2": {
+     "rect": {
+      "x": 3252,
+      "y": 502,
+      "width": 841,
+      "height": 226
+     },
+     "text": {
+      "fontSize": 174,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 174,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {},
+     "draws": "mana",
+     "face": "second"
+    },
+    "title_2": {
+     "rect": {
+      "x": 2483,
+      "y": 505,
+      "width": 1603,
+      "height": 197
+     },
+     "text": {
+      "fontSize": 151,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana_2"
+     },
+     "draws": "title",
+     "face": "second"
+    },
+    "type_2": {
+     "rect": {
+      "x": 2487,
+      "y": 1866,
+      "width": 1444,
+      "height": 133
+     },
+     "text": {
+      "fontSize": 102,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "face": "second"
+    },
+    "oracle_2": {
+     "rect": {
+      "x": 2456,
+      "y": 1939,
+      "width": 1629,
+      "height": 1045
+     },
+     "text": {
+      "fontSize": 150,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 28,
+      "paddingY": 28
+     },
+     "flow": {},
+     "draws": "oracle",
+     "face": "second",
+     "when": [
+      {
+       "condition": "fuse",
+       "rect": {
+        "height": 870
+       }
+      }
+     ]
+    },
+    "fuse": {
+     "rect": {
+      "x": 598,
+      "y": 2937,
+      "width": 3244,
+      "height": 147
+     },
+     "text": {
+      "fontSize": 113,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 20
+     },
+     "flow": {},
+     "condition": "fuse"
+    },
+    "set": {
+     "rect": {
+      "x": 329,
+      "y": 4171,
+      "width": 2176,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {},
+     "space": "output"
+    },
+    "artist": {
+     "rect": {
+      "x": 732,
+      "y": 4171,
+      "width": 2176,
+      "height": 146
+     },
+     "text": {
+      "fontSize": 77,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "space": "output"
+    },
+    "collector": {
+     "rect": {
+      "x": 330,
+      "y": 4095,
+      "width": 2176,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {},
+     "space": "output"
+    }
+   },
+   "art": [
+    {
+     "x": 547,
+     "y": 601,
+     "width": 1624,
+     "height": 1127,
+     "face": "first"
+    },
+    {
+     "x": 2459,
+     "y": 601,
+     "width": 1623,
+     "height": 1127,
+     "face": "second"
+    }
+   ]
+  }
+ }
+}

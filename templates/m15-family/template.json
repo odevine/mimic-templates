@@ -1,0 +1,2685 @@
+{
+ "contract": "1.2",
+ "id": "proxyshop.m15-family",
+ "version": "0.0.0",
+ "name": "M15 family",
+ "description": "The modern M15 frame across every card shape Proxyshop's own M15-style PSDs cover: standard, split, transform, MDFC, planeswalker, saga, class, leveler, mutate, prototype and battle.",
+ "author": {
+  "name": "mimic"
+ },
+ "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+ "credits": [
+  {
+   "name": "Proxyshop",
+   "url": "https://github.com/Investigamer/Proxyshop",
+   "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution"
+  }
+ ],
+ "parts": {
+  "back_badge_minus": {
+   "dir": "back/badge_minus",
+   "origin": {
+    "x": 254,
+    "y": 2852
+   }
+  },
+  "back_badge_plus": {
+   "dir": "back/badge_plus",
+   "origin": {
+    "x": 254,
+    "y": 2799
+   }
+  },
+  "back_badge_zero": {
+   "dir": "back/badge_zero",
+   "origin": {
+    "x": 255,
+    "y": 2843
+   }
+  },
+  "back_band_bottom": {
+   "dir": "back/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2732
+   }
+  },
+  "back_band_top": {
+   "dir": "back/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3150
+   }
+  },
+  "back_bg": {
+   "dir": "back/bg",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "back_color_indicator": {
+   "dir": "back/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "back_legendary_crown": {
+   "dir": "back/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 211
+   }
+  },
+  "back_loyalty_box": {
+   "dir": "back/loyalty_box",
+   "origin": {
+    "x": 2531,
+    "y": 3814
+   }
+  },
+  "back_pt_box": {
+   "dir": "back/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 2441,
+    "y": 3839
+   }
+  },
+  "battle_border": {
+   "dir": "battle/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "battle_color_indicator": {
+   "dir": "battle/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 427,
+    "y": 1269
+   }
+  },
+  "battle_defense_box": {
+   "dir": "battle/defense_box",
+   "origin": {
+    "x": 2572,
+    "y": 1812
+   }
+  },
+  "battle_divider": {
+   "dir": "battle/divider",
+   "origin": {
+    "x": 449,
+    "y": 1681
+   }
+  },
+  "battle_name_title_boxes": {
+   "dir": "battle/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 392,
+    "y": 190
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 14,
+       "width": 388
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.999
+   }
+  },
+  "battle_pinlines": {
+   "dir": "battle/pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 353,
+    "y": 151
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 592.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "battle_textbox": {
+   "dir": "battle/textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 423,
+    "y": 1413
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 14,
+       "width": 388
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.999
+   }
+  },
+  "battle_transform_circle": {
+   "dir": "battle/transform_circle",
+   "origin": {
+    "x": 391,
+    "y": 186
+   }
+  },
+  "battle_transform_icon_front": {
+   "dir": "battle/transform_icon_front",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 401,
+    "y": 196
+   }
+  },
+  "front_badge_minus": {
+   "dir": "front/badge_minus",
+   "origin": {
+    "x": 254,
+    "y": 2852
+   }
+  },
+  "front_badge_plus": {
+   "dir": "front/badge_plus",
+   "origin": {
+    "x": 254,
+    "y": 2799
+   }
+  },
+  "front_badge_zero": {
+   "dir": "front/badge_zero",
+   "origin": {
+    "x": 255,
+    "y": 2843
+   }
+  },
+  "front_bg": {
+   "dir": "front/bg",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "front_color_indicator": {
+   "dir": "front/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "front_legendary_crown": {
+   "dir": "front/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 211
+   }
+  },
+  "front_loyalty_box": {
+   "dir": "front/loyalty_box",
+   "origin": {
+    "x": 2531,
+    "y": 3814
+   }
+  },
+  "front_name_title_boxes": {
+   "dir": "front/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 330
+   }
+  },
+  "front_pt_box": {
+   "dir": "front/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 2441,
+    "y": 3839
+   }
+  },
+  "front_pw3_color_indicator": {
+   "dir": "front/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "front_pw3_name_title_boxes": {
+   "dir": "front/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "front_pw4_color_indicator": {
+   "dir": "front/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "front_pw4_name_title_boxes": {
+   "dir": "front/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "leveler_background": {
+   "dir": "leveler/background",
+   "slot": "background",
+   "origin": {
+    "x": 251,
+    "y": 249
+   }
+  },
+  "leveler_border": {
+   "dir": "leveler/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "leveler_border_legendary": {
+   "dir": "leveler/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "leveler_color_indicator": {
+   "dir": "leveler/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "leveler_legendary_crown": {
+   "dir": "leveler/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 211
+   }
+  },
+  "leveler_name_title_boxes": {
+   "dir": "leveler/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 330
+   }
+  },
+  "leveler_pinlines_textbox": {
+   "dir": "leveler/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 309
+   }
+  },
+  "leveler_pt_and_level_boxes": {
+   "dir": "leveler/pt_and_level_boxes",
+   "slot": "ptBox",
+   "origin": {
+    "x": 261,
+    "y": 2818
+   }
+  },
+  "leveler_shadows": {
+   "dir": "leveler/shadows",
+   "origin": {
+    "x": 264,
+    "y": 288
+   }
+  },
+  "mutate_background": {
+   "dir": "mutate/background",
+   "slot": "background",
+   "origin": {
+    "x": 251,
+    "y": 249
+   }
+  },
+  "mutate_border": {
+   "dir": "mutate/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "mutate_border_legendary": {
+   "dir": "mutate/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "mutate_color_indicator": {
+   "dir": "mutate/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "mutate_legendary_crown": {
+   "dir": "mutate/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 211
+   }
+  },
+  "mutate_name_title_boxes": {
+   "dir": "mutate/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 330
+   }
+  },
+  "mutate_pinlines_textbox": {
+   "dir": "mutate/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "mutate_pt_box": {
+   "dir": "mutate/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 2441,
+    "y": 3839
+   }
+  },
+  "mutate_shadows": {
+   "dir": "mutate/shadows",
+   "origin": {
+    "x": 264,
+    "y": 288
+   }
+  },
+  "normal_background": {
+   "dir": "normal/background",
+   "slot": "background",
+   "origin": {
+    "x": 251,
+    "y": 257
+   }
+  },
+  "normal_border": {
+   "dir": "normal/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_border_legendary": {
+   "dir": "normal/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_color_indicator": {
+   "dir": "normal/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2550
+   }
+  },
+  "normal_companion": {
+   "dir": "normal/companion",
+   "slot": "pinlines",
+   "origin": {
+    "x": 623,
+    "y": 243
+   }
+  },
+  "normal_divider": {
+   "dir": "normal/divider",
+   "origin": {
+    "x": 371,
+    "y": 3304
+   }
+  },
+  "normal_land_pinlines_textbox": {
+   "dir": "normal/land_pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 317
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "normal_legendary_crown": {
+   "dir": "normal/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 219
+   }
+  },
+  "normal_name_title_boxes": {
+   "dir": "normal/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 338
+   }
+  },
+  "normal_nyx": {
+   "dir": "normal/nyx",
+   "slot": "background",
+   "origin": {
+    "x": 0,
+    "y": 1
+   }
+  },
+  "normal_pinlines_textbox": {
+   "dir": "normal/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 317
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 604.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "normal_pt_box": {
+   "dir": "normal/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 2441,
+    "y": 3847
+   }
+  },
+  "normal_shadows": {
+   "dir": "normal/shadows",
+   "origin": {
+    "x": 264,
+    "y": 296
+   }
+  },
+  "normal_vector_background": {
+   "dir": "normal_vector/background",
+   "slot": "background",
+   "origin": {
+    "x": 161,
+    "y": 158
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "normal_vector_background_nyx": {
+   "dir": "normal_vector/background_nyx",
+   "slot": "background",
+   "origin": {
+    "x": 161,
+    "y": 158
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "normal_vector_border": {
+   "dir": "normal_vector/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_vector_border_legendary": {
+   "dir": "normal_vector/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "normal_vector_color_indicator": {
+   "dir": "normal_vector/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 246,
+    "y": 1685
+   }
+  },
+  "normal_vector_divider": {
+   "dir": "normal_vector/divider",
+   "origin": {
+    "x": 1168,
+    "y": 2386
+   }
+  },
+  "normal_vector_legendary_crown": {
+   "dir": "normal_vector/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 139,
+    "y": 150
+   }
+  },
+  "normal_vector_name_title_boxes": {
+   "dir": "normal_vector/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 213,
+    "y": 228
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "normal_vector_name_title_boxes_back": {
+   "dir": "normal_vector/name_title_boxes_back",
+   "slot": "twins",
+   "origin": {
+    "x": 213,
+    "y": 228
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "normal_vector_pinlines": {
+   "dir": "normal_vector/pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 174,
+    "y": 189
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 435.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "normal_vector_pt_box": {
+   "dir": "normal_vector/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 1616,
+    "y": 2551
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 20.5,
+       "width": 505
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "normal_vector_storybook_adventure_name": {
+   "dir": "normal_vector/storybook_adventure_name",
+   "slot": "twins",
+   "origin": {
+    "x": 228,
+    "y": 1823
+   }
+  },
+  "normal_vector_storybook_adventure_typeline": {
+   "dir": "normal_vector/storybook_adventure_typeline",
+   "slot": "twins",
+   "origin": {
+    "x": 228,
+    "y": 1962
+   }
+  },
+  "normal_vector_storybook_adventure_typeline_accent": {
+   "dir": "normal_vector/storybook_adventure_typeline_accent",
+   "slot": "twins",
+   "origin": {
+    "x": 228,
+    "y": 1947
+   }
+  },
+  "normal_vector_storybook_left": {
+   "dir": "normal_vector/storybook_left",
+   "slot": "twins",
+   "origin": {
+    "x": 228,
+    "y": 1824
+   }
+  },
+  "normal_vector_storybook_pinlines": {
+   "dir": "normal_vector/storybook_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 0,
+    "y": 2623
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 435.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "normal_vector_storybook_right": {
+   "dir": "normal_vector/storybook_right",
+   "slot": "pinlines",
+   "origin": {
+    "x": 1089,
+    "y": 1823
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 369.5,
+       "width": 446.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.999
+   }
+  },
+  "normal_vector_storybook_shading_outlines": {
+   "dir": "normal_vector/storybook_shading_outlines",
+   "origin": {
+    "x": 217,
+    "y": 1813
+   }
+  },
+  "normal_vector_storybook_top_shadow": {
+   "dir": "normal_vector/storybook_top_shadow",
+   "origin": {
+    "x": 870,
+    "y": 1819
+   }
+  },
+  "normal_vector_storybook_wings": {
+   "dir": "normal_vector/storybook_wings",
+   "slot": "pinlines",
+   "origin": {
+    "x": 175,
+    "y": 1819
+   }
+  },
+  "prototype_background": {
+   "dir": "prototype/background",
+   "slot": "background",
+   "origin": {
+    "x": 252,
+    "y": 254
+   }
+  },
+  "prototype_border": {
+   "dir": "prototype/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "prototype_border_legendary": {
+   "dir": "prototype/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "prototype_divider": {
+   "dir": "prototype/divider",
+   "origin": {
+    "x": 371,
+    "y": 3297
+   }
+  },
+  "prototype_legendary_crown": {
+   "dir": "prototype/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 192,
+    "y": 215
+   }
+  },
+  "prototype_name_title_boxes": {
+   "dir": "prototype/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 334
+   }
+  },
+  "prototype_pinlines_textbox": {
+   "dir": "prototype/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 285,
+    "y": 313
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 604.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "prototype_prototype_manabox": {
+   "dir": "prototype/prototype_manabox",
+   "slot": "prototype",
+   "origin": {
+    "x": 2435,
+    "y": 2765
+   }
+  },
+  "prototype_prototype_pt_box": {
+   "dir": "prototype/prototype_pt_box",
+   "slot": "prototype",
+   "origin": {
+    "x": 2417,
+    "y": 2951
+   }
+  },
+  "prototype_prototype_textbox": {
+   "dir": "prototype/prototype_textbox",
+   "slot": "prototype",
+   "origin": {
+    "x": 329,
+    "y": 2747
+   }
+  },
+  "prototype_pt_box": {
+   "dir": "prototype/pt_box",
+   "slot": "ptBox",
+   "origin": {
+    "x": 2441,
+    "y": 3843
+   }
+  },
+  "prototype_shadows": {
+   "dir": "prototype/shadows",
+   "origin": {
+    "x": 264,
+    "y": 292
+   }
+  },
+  "proxyshop-mdfc_back_background": {
+   "dir": "proxyshop-mdfc/back/background",
+   "slot": "background",
+   "origin": {
+    "x": 252,
+    "y": 250
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7.5,
+       "width": 606
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-mdfc_back_border": {
+   "dir": "proxyshop-mdfc/back/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-mdfc_back_border_legendary": {
+   "dir": "proxyshop-mdfc/back/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-mdfc_back_divider": {
+   "dir": "proxyshop-mdfc/back/divider",
+   "origin": {
+    "x": 371,
+    "y": 3266
+   }
+  },
+  "proxyshop-mdfc_back_land_pinlines_textbox": {
+   "dir": "proxyshop-mdfc/back/land_pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-mdfc_back_mdfc_bottom": {
+   "dir": "proxyshop-mdfc/back/mdfc_bottom",
+   "slot": "twins",
+   "origin": {
+    "x": 214,
+    "y": 3835
+   }
+  },
+  "proxyshop-mdfc_back_mdfc_top": {
+   "dir": "proxyshop-mdfc/back/mdfc_top",
+   "slot": "twins",
+   "origin": {
+    "x": 245,
+    "y": 332
+   }
+  },
+  "proxyshop-mdfc_back_name_title_boxes": {
+   "dir": "proxyshop-mdfc/back/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 330
+   }
+  },
+  "proxyshop-mdfc_back_pinlines_textbox": {
+   "dir": "proxyshop-mdfc/back/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-mdfc_back_shadows": {
+   "dir": "proxyshop-mdfc/back/shadows",
+   "origin": {
+    "x": 198,
+    "y": 288
+   }
+  },
+  "proxyshop-mdfc_front_background": {
+   "dir": "proxyshop-mdfc/front/background",
+   "slot": "background",
+   "origin": {
+    "x": 252,
+    "y": 250
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7.5,
+       "width": 606
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-mdfc_front_border": {
+   "dir": "proxyshop-mdfc/front/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-mdfc_front_border_legendary": {
+   "dir": "proxyshop-mdfc/front/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-mdfc_front_divider": {
+   "dir": "proxyshop-mdfc/front/divider",
+   "origin": {
+    "x": 371,
+    "y": 3257
+   }
+  },
+  "proxyshop-mdfc_front_land_pinlines_textbox": {
+   "dir": "proxyshop-mdfc/front/land_pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-mdfc_front_mdfc_bottom": {
+   "dir": "proxyshop-mdfc/front/mdfc_bottom",
+   "slot": "twins",
+   "origin": {
+    "x": 214,
+    "y": 3835
+   }
+  },
+  "proxyshop-mdfc_front_mdfc_top": {
+   "dir": "proxyshop-mdfc/front/mdfc_top",
+   "slot": "twins",
+   "origin": {
+    "x": 245,
+    "y": 332
+   }
+  },
+  "proxyshop-mdfc_front_pinlines_textbox": {
+   "dir": "proxyshop-mdfc/front/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-mdfc_front_shadows": {
+   "dir": "proxyshop-mdfc/front/shadows",
+   "origin": {
+    "x": 198,
+    "y": 288
+   }
+  },
+  "proxyshop-pw-mdfc_back_mdfc_bottom": {
+   "dir": "proxyshop-pw-mdfc/back/mdfc_bottom",
+   "slot": "twins",
+   "origin": {
+    "x": 202,
+    "y": 3823
+   }
+  },
+  "proxyshop-pw-mdfc_back_mdfc_top": {
+   "dir": "proxyshop-pw-mdfc/back/mdfc_top",
+   "slot": "twins",
+   "origin": {
+    "x": 245,
+    "y": 277
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_background": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_background",
+   "slot": "background",
+   "origin": {
+    "x": 248,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_band": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_border": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_color_indicator": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_name_title_boxes": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_pinlines": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_shadows": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_shadows",
+   "origin": {
+    "x": 220,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw3_textbox": {
+   "dir": "proxyshop-pw-mdfc/back/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_background": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_background",
+   "slot": "background",
+   "origin": {
+    "x": 248,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -992.5,
+       "width": 530.5
+      }
+     ]
+    },
+    "shape": "linear",
+    "end": 0.942
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_band": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_border": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_color_indicator": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_name_title_boxes": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_pinlines": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_shadows": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_shadows",
+   "origin": {
+    "x": 220,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-mdfc_back_pw4_textbox": {
+   "dir": "proxyshop-pw-mdfc/back/pw4_textbox",
+   "origin": {
+    "x": 483,
+    "y": 2464
+   }
+  },
+  "proxyshop-pw-mdfc_front_band_bottom": {
+   "dir": "proxyshop-pw-mdfc/front/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2732
+   }
+  },
+  "proxyshop-pw-mdfc_front_band_top": {
+   "dir": "proxyshop-pw-mdfc/front/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3150
+   }
+  },
+  "proxyshop-pw-mdfc_front_mdfc_bottom": {
+   "dir": "proxyshop-pw-mdfc/front/mdfc_bottom",
+   "slot": "twins",
+   "origin": {
+    "x": 202,
+    "y": 3823
+   }
+  },
+  "proxyshop-pw-mdfc_front_mdfc_top": {
+   "dir": "proxyshop-pw-mdfc/front/mdfc_top",
+   "slot": "twins",
+   "origin": {
+    "x": 245,
+    "y": 277
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw3_background": {
+   "dir": "proxyshop-pw-mdfc/front/pw3_background",
+   "slot": "background",
+   "origin": {
+    "x": 248,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw3_band": {
+   "dir": "proxyshop-pw-mdfc/front/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw3_border": {
+   "dir": "proxyshop-pw-mdfc/front/pw3_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw3_pinlines": {
+   "dir": "proxyshop-pw-mdfc/front/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw3_shadows": {
+   "dir": "proxyshop-pw-mdfc/front/pw3_shadows",
+   "origin": {
+    "x": 220,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw3_textbox": {
+   "dir": "proxyshop-pw-mdfc/front/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2748
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw4_background": {
+   "dir": "proxyshop-pw-mdfc/front/pw4_background",
+   "slot": "background",
+   "origin": {
+    "x": 248,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -992.5,
+       "width": 530.5
+      }
+     ]
+    },
+    "shape": "linear",
+    "end": 0.942
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw4_band": {
+   "dir": "proxyshop-pw-mdfc/front/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw4_border": {
+   "dir": "proxyshop-pw-mdfc/front/pw4_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw4_pinlines": {
+   "dir": "proxyshop-pw-mdfc/front/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 220,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw4_shadows": {
+   "dir": "proxyshop-pw-mdfc/front/pw4_shadows",
+   "origin": {
+    "x": 220,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-mdfc_front_pw4_textbox": {
+   "dir": "proxyshop-pw-mdfc/front/pw4_textbox",
+   "origin": {
+    "x": 483,
+    "y": 2464
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_background": {
+   "dir": "proxyshop-pw-transform/back/pw3_background",
+   "slot": "background",
+   "origin": {
+    "x": 253,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -1213.5,
+       "width": 58.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_band": {
+   "dir": "proxyshop-pw-transform/back/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_border": {
+   "dir": "proxyshop-pw-transform/back/pw3_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_color_indicator": {
+   "dir": "proxyshop-pw-transform/back/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_name_title_boxes": {
+   "dir": "proxyshop-pw-transform/back/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_pinlines": {
+   "dir": "proxyshop-pw-transform/back/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 272,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_shadows": {
+   "dir": "proxyshop-pw-transform/back/pw3_shadows",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-transform_back_pw3_textbox": {
+   "dir": "proxyshop-pw-transform/back/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_background": {
+   "dir": "proxyshop-pw-transform/back/pw4_background",
+   "slot": "background",
+   "origin": {
+    "x": 253,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -1213.5,
+       "width": 58.5
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_band": {
+   "dir": "proxyshop-pw-transform/back/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_border": {
+   "dir": "proxyshop-pw-transform/back/pw4_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_color_indicator": {
+   "dir": "proxyshop-pw-transform/back/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_name_title_boxes": {
+   "dir": "proxyshop-pw-transform/back/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_pinlines": {
+   "dir": "proxyshop-pw-transform/back/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 272,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_shadows": {
+   "dir": "proxyshop-pw-transform/back/pw4_shadows",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-transform_back_pw4_textbox": {
+   "dir": "proxyshop-pw-transform/back/pw4_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform_back_transform_circle": {
+   "dir": "proxyshop-pw-transform/back/transform_circle",
+   "origin": {
+    "x": 290,
+    "y": 271
+   }
+  },
+  "proxyshop-pw-transform_back_transform_icon_back": {
+   "dir": "proxyshop-pw-transform/back/transform_icon_back",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 307,
+    "y": 290
+   }
+  },
+  "proxyshop-pw-transform_front_band_bottom": {
+   "dir": "proxyshop-pw-transform/front/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2732
+   }
+  },
+  "proxyshop-pw-transform_front_band_top": {
+   "dir": "proxyshop-pw-transform/front/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3150
+   }
+  },
+  "proxyshop-pw-transform_front_pw3_background": {
+   "dir": "proxyshop-pw-transform/front/pw3_background",
+   "slot": "background",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-transform_front_pw3_band": {
+   "dir": "proxyshop-pw-transform/front/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform_front_pw3_border": {
+   "dir": "proxyshop-pw-transform/front/pw3_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-transform_front_pw3_pinlines": {
+   "dir": "proxyshop-pw-transform/front/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 272,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform_front_pw3_shadows": {
+   "dir": "proxyshop-pw-transform/front/pw3_shadows",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-transform_front_pw3_textbox": {
+   "dir": "proxyshop-pw-transform/front/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "proxyshop-pw-transform_front_pw4_background": {
+   "dir": "proxyshop-pw-transform/front/pw4_background",
+   "slot": "background",
+   "origin": {
+    "x": 253,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -455.5,
+       "width": 1656.5
+      }
+     ]
+    },
+    "shape": "linear",
+    "end": 0.942
+   }
+  },
+  "proxyshop-pw-transform_front_pw4_band": {
+   "dir": "proxyshop-pw-transform/front/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform_front_pw4_border": {
+   "dir": "proxyshop-pw-transform/front/pw4_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-pw-transform_front_pw4_pinlines": {
+   "dir": "proxyshop-pw-transform/front/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 272,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-pw-transform_front_pw4_shadows": {
+   "dir": "proxyshop-pw-transform/front/pw4_shadows",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "proxyshop-pw-transform_front_pw4_textbox": {
+   "dir": "proxyshop-pw-transform/front/pw4_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "proxyshop-pw-transform_front_transform_circle": {
+   "dir": "proxyshop-pw-transform/front/transform_circle",
+   "origin": {
+    "x": 289,
+    "y": 271
+   }
+  },
+  "proxyshop-pw-transform_front_transform_icon_front": {
+   "dir": "proxyshop-pw-transform/front/transform_icon_front",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 306,
+    "y": 289
+   }
+  },
+  "proxyshop-transform_back_background": {
+   "dir": "proxyshop-transform/back/background",
+   "slot": "background",
+   "origin": {
+    "x": 252,
+    "y": 250
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7.5,
+       "width": 606
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-transform_back_border": {
+   "dir": "proxyshop-transform/back/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-transform_back_border_legendary": {
+   "dir": "proxyshop-transform/back/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-transform_back_divider": {
+   "dir": "proxyshop-transform/back/divider",
+   "origin": {
+    "x": 371,
+    "y": 3348
+   }
+  },
+  "proxyshop-transform_back_land_pinlines_textbox": {
+   "dir": "proxyshop-transform/back/land_pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 275,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-transform_back_name_title_boxes": {
+   "dir": "proxyshop-transform/back/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 306,
+    "y": 330
+   }
+  },
+  "proxyshop-transform_back_pinlines_textbox": {
+   "dir": "proxyshop-transform/back/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 275,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 606
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-transform_back_shadows": {
+   "dir": "proxyshop-transform/back/shadows",
+   "origin": {
+    "x": 253,
+    "y": 288
+   }
+  },
+  "proxyshop-transform_back_transform_circle": {
+   "dir": "proxyshop-transform/back/transform_circle",
+   "origin": {
+    "x": 298,
+    "y": 323
+   }
+  },
+  "proxyshop-transform_back_transform_icon_back": {
+   "dir": "proxyshop-transform/back/transform_icon_back",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 317,
+    "y": 342
+   }
+  },
+  "proxyshop-transform_front_background": {
+   "dir": "proxyshop-transform/front/background",
+   "slot": "background",
+   "origin": {
+    "x": 252,
+    "y": 250
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7.5,
+       "width": 606
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.942
+   }
+  },
+  "proxyshop-transform_front_border": {
+   "dir": "proxyshop-transform/front/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-transform_front_border_legendary": {
+   "dir": "proxyshop-transform/front/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "proxyshop-transform_front_divider": {
+   "dir": "proxyshop-transform/front/divider",
+   "origin": {
+    "x": 371,
+    "y": 3348
+   }
+  },
+  "proxyshop-transform_front_land_pinlines_textbox": {
+   "dir": "proxyshop-transform/front/land_pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 275,
+    "y": 309
+   }
+  },
+  "proxyshop-transform_front_pinlines_textbox": {
+   "dir": "proxyshop-transform/front/pinlines_textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 275,
+    "y": 309
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "proxyshop-transform_front_shadows": {
+   "dir": "proxyshop-transform/front/shadows",
+   "origin": {
+    "x": 253,
+    "y": 288
+   }
+  },
+  "proxyshop-transform_front_transform_circle": {
+   "dir": "proxyshop-transform/front/transform_circle",
+   "origin": {
+    "x": 298,
+    "y": 323
+   }
+  },
+  "proxyshop-transform_front_transform_icon_front": {
+   "dir": "proxyshop-transform/front/transform_icon_front",
+   "slot": "transform_icon",
+   "origin": {
+    "x": 317,
+    "y": 342
+   }
+  },
+  "pw_badge_minus": {
+   "dir": "pw/badge_minus",
+   "origin": {
+    "x": 254,
+    "y": 2852
+   }
+  },
+  "pw_badge_plus": {
+   "dir": "pw/badge_plus",
+   "origin": {
+    "x": 254,
+    "y": 2799
+   }
+  },
+  "pw_badge_zero": {
+   "dir": "pw/badge_zero",
+   "origin": {
+    "x": 255,
+    "y": 2843
+   }
+  },
+  "pw_band_bottom": {
+   "dir": "pw/band_bottom",
+   "origin": {
+    "x": 494,
+    "y": 2732
+   }
+  },
+  "pw_band_top": {
+   "dir": "pw/band_top",
+   "origin": {
+    "x": 495,
+    "y": 3150
+   }
+  },
+  "pw_bg": {
+   "dir": "pw/bg",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "pw_loyalty_box": {
+   "dir": "pw/loyalty_box",
+   "origin": {
+    "x": 2531,
+    "y": 3814
+   }
+  },
+  "pw_pw3_background": {
+   "dir": "pw/pw3_background",
+   "slot": "background",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "pw_pw3_band": {
+   "dir": "pw/pw3_band",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "pw_pw3_border": {
+   "dir": "pw/pw3_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "pw_pw3_color_indicator": {
+   "dir": "pw/pw3_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2542
+   }
+  },
+  "pw_pw3_name_title_boxes": {
+   "dir": "pw/pw3_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "pw_pw3_pinlines": {
+   "dir": "pw/pw3_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 273,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "pw_pw3_shadows": {
+   "dir": "pw/pw3_shadows",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "pw_pw3_textbox": {
+   "dir": "pw/pw3_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2749
+   }
+  },
+  "pw_pw4_background": {
+   "dir": "pw/pw4_background",
+   "slot": "background",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "pw_pw4_band": {
+   "dir": "pw/pw4_band",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "pw_pw4_border": {
+   "dir": "pw/pw4_border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "pw_pw4_color_indicator": {
+   "dir": "pw/pw4_color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 367,
+    "y": 2258
+   }
+  },
+  "pw_pw4_name_title_boxes": {
+   "dir": "pw/pw4_name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 298,
+    "y": 275
+   }
+  },
+  "pw_pw4_pinlines": {
+   "dir": "pw/pw4_pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 273,
+    "y": 251
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -7,
+       "width": 605
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.943
+   }
+  },
+  "pw_pw4_shadows": {
+   "dir": "pw/pw4_shadows",
+   "origin": {
+    "x": 253,
+    "y": 251
+   }
+  },
+  "pw_pw4_textbox": {
+   "dir": "pw/pw4_textbox",
+   "origin": {
+    "x": 484,
+    "y": 2465
+   }
+  },
+  "split_art_outline": {
+   "dir": "split/art_outline",
+   "origin": {
+    "x": 425,
+    "y": 237
+   }
+  },
+  "split_background": {
+   "dir": "split/background",
+   "slot": "background",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -857.5,
+       "width": 520.5
+      }
+     ]
+    },
+    "shape": "smooth"
+   }
+  },
+  "split_border": {
+   "dir": "split/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "split_border_fuse": {
+   "dir": "split/border_fuse",
+   "origin": {
+    "x": 434,
+    "y": 2899
+   }
+  },
+  "split_fuse_pinlines": {
+   "dir": "split/fuse_pinlines",
+   "slot": "fuse_pinlines",
+   "origin": {
+    "x": 504,
+    "y": 2808
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 88.8,
+       "width": 177.6
+      }
+     ],
+     "3": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ],
+     "4": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 88.8,
+       "width": 177.6
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "split_fuse_textbox": {
+   "dir": "split/fuse_textbox",
+   "slot": "fuse",
+   "origin": {
+    "x": 527,
+    "y": 2832
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 88.8,
+       "width": 177.6
+      }
+     ],
+     "3": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ],
+     "4": [
+      {
+       "center": -865.8,
+       "width": 222
+      },
+      {
+       "center": 88.8,
+       "width": 177.6
+      },
+      {
+       "center": 1043.4,
+       "width": 222
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "split_name_title_boxes": {
+   "dir": "split/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 425,
+    "y": 237
+   }
+  },
+  "split_pinlines": {
+   "dir": "split/pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -865.5,
+       "width": 222
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "split_textbox": {
+   "dir": "split/textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 425,
+    "y": 237
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": -857.5,
+       "width": 519
+      }
+     ]
+    },
+    "shape": "smooth",
+    "end": 0.999
+   }
+  },
+  "vertical_mode_class_background": {
+   "dir": "vertical_mode_class/background",
+   "slot": "background",
+   "origin": {
+    "x": 161,
+    "y": 158
+   }
+  },
+  "vertical_mode_class_border": {
+   "dir": "vertical_mode_class/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "vertical_mode_class_border_legendary": {
+   "dir": "vertical_mode_class/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "vertical_mode_class_class_divider": {
+   "dir": "vertical_mode_class/class_divider",
+   "origin": {
+    "x": 1082,
+    "y": 615
+   }
+  },
+  "vertical_mode_class_class_stage": {
+   "dir": "vertical_mode_class/class_stage",
+   "origin": {
+    "x": 1092,
+    "y": 966
+   }
+  },
+  "vertical_mode_class_color_indicator": {
+   "dir": "vertical_mode_class/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 245,
+    "y": 2468
+   }
+  },
+  "vertical_mode_class_legendary_crown": {
+   "dir": "vertical_mode_class/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 139,
+    "y": 150
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 435.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "vertical_mode_class_legendary_shading": {
+   "dir": "vertical_mode_class/legendary_shading",
+   "origin": {
+    "x": 175,
+    "y": 402
+   }
+  },
+  "vertical_mode_class_name_title_boxes": {
+   "dir": "vertical_mode_class/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 213,
+    "y": 228
+   }
+  },
+  "vertical_mode_class_name_title_boxes_back": {
+   "dir": "vertical_mode_class/name_title_boxes_back",
+   "slot": "twins",
+   "origin": {
+    "x": 213,
+    "y": 228
+   }
+  },
+  "vertical_mode_class_nyx": {
+   "dir": "vertical_mode_class/nyx",
+   "slot": "background",
+   "origin": {
+    "x": 161,
+    "y": 158
+   }
+  },
+  "vertical_mode_class_outline": {
+   "dir": "vertical_mode_class/outline",
+   "origin": {
+    "x": 1084,
+    "y": 403
+   }
+  },
+  "vertical_mode_class_pinlines": {
+   "dir": "vertical_mode_class/pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 174,
+    "y": 189
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 435.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "vertical_mode_class_textbox": {
+   "dir": "vertical_mode_class/textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 230,
+    "y": 389
+   }
+  },
+  "vertical_mode_class_textbox_back": {
+   "dir": "vertical_mode_class/textbox_back",
+   "slot": "pinlines",
+   "origin": {
+    "x": 230,
+    "y": 389
+   }
+  },
+  "vertical_mode_saga_background": {
+   "dir": "vertical_mode_saga/background",
+   "slot": "background",
+   "origin": {
+    "x": 161,
+    "y": 158
+   }
+  },
+  "vertical_mode_saga_banner_top": {
+   "dir": "vertical_mode_saga/banner_top",
+   "origin": {
+    "x": 137,
+    "y": 374
+   }
+  },
+  "vertical_mode_saga_border": {
+   "dir": "vertical_mode_saga/border",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "vertical_mode_saga_border_legendary": {
+   "dir": "vertical_mode_saga/border_legendary",
+   "origin": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "vertical_mode_saga_color_indicator": {
+   "dir": "vertical_mode_saga/color_indicator",
+   "slot": "indicator",
+   "origin": {
+    "x": 245,
+    "y": 2468
+   }
+  },
+  "vertical_mode_saga_legendary_crown": {
+   "dir": "vertical_mode_saga/legendary_crown",
+   "slot": "crown",
+   "origin": {
+    "x": 139,
+    "y": 150
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 435.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "vertical_mode_saga_legendary_shading": {
+   "dir": "vertical_mode_saga/legendary_shading",
+   "origin": {
+    "x": 175,
+    "y": 402
+   }
+  },
+  "vertical_mode_saga_name_title_boxes": {
+   "dir": "vertical_mode_saga/name_title_boxes",
+   "slot": "twins",
+   "origin": {
+    "x": 213,
+    "y": 228
+   }
+  },
+  "vertical_mode_saga_name_title_boxes_back": {
+   "dir": "vertical_mode_saga/name_title_boxes_back",
+   "slot": "twins",
+   "origin": {
+    "x": 213,
+    "y": 228
+   }
+  },
+  "vertical_mode_saga_nyx": {
+   "dir": "vertical_mode_saga/nyx",
+   "slot": "background",
+   "origin": {
+    "x": 161,
+    "y": 158
+   }
+  },
+  "vertical_mode_saga_outline": {
+   "dir": "vertical_mode_saga/outline",
+   "origin": {
+    "x": 1084,
+    "y": 403
+   }
+  },
+  "vertical_mode_saga_pinlines": {
+   "dir": "vertical_mode_saga/pinlines",
+   "slot": "pinlines",
+   "origin": {
+    "x": 174,
+    "y": 189
+   },
+   "blend": {
+    "seams": {
+     "2": [
+      {
+       "center": 0,
+       "width": 435.5
+      }
+     ]
+    },
+    "shape": "linear"
+   }
+  },
+  "vertical_mode_saga_saga_banner": {
+   "dir": "vertical_mode_saga/saga_banner",
+   "slot": "pinlines",
+   "origin": {
+    "x": 158,
+    "y": 583
+   }
+  },
+  "vertical_mode_saga_saga_divider": {
+   "dir": "vertical_mode_saga/saga_divider",
+   "origin": {
+    "x": 313,
+    "y": 928
+   }
+  },
+  "vertical_mode_saga_saga_i": {
+   "dir": "vertical_mode_saga/saga_i",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   }
+  },
+  "vertical_mode_saga_saga_ii": {
+   "dir": "vertical_mode_saga/saga_ii",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   }
+  },
+  "vertical_mode_saga_saga_iii": {
+   "dir": "vertical_mode_saga/saga_iii",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   }
+  },
+  "vertical_mode_saga_saga_iv": {
+   "dir": "vertical_mode_saga/saga_iv",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   }
+  },
+  "vertical_mode_saga_saga_v": {
+   "dir": "vertical_mode_saga/saga_v",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   }
+  },
+  "vertical_mode_saga_saga_vi": {
+   "dir": "vertical_mode_saga/saga_vi",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   }
+  },
+  "vertical_mode_saga_textbox": {
+   "dir": "vertical_mode_saga/textbox",
+   "slot": "pinlines",
+   "origin": {
+    "x": 252,
+    "y": 411
+   }
+  },
+  "vertical_mode_saga_textbox_back": {
+   "dir": "vertical_mode_saga/textbox_back",
+   "slot": "pinlines",
+   "origin": {
+    "x": 252,
+    "y": 411
+   }
+  }
+ }
+}

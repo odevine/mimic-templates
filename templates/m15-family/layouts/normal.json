@@ -1,0 +1,276 @@
+{
+ "serves": [
+  {
+   "role": "single",
+   "kind": "standard"
+  }
+ ],
+ "canvas": {
+  "width": 3264,
+  "height": 4440
+ },
+ "stack": [
+  {
+   "id": "background",
+   "part": "normal_background",
+   "condition": "nonnyx"
+  },
+  {
+   "id": "companion",
+   "part": "normal_companion",
+   "condition": "companion"
+  },
+  {
+   "id": "nyx",
+   "part": "normal_nyx",
+   "condition": "nyx"
+  },
+  {
+   "id": "shadows",
+   "part": "normal_shadows"
+  },
+  {
+   "id": "land_pinlines_textbox",
+   "part": "normal_land_pinlines_textbox",
+   "condition": "land"
+  },
+  {
+   "id": "pinlines_textbox",
+   "part": "normal_pinlines_textbox",
+   "condition": "nonland"
+  },
+  {
+   "id": "legendary_crown",
+   "part": "normal_legendary_crown",
+   "condition": "legendary"
+  },
+  {
+   "id": "border",
+   "part": "normal_border",
+   "condition": "nonlegendary"
+  },
+  {
+   "id": "border_legendary",
+   "part": "normal_border_legendary",
+   "condition": "legendary"
+  },
+  {
+   "id": "name_title_boxes",
+   "part": "normal_name_title_boxes"
+  },
+  {
+   "id": "pt_box",
+   "part": "normal_pt_box",
+   "condition": "creature"
+  },
+  {
+   "id": "color_indicator",
+   "part": "normal_color_indicator",
+   "condition": "color_indicator"
+  }
+ ],
+ "textBoxes": {
+  "mana": {
+   "rect": {
+    "x": 2047,
+    "y": 506,
+    "width": 866,
+    "height": 232
+   },
+   "text": {
+    "fontSize": 179,
+    "color": "#000000",
+    "align": "right",
+    "vAlign": "baseline",
+    "minFontSize": 179,
+    "shadow": {
+     "distance": 0.0907,
+     "angle": 25
+    }
+   },
+   "flow": {}
+  },
+  "title": {
+   "rect": {
+    "x": 386,
+    "y": 510,
+    "width": 2526,
+    "height": 203
+   },
+   "text": {
+    "fontSize": 156,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {
+    "clearOf": "mana"
+   }
+  },
+  "type_full": {
+   "rect": {
+    "x": 385,
+    "y": 2650,
+    "width": 2531,
+    "height": 171
+   },
+   "text": {
+    "fontSize": 132,
+    "font": "title",
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {},
+   "draws": "type",
+   "when": [
+    {
+     "condition": "set_symbol",
+     "rect": {
+      "width": 2126
+     }
+    },
+    {
+     "condition": "color_indicator",
+     "rect": {
+      "x": 514,
+      "width": 2402
+     }
+    },
+    {
+     "condition": "color_indicator,set_symbol",
+     "rect": {
+      "x": 514,
+      "width": 1997
+     }
+    }
+   ]
+  },
+  "oracle": {
+   "rect": {
+    "x": 347,
+    "y": 2750,
+    "width": 2569,
+    "height": 1244
+   },
+   "text": {
+    "fontSize": 150,
+    "color": "#000000",
+    "align": "left",
+    "vAlign": "center",
+    "lineSpacing": 1,
+    "paddingX": 40,
+    "paddingY": 40
+   },
+   "flow": {
+    "avoidLayer": "pt_box",
+    "divider": "normal_divider"
+   }
+  },
+  "pt": {
+   "rect": {
+    "x": 2490,
+    "y": 4030,
+    "width": 474,
+    "height": 206
+   },
+   "text": {
+    "fontSize": 159,
+    "font": "title",
+    "color": "#000000",
+    "align": "center",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "collector": {
+   "rect": {
+    "x": 327,
+    "y": 4102,
+    "width": 2590,
+    "height": 89
+   },
+   "text": {
+    "fontSize": 68,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline",
+    "tracking": 125
+   },
+   "flow": {}
+  },
+  "set": {
+   "rect": {
+    "x": 326,
+    "y": 4178,
+    "width": 2590,
+    "height": 89
+   },
+   "text": {
+    "fontSize": 68,
+    "font": "info",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "artist": {
+   "rect": {
+    "x": 729,
+    "y": 4178,
+    "width": 2590,
+    "height": 115
+   },
+   "text": {
+    "fontSize": 77,
+    "font": "small-caps",
+    "color": "#FFFFFF",
+    "align": "left",
+    "vAlign": "baseline"
+   },
+   "flow": {}
+  },
+  "copyright": {
+   "rect": {
+    "x": 1383,
+    "y": 4102,
+    "width": 1554,
+    "height": 120
+   },
+   "text": {
+    "fontSize": 68,
+    "color": "#FFFFFF",
+    "align": "right",
+    "vAlign": "baseline",
+    "tracking": 40
+   },
+   "flow": {
+    "duck": {
+     "layer": "pt_box",
+     "row": "artist"
+    }
+   }
+  }
+ },
+ "art": [
+  {
+   "x": 356,
+   "y": 607,
+   "width": 2552,
+   "height": 1856
+  }
+ ],
+ "symbols": {
+  "set": {
+   "x": 2452,
+   "y": 2521,
+   "width": 447,
+   "height": 179,
+   "align": "right",
+   "vAlign": "center"
+  }
+ }
+}

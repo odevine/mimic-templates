@@ -1,0 +1,81 @@
+{
+ "serves": [
+  {
+   "role": "single",
+   "kind": "basic_land"
+  }
+ ],
+ "canvas": {
+  "width": 3264,
+  "height": 4440
+ },
+ "stack": [
+  {
+   "id": "basic",
+   "part": "basic_classic_basic"
+  },
+  {
+   "id": "border",
+   "part": "basic_classic_border"
+  }
+ ],
+ "textBoxes": {
+  "artist": {
+   "rect": {
+    "x": 309,
+    "y": 3980,
+    "width": 2645,
+    "height": 152
+   },
+   "text": {
+    "fontSize": 117,
+    "color": "#FFFFFF",
+    "align": "center",
+    "vAlign": "baseline",
+    "shadow": {
+     "distance": 0.0571,
+     "angle": 330
+    },
+    "prefix": "Illus. "
+   },
+   "flow": {}
+  },
+  "collector": {
+   "rect": {
+    "x": 335,
+    "y": 4061,
+    "width": 2645,
+    "height": 87
+   },
+   "text": {
+    "fontSize": 67,
+    "color": "#FFFFFF",
+    "align": "center",
+    "vAlign": "baseline",
+    "shadow": {
+     "distance": 0.1,
+     "angle": 330
+    }
+   },
+   "flow": {}
+  }
+ },
+ "art": [
+  {
+   "x": 273,
+   "y": 283,
+   "width": 2718,
+   "height": 3875
+  }
+ ],
+ "symbols": {
+  "set": {
+   "x": 2466,
+   "y": 2460,
+   "width": 380,
+   "height": 152,
+   "align": "right",
+   "vAlign": "center"
+  }
+ }
+}

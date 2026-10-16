@@ -1,0 +1,2732 @@
+{
+ "format": 1,
+ "sources": {
+  "back": "tf-back.psd",
+  "front": "tf-front.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.transform",
+  "version": "0.1.0",
+  "name": "Proxyshop tf",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "front_background": {
+   "source": "front",
+   "dir": "front/background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Background",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Background",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Background",
+        "Land"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "Background",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_shadows": {
+   "source": "front",
+   "dir": "front/shadows",
+   "render": {
+    "target": [
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_land_pinlines_textbox": {
+   "source": "front",
+   "dir": "front/land_pinlines_textbox",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Land Pinlines & Textbox"
+    ],
+    "variants": {
+     "land": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pinlines_textbox": {
+   "source": "front",
+   "dir": "front/pinlines_textbox",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines & Textbox"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_legendary_crown": {
+   "source": "front",
+   "dir": "front/legendary_crown",
+   "slot": "crown",
+   "render": {
+    "target": [
+     "Legendary Crown"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Legendary Crown",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Legendary Crown",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Legendary Crown",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Legendary Crown",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Legendary Crown",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Legendary Crown",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Legendary Crown",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Legendary Crown",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Legendary Crown",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Legendary Crown",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Legendary Crown",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Legendary Crown",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Legendary Crown",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Legendary Crown",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Legendary Crown",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_border": {
+   "source": "front",
+   "dir": "front/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Normal Border (White)"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Legendary Border (White)"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_border_legendary": {
+   "source": "front",
+   "dir": "front/border_legendary",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Legendary Border (White)"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Normal Border (White)"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_name_title_boxes": {
+   "source": "front",
+   "dir": "front/name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_pt_box": {
+   "source": "front",
+   "dir": "front/pt_box",
+   "slot": "ptBox",
+   "render": {
+    "target": [
+     "PT Box"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "PT Box",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "PT Box",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "PT Box",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "PT Box",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "PT Box",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "PT Box",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "PT Box",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "PT Box",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "PT Box",
+        "Land"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "PT Box",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_color_indicator": {
+   "source": "front",
+   "dir": "front/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "front_divider": {
+   "source": "front",
+   "dir": "front/divider",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Divider"
+    ],
+    "show": [
+     [
+      "Text and Icons",
+      "Divider"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_transform_circle": {
+   "source": "front",
+   "dir": "front/transform_circle",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Transform",
+     "Circle"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "front_transform_icon_front": {
+   "source": "front",
+   "dir": "front/transform_icon_front",
+   "slot": "transform_icon",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Transform",
+     "Front"
+    ],
+    "variants": {
+     "compasslanddfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "compasslanddfc"
+       ]
+      ]
+     },
+     "originpwdfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "originpwdfc"
+       ]
+      ]
+     },
+     "mooneldrazidfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "mooneldrazidfc"
+       ]
+      ]
+     },
+     "sunmoondfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "sunmoondfc"
+       ]
+      ]
+     },
+     "convertdfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "convertdfc"
+       ]
+      ]
+     },
+     "upsidedowndfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Front",
+        "upsidedowndfc"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "back_background": {
+   "source": "back",
+   "dir": "back/background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Background",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Background",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Background",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Background",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Background",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Background",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Background",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Background",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Background",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Background",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Background",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Background",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Background",
+        "Land"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "Background",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_shadows": {
+   "source": "back",
+   "dir": "back/shadows",
+   "render": {
+    "target": [
+     "Shadows"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_land_pinlines_textbox": {
+   "source": "back",
+   "dir": "back/land_pinlines_textbox",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Land Pinlines & Textbox"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "Gold"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Land Pinlines & Textbox",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pinlines_textbox": {
+   "source": "back",
+   "dir": "back/pinlines_textbox",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines & Textbox"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Pinlines & Textbox",
+        "Colorless"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_legendary_crown": {
+   "source": "back",
+   "dir": "back/legendary_crown",
+   "slot": "crown",
+   "render": {
+    "target": [
+     "Legendary Crown"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Legendary Crown",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Legendary Crown",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Legendary Crown",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Legendary Crown",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Legendary Crown",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Legendary Crown",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Legendary Crown",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Legendary Crown",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Legendary Crown",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Legendary Crown",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Legendary Crown",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Legendary Crown",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Legendary Crown",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Legendary Crown",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Legendary Crown",
+        "RW"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Legendary Crown",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_border": {
+   "source": "back",
+   "dir": "back/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Normal Border (White)"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Legendary Border (White)"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_border_legendary": {
+   "source": "back",
+   "dir": "back/border_legendary",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Legendary Border (White)"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Normal Border (White)"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_name_title_boxes": {
+   "source": "back",
+   "dir": "back/name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_pt_box": {
+   "source": "back",
+   "dir": "back/pt_box",
+   "slot": "ptBox",
+   "render": {
+    "target": [
+     "PT Box"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "PT Box",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "PT Box",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "PT Box",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "PT Box",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "PT Box",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "PT Box",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "PT Box",
+        "Artifact"
+       ]
+      ]
+     },
+     "colorless": {
+      "show": [
+       [
+        "PT Box",
+        "Colorless"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "PT Box",
+        "Land"
+       ]
+      ]
+     },
+     "vehicle": {
+      "show": [
+       [
+        "PT Box",
+        "Vehicle"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_color_indicator": {
+   "source": "back",
+   "dir": "back/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Color Indicator",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Color Indicator",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Color Indicator",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Color Indicator",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Color Indicator",
+        "G"
+       ]
+      ]
+     },
+     "wu": {
+      "show": [
+       [
+        "Color Indicator",
+        "WU"
+       ]
+      ]
+     },
+     "ub": {
+      "show": [
+       [
+        "Color Indicator",
+        "UB"
+       ]
+      ]
+     },
+     "br": {
+      "show": [
+       [
+        "Color Indicator",
+        "BR"
+       ]
+      ]
+     },
+     "rg": {
+      "show": [
+       [
+        "Color Indicator",
+        "RG"
+       ]
+      ]
+     },
+     "wg": {
+      "show": [
+       [
+        "Color Indicator",
+        "GW"
+       ]
+      ]
+     },
+     "wb": {
+      "show": [
+       [
+        "Color Indicator",
+        "WB"
+       ]
+      ]
+     },
+     "bg": {
+      "show": [
+       [
+        "Color Indicator",
+        "BG"
+       ]
+      ]
+     },
+     "ug": {
+      "show": [
+       [
+        "Color Indicator",
+        "GU"
+       ]
+      ]
+     },
+     "ur": {
+      "show": [
+       [
+        "Color Indicator",
+        "UR"
+       ]
+      ]
+     },
+     "wr": {
+      "show": [
+       [
+        "Color Indicator",
+        "RW"
+       ]
+      ]
+     },
+     "ubr": {
+      "show": [
+       [
+        "Color Indicator",
+        "UBR"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "back_divider": {
+   "source": "back",
+   "dir": "back/divider",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Divider"
+    ],
+    "show": [
+     [
+      "Text and Icons",
+      "Divider"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_transform_circle": {
+   "source": "back",
+   "dir": "back/transform_circle",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Transform",
+     "Circle"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "back_transform_icon_back": {
+   "source": "back",
+   "dir": "back/transform_icon_back",
+   "slot": "transform_icon",
+   "render": {
+    "target": [
+     "Text and Icons",
+     "Transform",
+     "Back"
+    ],
+    "variants": {
+     "compasslanddfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "compasslanddfc"
+       ]
+      ]
+     },
+     "originpwdfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "originpwdfc"
+       ]
+      ]
+     },
+     "mooneldrazidfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "mooneldrazidfc"
+       ]
+      ]
+     },
+     "sunmoondfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "sunmoondfc"
+       ]
+      ]
+     },
+     "convertdfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "convertdfc"
+       ]
+      ]
+     },
+     "upsidedowndfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "upsidedowndfc"
+       ]
+      ]
+     },
+     "fandfc": {
+      "show": [
+       [
+        "Text and Icons",
+        "Transform",
+        "Back",
+        "fandfc"
+       ]
+      ]
+     }
+    }
+   }
+  }
+ },
+ "layouts": {
+  "front": {
+   "serves": [
+    {
+     "role": "transform_front",
+     "kind": "standard"
+    }
+   ],
+   "canvas": {
+    "width": 3264,
+    "height": 4440
+   },
+   "stack": [
+    {
+     "id": "background",
+     "part": "front_background"
+    },
+    {
+     "id": "shadows",
+     "part": "front_shadows"
+    },
+    {
+     "id": "land_pinlines_textbox",
+     "part": "front_land_pinlines_textbox",
+     "condition": "land"
+    },
+    {
+     "id": "pinlines_textbox",
+     "part": "front_pinlines_textbox",
+     "condition": "nonland"
+    },
+    {
+     "id": "legendary_crown",
+     "part": "front_legendary_crown",
+     "condition": "legendary"
+    },
+    {
+     "id": "border",
+     "part": "front_border",
+     "condition": "nonlegendary"
+    },
+    {
+     "id": "border_legendary",
+     "part": "front_border_legendary",
+     "condition": "legendary"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "front_name_title_boxes"
+    },
+    {
+     "id": "pt_box",
+     "part": "front_pt_box",
+     "condition": "creature"
+    },
+    {
+     "id": "color_indicator",
+     "part": "front_color_indicator",
+     "condition": "color_indicator"
+    },
+    {
+     "id": "transform_circle",
+     "part": "front_transform_circle"
+    },
+    {
+     "id": "transform_icon_front",
+     "part": "front_transform_icon_front"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2047,
+      "y": 498,
+      "width": 866,
+      "height": 232
+     },
+     "text": {
+      "fontSize": 179,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 179,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 613,
+      "y": 502,
+      "width": 2300,
+      "height": 203
+     },
+     "text": {
+      "fontSize": 156,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 385,
+      "y": 2642,
+      "width": 2531,
+      "height": 171
+     },
+     "text": {
+      "fontSize": 132,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 2132
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 514,
+        "width": 2402
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 514,
+        "width": 2003
+       }
+      }
+     ]
+    },
+    "oracle": {
+     "rect": {
+      "x": 347,
+      "y": 2742,
+      "width": 2569,
+      "height": 1244
+     },
+     "text": {
+      "fontSize": 150,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 40,
+      "paddingY": 40
+     },
+     "flow": {
+      "avoidLayer": "pt_box",
+      "divider": "front_divider"
+     }
+    },
+    "pt": {
+     "rect": {
+      "x": 2490,
+      "y": 4022,
+      "width": 475,
+      "height": 206
+     },
+     "text": {
+      "fontSize": 159,
+      "font": "title",
+      "color": "#000000",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "flipside_pt": {
+     "rect": {
+      "x": 2562,
+      "y": 3758,
+      "width": 364,
+      "height": 151
+     },
+     "text": {
+      "fontSize": 116,
+      "font": "title",
+      "color": "#494949",
+      "align": "right",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "collector": {
+     "rect": {
+      "x": 327,
+      "y": 4102,
+      "width": 2590,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {}
+    },
+    "set": {
+     "rect": {
+      "x": 326,
+      "y": 4178,
+      "width": 2590,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 729,
+      "y": 4178,
+      "width": 2590,
+      "height": 115
+     },
+     "text": {
+      "fontSize": 77,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "copyright": {
+     "rect": {
+      "x": 1387,
+      "y": 4102,
+      "width": 1554,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {
+      "duck": {
+       "layer": "pt_box",
+       "row": "artist"
+      }
+     }
+    }
+   },
+   "art": [
+    {
+     "x": 356,
+     "y": 599,
+     "width": 2552,
+     "height": 1856
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2459,
+     "y": 2514,
+     "width": 440,
+     "height": 176,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  },
+  "back": {
+   "serves": [
+    {
+     "role": "transform_back",
+     "kind": "standard"
+    }
+   ],
+   "canvas": {
+    "width": 3264,
+    "height": 4440
+   },
+   "stack": [
+    {
+     "id": "background",
+     "part": "back_background"
+    },
+    {
+     "id": "shadows",
+     "part": "back_shadows"
+    },
+    {
+     "id": "land_pinlines_textbox",
+     "part": "back_land_pinlines_textbox",
+     "condition": "land"
+    },
+    {
+     "id": "pinlines_textbox",
+     "part": "back_pinlines_textbox",
+     "condition": "nonland"
+    },
+    {
+     "id": "legendary_crown",
+     "part": "back_legendary_crown",
+     "condition": "legendary"
+    },
+    {
+     "id": "border",
+     "part": "back_border",
+     "condition": "nonlegendary"
+    },
+    {
+     "id": "border_legendary",
+     "part": "back_border_legendary",
+     "condition": "legendary"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "back_name_title_boxes"
+    },
+    {
+     "id": "pt_box",
+     "part": "back_pt_box",
+     "condition": "creature"
+    },
+    {
+     "id": "color_indicator",
+     "part": "back_color_indicator",
+     "condition": "color_indicator"
+    },
+    {
+     "id": "transform_circle",
+     "part": "back_transform_circle"
+    },
+    {
+     "id": "transform_icon_back",
+     "part": "back_transform_icon_back"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 2047,
+      "y": 498,
+      "width": 866,
+      "height": 232
+     },
+     "text": {
+      "fontSize": 179,
+      "color": "#000000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 179,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 613,
+      "y": 502,
+      "width": 2300,
+      "height": 203
+     },
+     "text": {
+      "fontSize": 156,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 385,
+      "y": 2642,
+      "width": 2531,
+      "height": 171
+     },
+     "text": {
+      "fontSize": 132,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 2132
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 514,
+        "width": 2402
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 514,
+        "width": 2003
+       }
+      }
+     ]
+    },
+    "oracle": {
+     "rect": {
+      "x": 347,
+      "y": 2742,
+      "width": 2569,
+      "height": 1244
+     },
+     "text": {
+      "fontSize": 150,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1,
+      "paddingX": 40,
+      "paddingY": 40
+     },
+     "flow": {
+      "avoidLayer": "pt_box",
+      "divider": "back_divider"
+     }
+    },
+    "pt": {
+     "rect": {
+      "x": 2490,
+      "y": 4022,
+      "width": 475,
+      "height": 206
+     },
+     "text": {
+      "fontSize": 159,
+      "font": "title",
+      "color": "#FFFFFF",
+      "align": "center",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "collector": {
+     "rect": {
+      "x": 327,
+      "y": 4102,
+      "width": 2590,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {}
+    },
+    "set": {
+     "rect": {
+      "x": 326,
+      "y": 4178,
+      "width": 2590,
+      "height": 89
+     },
+     "text": {
+      "fontSize": 68,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 729,
+      "y": 4178,
+      "width": 2590,
+      "height": 115
+     },
+     "text": {
+      "fontSize": 77,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "copyright": {
+     "rect": {
+      "x": 1387,
+      "y": 4102,
+      "width": 1554,
+      "height": 120
+     },
+     "text": {
+      "fontSize": 68,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {
+      "duck": {
+       "layer": "pt_box",
+       "row": "artist"
+      }
+     }
+    }
+   },
+   "art": [
+    {
+     "x": 356,
+     "y": 599,
+     "width": 2552,
+     "height": 1856
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 2459,
+     "y": 2514,
+     "width": 440,
+     "height": 176,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}

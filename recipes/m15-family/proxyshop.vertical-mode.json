@@ -1,0 +1,4131 @@
+{
+ "format": 1,
+ "sources": {
+  "vertical_mode_class": "vertical-mode.psd",
+  "vertical_mode_saga": "vertical-mode.psd"
+ },
+ "template": {
+  "contract": "1.2",
+  "id": "proxyshop.vertical-mode",
+  "version": "0.1.0",
+  "name": "Proxyshop vertical-mode",
+  "author": {
+   "name": "mimic"
+  },
+  "license": "CC BY-NC 4.0 for the derivative work: the cuts, blends, layouts, and manifest. The art stays with its original authors.",
+  "credits": [
+   {
+    "name": "Proxyshop",
+    "note": "The frame art is cut from a template Proxyshop distributes, which remains the work of its original designers and is redistributed with attribution",
+    "url": "https://github.com/Investigamer/Proxyshop"
+   }
+  ]
+ },
+ "parts": {
+  "vertical_mode_saga_nyx": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/nyx",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Nyx"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Nyx",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Nyx",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Nyx",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Nyx",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Nyx",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Nyx",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Nyx",
+        "Artifact"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_background": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Background",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Background",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_banner_top": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/banner_top",
+   "render": {
+    "target": [
+     "Banner Top"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_textbox": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/textbox",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Textbox",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Textbox",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Textbox",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Textbox",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_textbox_back": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/textbox_back",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Textbox",
+        "W Back"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Textbox",
+        "U Back"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Textbox",
+        "B Back"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Textbox",
+        "R Back"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Textbox",
+        "G Back"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Textbox",
+        "Gold Back"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Textbox",
+        "Artifact Back"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Textbox",
+        "Land Back"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_pinlines": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines"
+    ],
+    "show": [
+     [
+      "Pinlines",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "copyMasks": [
+     {
+      "from": [
+       "Masks",
+       "Pinlines",
+       "Normal"
+      ],
+      "to": [
+       "Pinlines"
+      ],
+      "hidesEffects": true
+     }
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f7f1"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0083c1"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#2c2821"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ed421f"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#058140"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#efd16b"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#a59684"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_legendary_shading": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/legendary_shading",
+   "render": {
+    "target": [
+     "Legendary Shading"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_legendary_crown": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/legendary_crown",
+   "slot": "crown",
+   "render": {
+    "target": [
+     "Legendary Crown"
+    ],
+    "show": [
+     [
+      "Legendary Crown"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#f6f7f1"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#0083c1"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#2c2821"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#ed421f"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#058140"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#efd16b"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#a59684"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_border": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Normal TF Front"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Legendary TF Front"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_border_legendary": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/border_legendary",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Legendary TF Front"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Normal TF Front"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_name_title_boxes": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "show": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "hide": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Bottom"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_name_title_boxes_back": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/name_title_boxes_back",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "show": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "hide": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Bottom"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W Back"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U Back"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B Back"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R Back"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G Back"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold Back"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact Back"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_outline": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/outline",
+   "render": {
+    "target": [
+     "Outline"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_color_indicator": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "show": [
+     [
+      "Color Indicator"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#f8f4f0"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006dae"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#393431"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#de3c23"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006d42"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_saga_saga_divider": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_divider",
+   "render": {
+    "target": [
+     "Saga",
+     "Divider"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_i": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_i",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   },
+   "crop": {
+    "x0": 163,
+    "y0": 1030,
+    "x1": 333,
+    "y1": 1225
+   },
+   "render": {
+    "target": [
+     "Saga",
+     "I"
+    ],
+    "show": [
+     [
+      "Saga",
+      "I"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_ii": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_ii",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   },
+   "crop": {
+    "x0": 163,
+    "y0": 1361,
+    "x1": 333,
+    "y1": 1556
+   },
+   "render": {
+    "target": [
+     "Saga",
+     "II"
+    ],
+    "show": [
+     [
+      "Saga",
+      "II"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_iii": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_iii",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   },
+   "crop": {
+    "x0": 163,
+    "y0": 1692,
+    "x1": 333,
+    "y1": 1887
+   },
+   "render": {
+    "target": [
+     "Saga",
+     "III"
+    ],
+    "show": [
+     [
+      "Saga",
+      "III"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_iv": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_iv",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   },
+   "crop": {
+    "x0": 163,
+    "y0": 2023,
+    "x1": 333,
+    "y1": 2218
+   },
+   "render": {
+    "target": [
+     "Saga",
+     "IV"
+    ],
+    "show": [
+     [
+      "Saga",
+      "IV"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_v": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_v",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   },
+   "crop": {
+    "x0": 163,
+    "y0": 2233,
+    "x1": 333,
+    "y1": 2428
+   },
+   "render": {
+    "target": [
+     "Saga",
+     "V"
+    ],
+    "show": [
+     [
+      "Saga",
+      "V"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_vi": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_vi",
+   "origin": {
+    "x": 163,
+    "y": 1030
+   },
+   "crop": {
+    "x0": 163,
+    "y0": 2233,
+    "x1": 333,
+    "y1": 2428
+   },
+   "render": {
+    "target": [
+     "Saga",
+     "VI"
+    ],
+    "show": [
+     [
+      "Saga",
+      "VI"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_saga_saga_banner": {
+   "source": "vertical_mode_saga",
+   "dir": "vertical_mode_saga/saga_banner",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Saga"
+    ],
+    "show": [
+     [
+      "Saga"
+     ],
+     [
+      "Saga",
+      "Normal"
+     ],
+     [
+      "Saga",
+      "Stripe",
+      "Shape",
+      "Normal"
+     ],
+     [
+      "Saga",
+      "Banner",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "hide": [
+     [
+      "Saga",
+      "Reminder Text"
+     ],
+     [
+      "Saga",
+      "Divider"
+     ],
+     [
+      "Saga",
+      "Text"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#f1e1c1"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#ebd19c"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#2559b1"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#224899"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#3b3330"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#1e1812"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#da382c"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#c5291e"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#01633a"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#02542e"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f1e1c1",
+           "location": 0.4
+          },
+          {
+           "color": "#2559b1",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2559b1",
+           "location": 0.4
+          },
+          {
+           "color": "#3b3330",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#3b3330",
+           "location": 0.4
+          },
+          {
+           "color": "#da382c",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#da382c",
+           "location": 0.4
+          },
+          {
+           "color": "#01633a",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#01633a",
+           "location": 0.4
+          },
+          {
+           "color": "#f1e1c1",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f1e1c1",
+           "location": 0.4
+          },
+          {
+           "color": "#3b3330",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#3b3330",
+           "location": 0.4
+          },
+          {
+           "color": "#01633a",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#01633a",
+           "location": 0.4
+          },
+          {
+           "color": "#2559b1",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2559b1",
+           "location": 0.4
+          },
+          {
+           "color": "#da382c",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#da382c",
+           "location": 0.4
+          },
+          {
+           "color": "#f1e1c1",
+           "location": 0.6
+          }
+         ]
+        }
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#2a2a2a"
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#ccad74"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#876b2d"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#c8cdea"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#a3abca"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#000000"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#000000"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Saga",
+         "Banner"
+        ],
+        "clip": true,
+        "color": "#6a5951"
+       },
+       {
+        "into": [
+         "Saga",
+         "Stripe"
+        ],
+        "clip": true,
+        "color": "#372f29"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "vertical_mode_class_nyx": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/nyx",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Nyx"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Nyx",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Nyx",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Nyx",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Nyx",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Nyx",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Nyx",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Nyx",
+        "Artifact"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_background": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/background",
+   "slot": "background",
+   "render": {
+    "target": [
+     "Background"
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Background",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Background",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Background",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Background",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Background",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Background",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Background",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Background",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_textbox": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/textbox",
+   "slot": "pinlines",
+   "crop": {
+    "x0": 230,
+    "y0": 389,
+    "x1": 1105,
+    "y1": 2437
+   },
+   "render": {
+    "target": [
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Textbox",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Textbox",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Textbox",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Textbox",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Textbox",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Textbox",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Textbox",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Textbox",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_textbox_back": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/textbox_back",
+   "slot": "pinlines",
+   "crop": {
+    "x0": 230,
+    "y0": 389,
+    "x1": 1105,
+    "y1": 2437
+   },
+   "render": {
+    "target": [
+     "Textbox"
+    ],
+    "show": [
+     [
+      "Textbox"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Textbox",
+        "W Back"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Textbox",
+        "U Back"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Textbox",
+        "B Back"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Textbox",
+        "R Back"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Textbox",
+        "G Back"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Textbox",
+        "Gold Back"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Textbox",
+        "Artifact Back"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Textbox",
+        "Land Back"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_pinlines": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/pinlines",
+   "slot": "pinlines",
+   "render": {
+    "target": [
+     "Pinlines"
+    ],
+    "show": [
+     [
+      "Pinlines",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "copyMasks": [
+     {
+      "from": [
+       "Masks",
+       "Pinlines",
+       "Normal"
+      ],
+      "to": [
+       "Pinlines"
+      ],
+      "hidesEffects": true
+     }
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#f6f7f1"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#0083c1"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#2c2821"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#ed421f"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#058140"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#efd16b"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Pinlines"
+        ],
+        "clip": true,
+        "color": "#a59684"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_legendary_shading": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/legendary_shading",
+   "render": {
+    "target": [
+     "Legendary Shading"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_class_legendary_crown": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/legendary_crown",
+   "slot": "crown",
+   "render": {
+    "target": [
+     "Legendary Crown"
+    ],
+    "show": [
+     [
+      "Legendary Crown"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#f6f7f1"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#0083c1"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#2c2821"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#ed421f"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#058140"
+       }
+      ]
+     },
+     "wu": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ub": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "br": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "rg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wb": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#f6f7f1",
+           "location": 0.4
+          },
+          {
+           "color": "#2c2821",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "bg": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#2c2821",
+           "location": 0.4
+          },
+          {
+           "color": "#058140",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ug": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#058140",
+           "location": 0.4
+          },
+          {
+           "color": "#0083c1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ur": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#0083c1",
+           "location": 0.4
+          },
+          {
+           "color": "#ed421f",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "wr": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "gradient": {
+         "stops": [
+          {
+           "color": "#ed421f",
+           "location": 0.4
+          },
+          {
+           "color": "#f6f7f1",
+           "location": 0.6
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "gold": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#efd16b"
+       }
+      ]
+     },
+     "artifact": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "colorless": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#e3e4e6"
+       }
+      ]
+     },
+     "land": {
+      "fills": [
+       {
+        "into": [
+         "Legendary Crown"
+        ],
+        "clip": true,
+        "color": "#a59684"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_border": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/border",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Normal TF Front"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Legendary TF Front"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_class_border_legendary": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/border_legendary",
+   "render": {
+    "target": [
+     "Border"
+    ],
+    "show": [
+     [
+      "Border",
+      "Legendary TF Front"
+     ]
+    ],
+    "hide": [
+     [
+      "Border",
+      "Normal TF Front"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_class_name_title_boxes": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/name_title_boxes",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "show": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "hide": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Bottom"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact"
+       ]
+      ]
+     },
+     "land": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Land"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_name_title_boxes_back": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/name_title_boxes_back",
+   "slot": "twins",
+   "render": {
+    "target": [
+     "Name & Title Boxes"
+    ],
+    "show": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Normal"
+     ]
+    ],
+    "hide": [
+     [
+      "Name & Title Boxes",
+      "Shape",
+      "Bottom"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "W Back"
+       ]
+      ]
+     },
+     "u": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "U Back"
+       ]
+      ]
+     },
+     "b": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "B Back"
+       ]
+      ]
+     },
+     "r": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "R Back"
+       ]
+      ]
+     },
+     "g": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "G Back"
+       ]
+      ]
+     },
+     "gold": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Gold Back"
+       ]
+      ]
+     },
+     "artifact": {
+      "show": [
+       [
+        "Name & Title Boxes",
+        "Artifact Back"
+       ]
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_outline": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/outline",
+   "render": {
+    "target": [
+     "Outline"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_class_color_indicator": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/color_indicator",
+   "slot": "indicator",
+   "render": {
+    "target": [
+     "Color Indicator"
+    ],
+    "show": [
+     [
+      "Color Indicator"
+     ]
+    ],
+    "variants": {
+     "w": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#f8f4f0"
+       }
+      ]
+     },
+     "u": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006dae"
+       }
+      ]
+     },
+     "b": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#393431"
+       }
+      ]
+     },
+     "r": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#de3c23"
+       }
+      ]
+     },
+     "g": {
+      "fills": [
+       {
+        "into": [
+         "Color Indicator"
+        ],
+        "clip": true,
+        "color": "#006d42"
+       }
+      ]
+     }
+    },
+    "fitPairs": true
+   }
+  },
+  "vertical_mode_class_class_divider": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/class_divider",
+   "render": {
+    "target": [
+     "Class",
+     "Divider"
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  },
+  "vertical_mode_class_class_stage": {
+   "source": "vertical_mode_class",
+   "dir": "vertical_mode_class/class_stage",
+   "render": {
+    "target": [
+     "Class",
+     "Stage"
+    ],
+    "show": [
+     [
+      "Class",
+      "Stage"
+     ]
+    ],
+    "hide": [
+     [
+      "Class",
+      "Stage",
+      "Cost"
+     ],
+     [
+      "Class",
+      "Stage",
+      "Level"
+     ]
+    ],
+    "variants": {
+     "any": {}
+    }
+   }
+  }
+ },
+ "layouts": {
+  "vertical_mode_saga": {
+   "serves": [
+    {
+     "role": "single",
+     "kind": "saga"
+    }
+   ],
+   "canvas": {
+    "width": 2176,
+    "height": 2960
+   },
+   "stack": [
+    {
+     "id": "nyx",
+     "part": "vertical_mode_saga_nyx",
+     "condition": "nyx"
+    },
+    {
+     "id": "background",
+     "part": "vertical_mode_saga_background",
+     "condition": "nonnyx"
+    },
+    {
+     "id": "banner_top",
+     "part": "vertical_mode_saga_banner_top"
+    },
+    {
+     "id": "textbox",
+     "part": "vertical_mode_saga_textbox"
+    },
+    {
+     "id": "textbox_back",
+     "part": "vertical_mode_saga_textbox_back",
+     "condition": "back"
+    },
+    {
+     "id": "pinlines",
+     "part": "vertical_mode_saga_pinlines"
+    },
+    {
+     "id": "legendary_shading",
+     "part": "vertical_mode_saga_legendary_shading",
+     "condition": "legendary"
+    },
+    {
+     "id": "legendary_crown",
+     "part": "vertical_mode_saga_legendary_crown",
+     "condition": "legendary"
+    },
+    {
+     "id": "border",
+     "part": "vertical_mode_saga_border",
+     "condition": "nonlegendary"
+    },
+    {
+     "id": "border_legendary",
+     "part": "vertical_mode_saga_border_legendary",
+     "condition": "legendary"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "vertical_mode_saga_name_title_boxes"
+    },
+    {
+     "id": "name_title_boxes_back",
+     "part": "vertical_mode_saga_name_title_boxes_back",
+     "condition": "back"
+    },
+    {
+     "id": "outline",
+     "part": "vertical_mode_saga_outline"
+    },
+    {
+     "id": "saga_banner",
+     "part": "vertical_mode_saga_saga_banner"
+    },
+    {
+     "id": "saga_divider",
+     "part": "vertical_mode_saga_saga_divider"
+    },
+    {
+     "id": "color_indicator",
+     "part": "vertical_mode_saga_color_indicator",
+     "condition": "color_indicator"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 1360,
+      "y": 338,
+      "width": 573,
+      "height": 152
+     },
+     "text": {
+      "fontSize": 117,
+      "color": "#010000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 117,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 264,
+      "y": 342,
+      "width": 1668,
+      "height": 134
+     },
+     "text": {
+      "fontSize": 103,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 263,
+      "y": 2542,
+      "width": 1718,
+      "height": 112
+     },
+     "text": {
+      "fontSize": 86,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 1419
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 367,
+        "width": 1614
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 367,
+        "width": 1315
+       }
+      }
+     ]
+    },
+    "flipside_pt": {
+     "rect": {
+      "x": 257,
+      "y": 2372,
+      "width": 192,
+      "height": 98
+     },
+     "text": {
+      "fontSize": 75,
+      "font": "title",
+      "color": "#696969",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "collector": {
+     "rect": {
+      "x": 218,
+      "y": 2726,
+      "width": 1764,
+      "height": 59
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {}
+    },
+    "set": {
+     "rect": {
+      "x": 218,
+      "y": 2777,
+      "width": 1764,
+      "height": 59
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 486,
+      "y": 2777,
+      "width": 1764,
+      "height": 76
+     },
+     "text": {
+      "fontSize": 51,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "copyright": {
+     "rect": {
+      "x": 937,
+      "y": 2726,
+      "width": 1058,
+      "height": 80
+     },
+     "text": {
+      "fontSize": 46,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {}
+    },
+    "description": {
+     "rect": {
+      "x": 272,
+      "y": 415,
+      "width": 788,
+      "height": 509
+     },
+     "text": {
+      "fontSize": 84,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1
+     },
+     "flow": {}
+    }
+   },
+   "sections": {
+    "chapters": {
+     "split": "chapters",
+     "rect": {
+      "x": 318,
+      "y": 950,
+      "width": 767,
+      "height": 1467
+     },
+     "text": {
+      "fontSize": 90,
+      "color": "#000000",
+      "lineSpacing": 1
+     },
+     "body": {
+      "x": 360,
+      "width": 700
+     },
+     "gap": 53,
+     "spread": {
+      "outside": 1,
+      "inside": 1.5
+     },
+     "items": [
+      {
+       "for": "chapter",
+       "parts": {
+        "I": "vertical_mode_saga_saga_i",
+        "II": "vertical_mode_saga_saga_ii",
+        "III": "vertical_mode_saga_saga_iii",
+        "IV": "vertical_mode_saga_saga_iv",
+        "V": "vertical_mode_saga_saga_v",
+        "VI": "vertical_mode_saga_saga_vi"
+       },
+       "y": 1127,
+       "step": 213
+      }
+     ],
+     "divider": {
+      "part": "vertical_mode_saga_saga_divider",
+      "y": 949
+     }
+    }
+   },
+   "art": [
+    {
+     "x": 1087,
+     "y": 405,
+     "width": 842,
+     "height": 2016
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 1646,
+     "y": 2462,
+     "width": 280,
+     "height": 112,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  },
+  "vertical_mode_class": {
+   "serves": [
+    {
+     "role": "single",
+     "kind": "class"
+    }
+   ],
+   "canvas": {
+    "width": 2176,
+    "height": 2960
+   },
+   "stack": [
+    {
+     "id": "nyx",
+     "part": "vertical_mode_class_nyx",
+     "condition": "nyx"
+    },
+    {
+     "id": "background",
+     "part": "vertical_mode_class_background",
+     "condition": "nonnyx"
+    },
+    {
+     "id": "textbox",
+     "part": "vertical_mode_class_textbox",
+     "at": {
+      "x": 1071,
+      "y": 389
+     }
+    },
+    {
+     "id": "textbox_back",
+     "part": "vertical_mode_class_textbox_back",
+     "condition": "back",
+     "at": {
+      "x": 1071,
+      "y": 389
+     }
+    },
+    {
+     "id": "pinlines",
+     "part": "vertical_mode_class_pinlines"
+    },
+    {
+     "id": "legendary_shading",
+     "part": "vertical_mode_class_legendary_shading",
+     "condition": "legendary"
+    },
+    {
+     "id": "legendary_crown",
+     "part": "vertical_mode_class_legendary_crown",
+     "condition": "legendary"
+    },
+    {
+     "id": "border",
+     "part": "vertical_mode_class_border",
+     "condition": "nonlegendary"
+    },
+    {
+     "id": "border_legendary",
+     "part": "vertical_mode_class_border_legendary",
+     "condition": "legendary"
+    },
+    {
+     "id": "name_title_boxes",
+     "part": "vertical_mode_class_name_title_boxes"
+    },
+    {
+     "id": "name_title_boxes_back",
+     "part": "vertical_mode_class_name_title_boxes_back",
+     "condition": "back"
+    },
+    {
+     "id": "outline",
+     "part": "vertical_mode_class_outline"
+    },
+    {
+     "id": "color_indicator",
+     "part": "vertical_mode_class_color_indicator",
+     "condition": "color_indicator"
+    },
+    {
+     "id": "class_divider",
+     "part": "vertical_mode_class_class_divider"
+    }
+   ],
+   "textBoxes": {
+    "mana": {
+     "rect": {
+      "x": 1360,
+      "y": 338,
+      "width": 573,
+      "height": 152
+     },
+     "text": {
+      "fontSize": 117,
+      "color": "#010000",
+      "align": "right",
+      "vAlign": "baseline",
+      "minFontSize": 117,
+      "shadow": {
+       "distance": 0.0907,
+       "angle": 25
+      }
+     },
+     "flow": {}
+    },
+    "title": {
+     "rect": {
+      "x": 264,
+      "y": 342,
+      "width": 1668,
+      "height": 134
+     },
+     "text": {
+      "fontSize": 103,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {
+      "clearOf": "mana"
+     }
+    },
+    "type_full": {
+     "rect": {
+      "x": 263,
+      "y": 2542,
+      "width": 1718,
+      "height": 112
+     },
+     "text": {
+      "fontSize": 86,
+      "font": "title",
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {},
+     "draws": "type",
+     "when": [
+      {
+       "condition": "set_symbol",
+       "rect": {
+        "width": 1419
+       }
+      },
+      {
+       "condition": "color_indicator",
+       "rect": {
+        "x": 367,
+        "width": 1614
+       }
+      },
+      {
+       "condition": "color_indicator,set_symbol",
+       "rect": {
+        "x": 367,
+        "width": 1315
+       }
+      }
+     ]
+    },
+    "flipside_pt": {
+     "rect": {
+      "x": 257,
+      "y": 2372,
+      "width": 192,
+      "height": 98
+     },
+     "text": {
+      "fontSize": 75,
+      "font": "title",
+      "color": "#696969",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "collector": {
+     "rect": {
+      "x": 218,
+      "y": 2726,
+      "width": 1764,
+      "height": 59
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline",
+      "tracking": 125
+     },
+     "flow": {}
+    },
+    "set": {
+     "rect": {
+      "x": 218,
+      "y": 2777,
+      "width": 1764,
+      "height": 59
+     },
+     "text": {
+      "fontSize": 46,
+      "font": "info",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "artist": {
+     "rect": {
+      "x": 486,
+      "y": 2777,
+      "width": 1764,
+      "height": 76
+     },
+     "text": {
+      "fontSize": 51,
+      "font": "small-caps",
+      "color": "#FFFFFF",
+      "align": "left",
+      "vAlign": "baseline"
+     },
+     "flow": {}
+    },
+    "copyright": {
+     "rect": {
+      "x": 937,
+      "y": 2726,
+      "width": 1058,
+      "height": 80
+     },
+     "text": {
+      "fontSize": 46,
+      "color": "#FFFFFF",
+      "align": "right",
+      "vAlign": "baseline",
+      "tracking": 40
+     },
+     "flow": {}
+    },
+    "description": {
+     "rect": {
+      "x": 1112,
+      "y": 435,
+      "width": 788,
+      "height": 180
+     },
+     "text": {
+      "fontSize": 77,
+      "color": "#000000",
+      "align": "left",
+      "vAlign": "center",
+      "lineSpacing": 1
+     },
+     "flow": {}
+    }
+   },
+   "sections": {
+    "levels": {
+     "split": "levels",
+     "rect": {
+      "x": 1090,
+      "y": 638,
+      "width": 835,
+      "height": 1779
+     },
+     "text": {
+      "fontSize": 89,
+      "color": "#000000",
+      "lineSpacing": 1
+     },
+     "body": {
+      "x": 1112,
+      "width": 788
+     },
+     "gap": 53,
+     "header": {
+      "for": "cost",
+      "height": 170
+     },
+     "items": [
+      {
+       "for": "cost",
+       "part": "vertical_mode_class_class_stage",
+       "anchor": "top",
+       "y": 966
+      },
+      {
+       "for": "cost",
+       "rect": {
+        "x": 1118,
+        "y": 1070,
+        "width": 794,
+        "height": 109
+       },
+       "text": {
+        "fontSize": 84,
+        "color": "#000000",
+        "align": "left",
+        "vAlign": "baseline"
+       },
+       "format": "{}:",
+       "anchor": "top",
+       "y": 966
+      },
+      {
+       "for": "level",
+       "rect": {
+        "x": 1118,
+        "y": 1073,
+        "width": 794,
+        "height": 107
+       },
+       "text": {
+        "fontSize": 82,
+        "color": "#000000",
+        "align": "right",
+        "vAlign": "baseline"
+       },
+       "format": "Level {}",
+       "anchor": "top",
+       "y": 966
+      }
+     ]
+    }
+   },
+   "art": [
+    {
+     "x": 246,
+     "y": 405,
+     "width": 843,
+     "height": 2016
+    }
+   ],
+   "symbols": {
+    "set": {
+     "x": 1646,
+     "y": 2462,
+     "width": 280,
+     "height": 112,
+     "align": "right",
+     "vAlign": "center"
+    }
+   }
+  }
+ }
+}
