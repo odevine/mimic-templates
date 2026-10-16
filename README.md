@@ -28,9 +28,14 @@ templates/m15/
 └── ...                one folder for each part
 ```
 
-The PNGs are tracked in git. `templates/m15` is the only template today, with
+The PNGs are tracked in git. `templates/m15` is kept this way by hand, with
 three layouts: `normal` for standard cards, `split` for split cards, and
-`transform` for both faces of a transform card. Its README covers its credits.
+`transform` for both faces of a transform card. `templates/m15-family`,
+`templates/classic-family`, and `templates/pw-borderless-family` are instead
+converted from Proxyshop's own PSDs with the engine's `psdconvert` and
+`tplmerge` commands; each has more layouts, one per card shape it covers. Every
+template's own README covers its credits and, for a converted one, how to
+rebuild it from its recipe.
 
 `validate -schema template` and `validate -schema layout`, from the commands
 below, print the JSON Schema of `template.json` and of a layout file, for an editor
